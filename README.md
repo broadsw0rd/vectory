@@ -13,12 +13,48 @@
 
 ## API
 
-#### Static methods
+#### Static members
 
-- [ ] `Vector.add()`
-- [ ] `Vector.iadd()`
+- [ ] `Vector(x, y)`
+- [ ] `Vector.VERSION`
+- [ ] `Vector.from([x, y])`
+- [ ] `Vector.fromAngle(angle, magnitude)`
+- [ ] `Vector.add(one, another)`
+- [ ] `Vector.iadd(one, another)`
+- [ ] `Vector.sub(one, another)`
+- [ ] `Vector.isub(one, another)`
+- [ ] `Vector.mul(vector, scalar)`
+- [ ] `Vector.imul(vector, scalar)`
+- [ ] `Vector.div(vector, scalar)`
+- [ ] `Vector.idiv(vector, scalar)`
+- [ ] `Vector.normalized(vector)`
+- [ ] `Vector.normalize(vector)`
+- [ ] `Vector.distance(one, another)`
+- [ ] `Vector.magnitude(vector)`
+- [ ] `Vector.angle(vector)`
+- [ ] `Vector.zero(vector)`
+- [ ] `Vector.copy(vector)`
+- [ ] `Vector.toJSON(vector)`
 
-#### Prototype methods
+#### Prototype members
 
-- [ ] `Vector#add()`
-- [ ] `Vector#iadd()`
+- [ ] `Vector.xx`
+- [ ] `Vector.xy`
+- [ ] `Vector.yx`
+- [ ] `Vector.yy`
+- [ ] `Vector#add(vector)`
+- [ ] `Vector#iadd(vector)`
+- [ ] `Vector#sub(vector)`
+- [ ] `Vector#isub(vector)`
+- [ ] `Vector#mul(vector)`
+- [ ] `Vector#imul(scalar)`
+- [ ] `Vector#div(scalar)`
+- [ ] `Vector#idiv(scalar)`
+- [ ] `Vector#normalized()`
+- [ ] `Vector#normalize()`
+- [ ] `Vector#distance(vector)`
+- [ ] `Vector#magnitude()`
+- [ ] `Vector#angle()`
+- [ ] `Vector#zero()`
+- [ ] `Vector#copy()`
+- [ ] `Vector#toJSON()`
