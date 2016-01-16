@@ -38,10 +38,10 @@
 
 #### Prototype members
 
-- [ ] `Vector.xx`
-- [ ] `Vector.xy`
-- [ ] `Vector.yx`
-- [ ] `Vector.yy`
+- [ ] `Vector#xx`
+- [ ] `Vector#xy`
+- [ ] `Vector#yx`
+- [ ] `Vector#yy`
 - [ ] `Vector#add(vector)`
 - [ ] `Vector#iadd(vector)`
 - [ ] `Vector#sub(vector)`
