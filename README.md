@@ -22,7 +22,7 @@
 
 ## API
 
-#### Static members
+**Static members**
 
 - [x] [`Vector(x, y)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L1)
 - [x] [`Vector.VERSION`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L6)
@@ -45,12 +45,8 @@
 - [ ] `Vector.copy(vector)`
 - [ ] `Vector.toJSON(vector)`
 
-#### Prototype members
+**Prototype members**
 
-- [ ] `Vector#xx`
-- [ ] `Vector#xy`
-- [ ] `Vector#yx`
-- [ ] `Vector#yy`
 - [x] [`Vector#add(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L20)
 - [ ] `Vector#iadd(vector)`
 - [ ] `Vector#sub(vector)`
@@ -66,7 +62,13 @@
 - [ ] `Vector#angle()`
 - [ ] `Vector#zero()`
 - [ ] `Vector#copy()`
-- [ ] `Vector#toJSON()`
+- [ ] `Vector#toJSON()`- 
+- [ ] `Vector#xx`
+- [ ] `Vector#xy`
+- [ ] `Vector#yx`
+- [ ] `Vector#yy`
+
+## Benchmark
 
 ## Development
 
