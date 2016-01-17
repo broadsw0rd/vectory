@@ -32,7 +32,7 @@
   },
   "scripts": {
     "check": "snazzy src/vectory.js",
-    "concat": "cat tools/header.js src/vectory.js tools/footer.js > dist/vectory.js",
+    "wrap": "cat tools/header.js src/vectory.js tools/footer.js > dist/vectory.js",
     "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec test/test.js",
     "build": "uglifyjs -c -m -- src/vectory.js > dist/vectory.min.js",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
