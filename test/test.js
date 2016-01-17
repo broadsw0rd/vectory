@@ -43,3 +43,18 @@ describe('Vector.from([x, y])', function(){
     expect(vector.y).to.be(2)
   })
 })
+
+describe('Vector.fromAngle(angle, magnitude)', function(){
+  it('should be defined', function(){
+    expect(Vector.fromAngle).to.be.ok()
+  })
+  it('should be a function', function(){
+    expect(Vector.fromAngle).to.be.a(Function)
+  })
+  it('should return new vector from angle and magnitude', function(){
+    var vector = Vector.fromAngle(90 * (Math.PI / 180), 1)
+    expect(vector).to.be.a(Vector)
+    expect(vector.x).to.be.below(Number.EPSILON)
+    expect(vector.y).to.be(1)
+  })
+})
