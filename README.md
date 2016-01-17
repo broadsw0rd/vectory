@@ -23,7 +23,7 @@
 
 - [x] [`Vector(x, y)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L1)
 - [x] [`Vector.VERSION`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L6)
-- [ ] `Vector.from([x, y])`
+- [x] [`Vector.from([x, y])`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L8)
 - [ ] `Vector.fromAngle(angle, magnitude)`
 - [ ] `Vector.add(one, another)`
 - [ ] `Vector.iadd(one, another)`

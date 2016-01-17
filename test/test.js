@@ -1,14 +1,14 @@
 var Vector = require('../dist/vectory.js')
 var expect = require('expect.js')
 
-describe('Vector()', function(){
+describe('Vector(x, y)', function(){
   it('should be defined', function(){
     expect(Vector).to.be.ok()
   })
   it('should be a function', function(){
     expect(Vector).to.be.a(Function)
   })
-  it('should create an instance of Vector', function(){
+  it('should create vector instance', function(){
     var vector = new Vector(1, 2)
     expect(vector.x).to.be(1)
     expect(vector.y).to.be(2)
@@ -26,5 +26,20 @@ describe('Vector.VERSION', function(){
   })
   it('should be a current version of library', function(){
     expect(Vector.VERSION).to.be('0.0.1')
+  })
+})
+
+describe('Vector.from([x, y])', function(){
+  it('should be defined', function(){
+    expect(Vector.from).to.be.ok()
+  })
+  it('should be a function', function(){
+    expect(Vector.from).to.be.a(Function)
+  })
+  it('should return new vector from data', function(){
+    var vector = Vector.from([1, 2])
+    expect(vector).to.be.a(Vector)
+    expect(vector.x).to.be(1)
+    expect(vector.y).to.be(2)
   })
 })

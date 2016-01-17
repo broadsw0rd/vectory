@@ -32,6 +32,10 @@ function Vector (x, y) {
 
 Vector.VERSION = '0.0.1'
 
+Vector.from = function (data) {
+  return new Vector(data[0], data[1])
+}
+
 return Vector
 
 }))
