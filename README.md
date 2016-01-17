@@ -16,9 +16,9 @@
    </a>
 </p>
 
-## Install
+## About
 
-## Usage
+## Install & Usage
 
 ## API
 
