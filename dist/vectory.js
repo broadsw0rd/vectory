@@ -6,7 +6,6 @@
 |___/\___/\___/\__/\____/_/   \__, /  
                              /____/   
 */
-
 ;(function umd (name, root, factory) {
   /* istanbul ignore next */
   if (typeof module !== 'undefined' && module.exports) {
@@ -18,7 +17,7 @@
   }
 }(
 'Vectory',
-// better `this` reference, inspired [here](https://github.com/facebook/regenerator/blob/master/runtime.js#L645)
+// better `this` reference, inspired [here](https://github.com/facebook/regenerator/blob/master/runtime.js#L662)
 typeof global === 'object' ? global : 
 /* istanbul ignore next */
 typeof window === 'object' ? window : 
