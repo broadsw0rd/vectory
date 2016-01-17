@@ -16,7 +16,13 @@
    </a>
 </p>
 
-## About
+## Features
+
+- Simple - [22 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L22)
+- Lightweight - ? Kb
+- Robust - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
+- Build with performance in mind - reviewed with [IRHydra](http://mrale.ph/irhydra/2/)
+- Abuse some hacks([1](https://github.com/WebKit/webkit/blob/master/Source/JavaScriptCore/inspector/InjectedScriptSource.js#L768), [2](https://kangax.github.io/nfe/#webkit-displayName)) to enhance your devtools experience
 
 ## Install & Usage
 
