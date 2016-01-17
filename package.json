@@ -1,0 +1,41 @@
+{
+  "name": "vectory",
+  "version": "0.0.1",
+  "description": "High performance, DevTools friendly, Crankshaft tolerant 2d vectors",
+  "keywords": [
+    "vector",
+    "2d"
+  ],
+  "license": "MIT",
+  "homepage": "http://broadsw0rd.github.io/vectory/",
+  "bugs": {
+    "url": "https://github.com/broadsw0rd/vectory/issues",
+    "email": "broadsw.rd@yandex.ru"
+  },
+  "author": {
+    "name": "Vladimir Bykov",
+    "email": "broadsw.rd@yandex.ru",
+    "url": "https://github.com/broadsw0rd"
+  },
+  "main": "dist/vectory.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/broadsw0rd/vectory"
+  },
+  "devDependencies": {
+    "uglify-js": "latest",
+    "mocha": "latest",
+    "expect.js": "latest",
+    "coveralls": "latest",
+    "istanbul": "latest",
+    "snazzy": "latest"
+  },
+  "scripts": {
+    "check": "snazzy src/vectory.js",
+    "concat": "cat tools/header.js src/vectory.js tools/footer.js > dist/vectory.js",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec test/test.js",
+    "build": "uglifyjs -c -m -- src/vectory.js > dist/vectory.min.js",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "dependencies": {}
+}
