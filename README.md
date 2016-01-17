@@ -21,7 +21,7 @@
 
 #### Static members
 
-- [ ] `Vector(x, y)`
+- [x] [`Vector(x, y)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L1)
 - [ ] `Vector.VERSION`
 - [ ] `Vector.from([x, y])`
 - [ ] `Vector.fromAngle(angle, magnitude)`
