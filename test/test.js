@@ -58,3 +58,37 @@ describe('Vector.fromAngle(angle, magnitude)', function(){
     expect(vector.y).to.be(1)
   })
 })
+
+describe('Vector.add(one, another)', function(){
+  it('should be defined', function(){
+    expect(Vector.add).to.be.ok()
+  })
+  it('should be a function', function(){
+    expect(Vector.add).to.be.a(Function)
+  })
+  it('should return sum of two vectors', function(){
+    var one = new Vector(1, 2)
+    var another = new Vector(3, 4)
+    var result = Vector.add(one, another)
+    expect(result).to.be.a(Vector)
+    expect(result.x).to.be(4)
+    expect(result.y).to.be(6)
+  })
+})
+
+describe('Vector#add(vector)', function(){
+  it('should be defined', function(){
+    expect(Vector.prototype.add).to.be.ok()
+  })
+  it('should be a function', function(){
+    expect(Vector.prototype.add).to.be.a(Function)
+  })
+  it('should return sum of two vectors', function(){
+    var one = new Vector(1, 2)
+    var another = new Vector(3, 4)
+    var result = one.add(another)
+    expect(result).to.be.a(Vector)
+    expect(result.x).to.be(4)
+    expect(result.y).to.be(6)
+  })
+})

@@ -12,3 +12,11 @@ Vector.from = function (data) {
 Vector.fromAngle = function (angle, magnitude) {
   return new Vector(magnitude * Math.cos(angle), magnitude * Math.sin(angle))
 }
+
+Vector.add = function (one, another) {
+  return one.add(another)
+}
+
+Vector.prototype.add = function (vector) {
+  return new Vector(this.x + vector.x, this.y + vector.y)
+}
