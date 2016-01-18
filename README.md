@@ -76,6 +76,8 @@
 
 ## Benchmark
 
+Intel Core i5-4210U @ 1.7 Gh, DDR3 4 Gb, node v4.2.4
+
 ```
 > node ./bench/bench.js
 
