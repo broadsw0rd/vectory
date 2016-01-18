@@ -83,11 +83,11 @@ Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v4.2.4
 
 Vectory benchmark:
 
-	√ Vector(x, y) x 22,182,632 ops/sec ±2.09% (88 runs sampled)
-	√ Vector.from([x, y]) x 17,309,245 ops/sec ±0.77% (91 runs sampled)
-	√ Vector.fromAngle(angle, magnitude) x 12,888,104 ops/sec ±0.92% (89 runs sampled)
-	√ Vector.add(one, another) x 9,306,880 ops/sec ±0.83% (89 runs sampled)
-	√ Vector#add(vector) x 9,362,130 ops/sec ±0.68% (90 runs sampled)
+	√ Vector(x, y) x 46,907,583 ops/sec ±3.79% (80 runs sampled)
+	√ Vector.from([x, y]) x 42,583,816 ops/sec ±1.68% (89 runs sampled)
+	√ Vector.fromAngle(angle, magnitude) x 12,932,546 ops/sec ±0.87% (93 runs sampled)
+	√ Vector.add(one, another) x 46,950,643 ops/sec ±0.95% (90 runs sampled)
+	√ Vector#add(vector) x 47,877,556 ops/sec ±0.83% (90 runs sampled)
 ```
 
 ## Development
