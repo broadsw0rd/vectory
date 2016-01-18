@@ -77,6 +77,8 @@
 ## Benchmark
 
 ```
+> node ./bench/bench.js
+
 Vectory benchmark:
 
 	√ Vector(x, y) x 23,086,660 ops/sec ±2.59% (89 runs sampled)
@@ -88,5 +90,6 @@ Command | Description
 --------| -----------
 `npm run check` | Check standard code style by [snazzy](https://www.npmjs.com/package/snazzy)
 `npm run wrap` | Wrap source code in [UMD](https://github.com/umdjs/umd)
+`npm run bench` | Run [benchmark](http://benchmarkjs.com/)
 `npm run test` | Run tests by [mocha](https://mochajs.org/) and compute code coverage by [istanbul](https://github.com/gotwarlost/istanbul)
 `npm run build` | Minify code by [UglifyJS](https://github.com/mishoo/UglifyJS)
