@@ -28,12 +28,16 @@
     "expect.js": "latest",
     "coveralls": "latest",
     "istanbul": "latest",
-    "snazzy": "latest"
+    "snazzy": "latest",
+    "benchmark": "latest",
+    "chalk": "latest",
+    "log-symbols": "latest"
   },
   "scripts": {
     "check": "snazzy src/vectory.js",
     "wrap": "cat tools/header.js src/vectory.js tools/footer.js > dist/vectory.js",
     "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec test/test.js",
+    "bench": "node ./bench/bench.js",
     "build": "uglifyjs -c -m -- src/vectory.js > dist/vectory.min.js",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },

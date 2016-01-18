@@ -76,6 +76,12 @@
 
 ## Benchmark
 
+```
+Vectory benchmark:
+
+	√ Vector(x, y) x 23,086,660 ops/sec ±2.59% (89 runs sampled)
+```
+
 ## Development
 
 Command | Description
