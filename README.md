@@ -81,7 +81,11 @@
 
 Vectory benchmark:
 
-	√ Vector(x, y) x 23,086,660 ops/sec ±2.59% (89 runs sampled)
+	√ Vector(x, y) x 22,182,632 ops/sec ±2.09% (88 runs sampled)
+	√ Vector.from([x, y]) x 17,309,245 ops/sec ±0.77% (91 runs sampled)
+	√ Vector.fromAngle(angle, magnitude) x 12,888,104 ops/sec ±0.92% (89 runs sampled)
+	√ Vector.add(one, another) x 9,306,880 ops/sec ±0.83% (89 runs sampled)
+	√ Vector#add(vector) x 9,362,130 ops/sec ±0.68% (90 runs sampled)
 ```
 
 ## Development
