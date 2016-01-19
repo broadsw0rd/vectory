@@ -47,6 +47,16 @@ Vector.prototype.add = function (vector) {
   return new Vector(this.x + vector.x, this.y + vector.y)
 }
 
+Vector.iadd = function (one, another) {
+  return one.iadd(another)
+}
+
+Vector.prototype.iadd = function (vector) {
+  this.x += vector.x
+  this.y += vector.y
+  return this
+}
+
 return Vector
 
 }))

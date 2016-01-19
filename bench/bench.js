@@ -31,6 +31,18 @@ var benchmarks = {
     return function(){
       return one.add(another)
     }
+  }(new Vector(rand(0, 100), rand(0, 100)), new Vector(rand(0, 100), rand(0, 100))),
+
+  'Vector.iadd(one, another)': function(one, another){
+    return function(){
+      return Vector.iadd(one, another)
+    }
+  }(new Vector(rand(0, 100), rand(0, 100)), new Vector(rand(0, 100), rand(0, 100))),
+
+  'Vector#iadd(vector)': function(one, another){
+    return function(){
+      return one.iadd(another)
+    }
   }(new Vector(rand(0, 100), rand(0, 100)), new Vector(rand(0, 100), rand(0, 100)))
 }
 

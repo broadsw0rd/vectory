@@ -92,3 +92,47 @@ describe('Vector#add(vector)', function(){
     expect(result.y).to.be(6)
   })
 })
+
+describe('Vector.iadd(one, another)', function(){
+  it('should be defined', function(){
+    expect(Vector.iadd).to.be.ok()
+  })
+  it('should be a function', function(){
+    expect(Vector.iadd).to.be.a(Function)
+  })
+  it('should add second vector to first', function(){
+    var one = new Vector(1, 2)
+    var another = new Vector(3, 4)
+    Vector.iadd(one, another)
+    expect(one.x).to.be(4)
+    expect(one.y).to.be(6)
+  })
+  it('should return first vector', function(){
+    var one = new Vector(1, 2)
+    var another = new Vector(3, 4)
+    var result = Vector.iadd(one, another)
+    expect(result).to.be(one)
+  })
+})
+
+describe('Vector#iadd(vector)', function(){
+  it('should be defined', function(){
+    expect(Vector.prototype.iadd).to.be.ok()
+  })
+  it('should be a function', function(){
+    expect(Vector.prototype.iadd).to.be.a(Function)
+  })
+  it('should add vector to self', function(){
+    var one = new Vector(1, 2)
+    var another = new Vector(3, 4)
+    one.iadd(another)
+    expect(one.x).to.be(4)
+    expect(one.y).to.be(6)
+  })
+  it('should return self instance', function(){
+    var one = new Vector(1, 2)
+    var another = new Vector(3, 4)
+    var result = one.iadd(another)
+    expect(result).to.be(one)
+  })
+})
