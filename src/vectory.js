@@ -30,3 +30,11 @@ Vector.prototype.iadd = function (vector) {
   this.y += vector.y
   return this
 }
+
+Vector.sub = function (one, another) {
+  return one.sub(another)
+}
+
+Vector.prototype.sub = function (vector) {
+  return new Vector(this.x - vector.x, this.y - vector.y)
+}

@@ -136,3 +136,37 @@ describe('Vector#iadd(vector)', function(){
     expect(result).to.be(one)
   })
 })
+
+describe('Vector.sub(one, another)', function(){
+  it('should be defined', function(){
+    expect(Vector.sub).to.be.ok()
+  })
+  it('should be a function', function(){
+    expect(Vector.sub).to.be.a(Function)
+  })
+  it('should return diff of two vectors', function(){
+    var one = new Vector(3, 4)
+    var another = new Vector(1, 2)
+    var result = Vector.sub(one, another)
+    expect(result).to.be.a(Vector)
+    expect(result.x).to.be(2)
+    expect(result.y).to.be(2)
+  })
+})
+
+describe('Vector#sub(vector)', function(){
+  it('should be defined', function(){
+    expect(Vector.prototype.sub).to.be.ok()
+  })
+  it('should be a function', function(){
+    expect(Vector.prototype.sub).to.be.a(Function)
+  })
+  it('should return diff of two vectors', function(){
+    var one = new Vector(3, 4)
+    var another = new Vector(1, 2)
+    var result = one.sub(another)
+    expect(result).to.be.a(Vector)
+    expect(result.x).to.be(2)
+    expect(result.y).to.be(2)
+  })
+})

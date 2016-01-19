@@ -36,7 +36,7 @@
 - [x] [`Vector.fromAngle(angle, magnitude)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L12)
 - [x] [`Vector.add(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L16)
 - [x] [`Vector.iadd(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L24)
-- [ ] `Vector.sub(one, another)`
+- [x] [`Vector.sub(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L34)
 - [ ] `Vector.isub(one, another)`
 - [ ] `Vector.mul(vector, scalar)`
 - [ ] `Vector.imul(vector, scalar)`
@@ -55,7 +55,7 @@
 
 - [x] [`Vector#add(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L20)
 - [x] [`Vector#iadd(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L28)
-- [ ] `Vector#sub(vector)`
+- [x] [`Vector#sub(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L38)
 - [ ] `Vector#isub(vector)`
 - [ ] `Vector#mul(scalar)`
 - [ ] `Vector#imul(scalar)`
@@ -83,13 +83,15 @@ Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v4.2.4
 
 Vectory benchmark:
 
-	√ Vector(x, y) x 48,074,052 ops/sec ±2.94% (79 runs sampled)
-	√ Vector.from([x, y]) x 42,865,583 ops/sec ±0.87% (87 runs sampled)
-	√ Vector.fromAngle(angle, magnitude) x 12,687,758 ops/sec ±2.42% (89 runs sampled)
-	√ Vector.add(one, another) x 46,827,418 ops/sec ±0.72% (92 runs sampled)
-	√ Vector#add(vector) x 49,783,058 ops/sec ±1.01% (91 runs sampled)
-	√ Vector.iadd(one, another) x 61,332,740 ops/sec ±0.88% (91 runs sampled)
-	√ Vector#iadd(vector) x 63,774,303 ops/sec ±1.18% (90 runs sampled)
+	√ Vector(x, y) x 48,651,883 ops/sec ±2.69% (82 runs sampled)
+	√ Vector.from([x, y]) x 41,785,230 ops/sec ±1.04% (89 runs sampled)
+	√ Vector.fromAngle(angle, magnitude) x 13,358,708 ops/sec ±0.79% (89 runs sampled)
+	√ Vector.add(one, another) x 46,021,776 ops/sec ±0.90% (90 runs sampled)
+	√ Vector#add(vector) x 48,284,295 ops/sec ±1.06% (91 runs sampled)
+	√ Vector.iadd(one, another) x 60,882,636 ops/sec ±1.00% (88 runs sampled)
+	√ Vector#iadd(vector) x 62,380,417 ops/sec ±1.22% (87 runs sampled)
+	√ Vector.sub(one, another) x 46,253,116 ops/sec ±0.92% (91 runs sampled)
+	√ Vector#sub(vector) x 45,501,181 ops/sec ±0.81% (87 runs sampled)
 
 ```
 

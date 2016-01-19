@@ -43,7 +43,19 @@ var benchmarks = {
     return function(){
       return one.iadd(another)
     }
-  }(new Vector(rand(0, 100), rand(0, 100)), new Vector(rand(0, 100), rand(0, 100)))
+  }(new Vector(rand(0, 100), rand(0, 100)), new Vector(rand(0, 100), rand(0, 100))),
+
+  'Vector.sub(one, another)': function(one, another){
+    return function(){
+      return Vector.sub(one, another)
+    }
+  }(new Vector(rand(0, 100), rand(0, 100)), new Vector(rand(0, 100), rand(0, 100))),
+
+  'Vector#sub(vector)': function(one, another){
+    return function(){
+      return one.sub(another)
+    }
+  }(new Vector(rand(0, 100), rand(0, 100)), new Vector(rand(0, 100), rand(0, 100))),
 }
 
 for (var i in benchmarks) {
