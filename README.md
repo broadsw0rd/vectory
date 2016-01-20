@@ -28,47 +28,79 @@
 
 ## API
 
-**Static members**
+**Creation**
 
-- [x] [`Vector(x, y)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L1)
-- [x] [`Vector.VERSION`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L6)
+- [x] [`new Vector(x, y)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L1)
 - [x] [`Vector.from([x, y])`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L8)
 - [x] [`Vector.fromAngle(angle, magnitude)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L12)
+
+**Addition**
+
 - [x] [`Vector.add(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L16)
-- [x] [`Vector.iadd(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L24)
-- [x] [`Vector.sub(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L34)
-- [ ] `Vector.isub(one, another)`
-- [ ] `Vector.mul(vector, scalar)`
-- [ ] `Vector.imul(vector, scalar)`
-- [ ] `Vector.div(vector, scalar)`
-- [ ] `Vector.idiv(vector, scalar)`
-- [ ] `Vector.normalized(vector)`
-- [ ] `Vector.normalize(vector)`
-- [ ] `Vector.distance(one, another)`
-- [ ] `Vector.magnitude(vector)`
-- [ ] `Vector.angle(vector)`
-- [ ] `Vector.zero(vector)`
-- [ ] `Vector.copy(vector)`
-- [ ] `Vector.toJSON(vector)`
-
-**Prototype members**
-
 - [x] [`Vector#add(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L20)
+- [x] [`Vector.iadd(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L24)
 - [x] [`Vector#iadd(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L28)
+
+**Substraction**
+
+- [x] [`Vector.sub(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L34)
 - [x] [`Vector#sub(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L38)
+- [ ] `Vector.isub(one, another)`
 - [ ] `Vector#isub(vector)`
+
+**Multiplication**
+
+- [ ] `Vector.mul(vector, scalar)`
 - [ ] `Vector#mul(scalar)`
+- [ ] `Vector.imul(vector, scalar)`
 - [ ] `Vector#imul(scalar)`
+
+**Division**
+
+- [ ] `Vector.div(vector, scalar)`
 - [ ] `Vector#div(scalar)`
+- [ ] `Vector.idiv(vector, scalar)`
 - [ ] `Vector#idiv(scalar)`
+
+**Normalization**
+
+- [ ] `Vector.normalized(vector)`
 - [ ] `Vector#normalized()`
+- [ ] `Vector.normalize(vector)`
 - [ ] `Vector#normalize()`
+
+**Distance computing**
+
+- [ ] `Vector.distance(one, another)`
 - [ ] `Vector#distance(vector)`
+
+**Magnitude computing**
+
+- [ ] `Vector.magnitude(vector)`
 - [ ] `Vector#magnitude()`
+
+**Angle computing**
+
+- [ ] `Vector.angle(vector)`
 - [ ] `Vector#angle()`
+
+**Reseting**
+
+- [ ] `Vector.zero(vector)`
 - [ ] `Vector#zero()`
+
+**Copy**
+
+- [ ] `Vector.copy(vector)`
 - [ ] `Vector#copy()`
+
+**JSON convertion**
+
+- [ ] `Vector.toJSON(vector)`
 - [ ] `Vector#toJSON()`
+
+**Swizzling**
+
 - [ ] `Vector#xx`
 - [ ] `Vector#xy`
 - [ ] `Vector#yx`
