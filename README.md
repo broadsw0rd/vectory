@@ -84,7 +84,7 @@
 - [ ] `Vector.angle(vector)`
 - [ ] `Vector#angle()`
 
-**Reseting**
+**Resetting**
 
 - [ ] `Vector.zero(vector)`
 - [ ] `Vector#zero()`
