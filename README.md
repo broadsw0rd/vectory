@@ -100,6 +100,12 @@
 - [ ] `Vector.toJSON(vector)`
 - [ ] `Vector.prototype.toJSON()`
 
+
+**Equality**
+
+- [ ] `Vector.equal(one, another)`
+- [ ] `Vector.protototype.equal(vector)`
+
 **Swizzling**
 
 - [ ] `Vector.prototype.xx`
