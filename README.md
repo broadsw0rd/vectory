@@ -37,74 +37,74 @@
 **Addition**
 
 - [x] [`Vector.add(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L16)
-- [x] [`Vector#add(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L20)
+- [x] [`Vector.prototype.add(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L20)
 - [x] [`Vector.iadd(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L24)
-- [x] [`Vector#iadd(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L28)
+- [x] [`Vector.prototype.iadd(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L28)
 
 **Substraction**
 
 - [x] [`Vector.sub(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L34)
-- [x] [`Vector#sub(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L38)
+- [x] [`Vector.prototype.sub(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L38)
 - [ ] `Vector.isub(one, another)`
-- [ ] `Vector#isub(vector)`
+- [ ] `Vector.prototype.isub(vector)`
 
 **Multiplication**
 
 - [ ] `Vector.mul(vector, scalar)`
-- [ ] `Vector#mul(scalar)`
+- [ ] `Vector.prototype.mul(scalar)`
 - [ ] `Vector.imul(vector, scalar)`
-- [ ] `Vector#imul(scalar)`
+- [ ] `Vector.prototype.imul(scalar)`
 
 **Division**
 
 - [ ] `Vector.div(vector, scalar)`
-- [ ] `Vector#div(scalar)`
+- [ ] `Vector.prototype.div(scalar)`
 - [ ] `Vector.idiv(vector, scalar)`
-- [ ] `Vector#idiv(scalar)`
+- [ ] `Vector.prototype.idiv(scalar)`
 
 **Normalization**
 
 - [ ] `Vector.normalized(vector)`
-- [ ] `Vector#normalized()`
+- [ ] `Vector.prototype.normalized()`
 - [ ] `Vector.normalize(vector)`
-- [ ] `Vector#normalize()`
+- [ ] `Vector.prototype.normalize()`
 
 **Distance computing**
 
 - [ ] `Vector.distance(one, another)`
-- [ ] `Vector#distance(vector)`
+- [ ] `Vector.prototype.distance(vector)`
 
 **Magnitude computing**
 
 - [ ] `Vector.magnitude(vector)`
-- [ ] `Vector#magnitude()`
+- [ ] `Vector.prototype.magnitude()`
 
 **Angle computing**
 
 - [ ] `Vector.angle(vector)`
-- [ ] `Vector#angle()`
+- [ ] `Vector.prototype.angle()`
 
 **Resetting**
 
 - [ ] `Vector.zero(vector)`
-- [ ] `Vector#zero()`
+- [ ] `Vector.prototype.zero()`
 
 **Copy**
 
 - [ ] `Vector.copy(vector)`
-- [ ] `Vector#copy()`
+- [ ] `Vector.prototype.copy()`
 
 **JSON convertion**
 
 - [ ] `Vector.toJSON(vector)`
-- [ ] `Vector#toJSON()`
+- [ ] `Vector.prototype.toJSON()`
 
 **Swizzling**
 
-- [ ] `Vector#xx`
-- [ ] `Vector#xy`
-- [ ] `Vector#yx`
-- [ ] `Vector#yy`
+- [ ] `Vector.prototype.xx`
+- [ ] `Vector.prototype.xy`
+- [ ] `Vector.prototype.yx`
+- [ ] `Vector.prototype.yy`
 
 ## Benchmark
 
