@@ -63,6 +63,11 @@
 - [ ] `Vector.idiv(vector, scalar)`
 - [ ] `Vector.prototype.idiv(scalar)`
 
+**Dot product computing**
+
+- [ ] `Vector.dot(one, another)`
+- [ ] `Vector.prototype.dot(vector)`
+
 **Normalization**
 
 - [ ] `Vector.normalized(vector)`
@@ -82,8 +87,10 @@
 
 **Angle computing**
 
-- [ ] `Vector.angle(vector)`
-- [ ] `Vector.prototype.angle()`
+- [ ] `Vector.angleOf(vector)`
+- [ ] `Vector.prototype.angleOf()`
+- [ ] `Vector.angleTo(one, another)`
+- [ ] `Vector.prototype.angleTo(vector)`
 
 **Resetting**
 
