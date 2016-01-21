@@ -63,17 +63,17 @@
 - [ ] `Vector.idiv(vector, scalar)`
 - [ ] `Vector.prototype.idiv(scalar)`
 
-**Dot product computing**
-
-- [ ] `Vector.dot(one, another)`
-- [ ] `Vector.prototype.dot(vector)`
-
 **Normalization**
 
 - [ ] `Vector.normalized(vector)`
 - [ ] `Vector.prototype.normalized()`
 - [ ] `Vector.normalize(vector)`
 - [ ] `Vector.prototype.normalize()`
+
+**Dot product computing**
+
+- [ ] `Vector.dot(one, another)`
+- [ ] `Vector.prototype.dot(vector)`
 
 **Distance computing**
 
