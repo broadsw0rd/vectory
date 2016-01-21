@@ -34,6 +34,7 @@
 - [x] [`new Vector(x, y)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L1)
 - [x] [`Vector.from([x, y])`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L8)
 - [x] [`Vector.fromAngle(angle, magnitude)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L12)
+- [ ] [`Vector.parse(string)`]
 
 **Addition**
 
@@ -102,10 +103,12 @@
 - [ ] `Vector.copy(vector)`
 - [ ] `Vector.prototype.copy()`
 
-**JSON convertion**
+**Convertion**
 
 - [ ] `Vector.toJSON(vector)`
 - [ ] `Vector.prototype.toJSON()`
+- [ ] `Vector.toString(vector)`
+- [ ] `Vector.prototype.toString()`
 
 
 **Equality**
