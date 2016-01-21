@@ -34,7 +34,7 @@
 - [x] [`new Vector(x, y)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L1)
 - [x] [`Vector.from([x, y])`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L8)
 - [x] [`Vector.fromAngle(angle, magnitude)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L12)
-- [ ] [`Vector.parse(string)`]
+- [ ] `Vector.parse(string)`
 
 **Addition**
 
