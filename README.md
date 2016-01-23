@@ -19,11 +19,10 @@
 ## Features
 
 - Simple - [32 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L32)
-- Lightweight - ? Kb
+- Lightweight - [0.8 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
 - Robust - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
 - Built for any environment
 - Designed with performance in mind and reviewed with [IRHydra](http://mrale.ph/irhydra/2/)
-- Abuse some hacks([1](https://github.com/WebKit/webkit/blob/master/Source/JavaScriptCore/inspector/InjectedScriptSource.js#L768), [2](https://kangax.github.io/nfe/#webkit-displayName)) to enhance your devtools experience
 
 ## Install & Usage
 
@@ -132,7 +131,7 @@
 Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v4.2.4
 
 ```
-> node ./bench/bench.js
+> node ./bench/index.js
 
 Vectory benchmark:
 
