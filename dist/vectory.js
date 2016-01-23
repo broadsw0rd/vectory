@@ -39,6 +39,10 @@ Vector.fromAngle = function (angle, magnitude) {
   return new Vector(magnitude * Math.cos(angle), magnitude * Math.sin(angle))
 }
 
+Vector.parse = function (string) {
+  return Vector.from(string.trim().replace(',', ' ').split(/\s+/).map(parseFloat))
+}
+
 Vector.add = function (one, another) {
   return one.add(another)
 }

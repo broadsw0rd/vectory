@@ -28,6 +28,14 @@ var benchmarks = {
     }
   }()),
 
+  'Vector.parse(string)': (function () {
+    var string = [rand(0, 100), rand(0, 100)].join()
+
+    return function () {
+      return Vector.parse(string)
+    }
+  }()),
+
   'Vector.add(one, another)': (function () {
     var one = new Vector(rand(0, 100), rand(0, 100))
     var another = new Vector(rand(0, 100), rand(0, 100))

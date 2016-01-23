@@ -18,8 +18,8 @@
 
 ## Features
 
-- Simple - [32 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L32)
-- Lightweight - [0.8 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
+- Simple - [44 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L44)
+- Lightweight - [0.8 Kb] Kb
 - Robust - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
 - Built for any environment
 - Designed with performance in mind and reviewed with [IRHydra](http://mrale.ph/irhydra/2/)
@@ -33,19 +33,19 @@
 - [x] [`new Vector(x, y)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L1)
 - [x] [`Vector.from([x, y])`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L8)
 - [x] [`Vector.fromAngle(angle, magnitude)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L12)
-- [ ] `Vector.parse(string)`
+- [x] [`Vector.parse(string)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L16)
 
 **Addition**
 
-- [x] [`Vector.add(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L16)
-- [x] [`Vector.prototype.add(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L20)
-- [x] [`Vector.iadd(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L24)
-- [x] [`Vector.prototype.iadd(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L28)
+- [x] [`Vector.add(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L20)
+- [x] [`Vector.prototype.add(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L24)
+- [x] [`Vector.iadd(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L28)
+- [x] [`Vector.prototype.iadd(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L32)
 
 **Substraction**
 
-- [x] [`Vector.sub(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L34)
-- [x] [`Vector.prototype.sub(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L38)
+- [x] [`Vector.sub(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L38)
+- [x] [`Vector.prototype.sub(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L42)
 - [ ] `Vector.isub(one, another)`
 - [ ] `Vector.prototype.isub(vector)`
 
@@ -135,15 +135,16 @@ Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v4.2.4
 
 Vectory benchmark:
 
-	√ Vector(x, y) x 48,651,883 ops/sec ±2.69% (82 runs sampled)
-	√ Vector.from([x, y]) x 41,785,230 ops/sec ±1.04% (89 runs sampled)
-	√ Vector.fromAngle(angle, magnitude) x 13,358,708 ops/sec ±0.79% (89 runs sampled)
-	√ Vector.add(one, another) x 46,021,776 ops/sec ±0.90% (90 runs sampled)
-	√ Vector#add(vector) x 48,284,295 ops/sec ±1.06% (91 runs sampled)
-	√ Vector.iadd(one, another) x 60,882,636 ops/sec ±1.00% (88 runs sampled)
-	√ Vector#iadd(vector) x 62,380,417 ops/sec ±1.22% (87 runs sampled)
-	√ Vector.sub(one, another) x 46,253,116 ops/sec ±0.92% (91 runs sampled)
-	√ Vector#sub(vector) x 45,501,181 ops/sec ±0.81% (87 runs sampled)
+	√ Vector(x, y) x 50,366,685 ops/sec ±2.58% (87 runs sampled)
+	√ Vector.from([x, y]) x 47,611,878 ops/sec ±1.77% (87 runs sampled)
+	√ Vector.fromAngle(angle, magnitude) x 13,044,574 ops/sec ±0.86% (90 runs sampled)
+	√ Vector.parse(string) x 935,430 ops/sec ±0.81% (90 runs sampled)
+	√ Vector.add(one, another) x 47,596,150 ops/sec ±0.68% (91 runs sampled)
+	√ Vector#add(vector) x 50,156,803 ops/sec ±0.85% (88 runs sampled)
+	√ Vector.iadd(one, another) x 61,788,722 ops/sec ±0.88% (91 runs sampled)
+	√ Vector#iadd(vector) x 63,903,805 ops/sec ±1.13% (91 runs sampled)
+	√ Vector.sub(one, another) x 47,381,781 ops/sec ±1.02% (89 runs sampled)
+	√ Vector#sub(vector) x 49,837,257 ops/sec ±1.29% (92 runs sampled)
 
 ```
 

@@ -43,6 +43,33 @@ describe('Creation', function () {
       expect(vector.y).to.be(1)
     })
   })
+
+  describe('Vector.parse(string)', function () {
+    it('should be a function', function () {
+      expect(Vector.parse).to.be.a(Function)
+    })
+    it('should return new vector from data', function () {
+      var vector = Vector.parse('1.1, 2.2')
+      expect(vector).to.be.a(Vector)
+      expect(vector.x).to.be(1.1)
+      expect(vector.y).to.be(2.2)
+
+      vector = Vector.parse('1.1,2.2')
+      expect(vector).to.be.a(Vector)
+      expect(vector.x).to.be(1.1)
+      expect(vector.y).to.be(2.2)
+
+      vector = Vector.parse('1.1 2.2')
+      expect(vector).to.be.a(Vector)
+      expect(vector.x).to.be(1.1)
+      expect(vector.y).to.be(2.2)
+
+      vector = Vector.parse(' 1.1 2.2 ')
+      expect(vector).to.be.a(Vector)
+      expect(vector.x).to.be(1.1)
+      expect(vector.y).to.be(2.2)
+    })
+  })
 })
 
 describe('Addition', function () {
