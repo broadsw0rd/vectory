@@ -20,15 +20,6 @@ describe('Vector(x, y)', function(){
   })
 })
 
-describe('Vector.VERSION', function(){
-  it('should be defined', function(){
-    expect(Vector.VERSION).to.be.ok()
-  })
-  it('should be a current version of library', function(){
-    expect(Vector.VERSION).to.be('0.0.1')
-  })
-})
-
 describe('Vector.from([x, y])', function(){
   it('should be defined', function(){
     expect(Vector.from).to.be.ok()

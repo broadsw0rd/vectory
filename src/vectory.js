@@ -3,7 +3,7 @@ function Vector (x, y) {
   this.y = y || 0
 }
 
-Vector.VERSION = '0.0.1'
+Vector.displayName = 'Vector'
 
 Vector.from = function (data) {
   return new Vector(data[0], data[1])
