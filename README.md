@@ -123,6 +123,10 @@
 - [ ] `Vector.prototype.yx`
 - [ ] `Vector.prototype.yy`
 
+**Iterator**
+
+- [ ] `Vector.prototype[Symbol.iterator]()`
+
 ## Benchmark
 
 Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v4.2.4
