@@ -39,7 +39,7 @@ describe('Creation', function () {
     it('should return new vector from angle and magnitude', function () {
       var vector = Vector.fromAngle(90 * (Math.PI / 180), 1)
       expect(vector).to.be.a(Vector)
-      expect(vector.x).to.be.below(Number.EPSILON)
+      expect(Math.round(vector.x)).to.be(0)
       expect(vector.y).to.be(1)
     })
   })
