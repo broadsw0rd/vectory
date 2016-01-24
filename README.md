@@ -2,19 +2,19 @@
 <h4 align="center">High performance, DevTools friendly, Crankshaft tolerant 2d vectors</h4>
 
 <p align="center">
-   <a href="https://travis-ci.org/broadsw0rd/vectory">
-      <img src="https://travis-ci.org/broadsw0rd/vectory.svg?branch=master" alt="Build Status"></img>
+   <a href="https://travis-ci.org/broadsw0rd/vectory" target="_blank">
+      <img src="https://travis-ci.org/broadsw0rd/vectory.svg?branch=master" alt="Build Status" target="_blank"></img>
    </a>
-   <a href='https://coveralls.io/github/broadsw0rd/vectory?branch=master'>
+   <a href='https://coveralls.io/github/broadsw0rd/vectory?branch=master' target="_blank">
       <img src='https://coveralls.io/repos/broadsw0rd/vectory/badge.svg?branch=master&service=github' alt='Coverage Status' />
    </a>
-   <a href="https://github.com/feross/standard">
+   <a href="https://github.com/feross/standard" target="_blank">
       <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat" alt="js-standard-style"></img>
    </a>
 </p>
 
 <p align="center">
-   <a href="https://saucelabs.com/u/fantabulous-js">
+   <a href="https://saucelabs.com/u/fantabulous-js" target="_blank">
       <img src="https://saucelabs.com/browser-matrix/fantabulous-js.svg" alt="Sauce Test Status"/>
    </a>
 </p>
