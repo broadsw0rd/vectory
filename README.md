@@ -157,3 +157,4 @@ Command | Description
 `npm run bench` | Run [benchmark](http://benchmarkjs.com/)
 `npm run test` | Run tests by [mocha](https://mochajs.org/) and compute code coverage by [istanbul](https://github.com/gotwarlost/istanbul)
 `npm run build` | Minify code by [UglifyJS](https://github.com/mishoo/UglifyJS)
+`npm run test-browser` | Make tests available from browser

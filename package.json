@@ -31,7 +31,8 @@
     "snazzy": "latest",
     "benchmark": "latest",
     "chalk": "latest",
-    "log-symbols": "latest"
+    "log-symbols": "latest",
+    "browserify": "latest"
   },
   "scripts": {
     "check": "snazzy src/vectory.js test/test.js bench/index.js",
@@ -39,6 +40,7 @@
     "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec test/test.js",
     "bench": "node ./bench/index.js",
     "build": "uglifyjs -c -m -- dist/vectory.js > dist/vectory.min.js",
+    "test-browser": "browserify test/test.js -o test/test-browser.js",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {}
