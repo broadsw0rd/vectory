@@ -21,7 +21,7 @@
 
 ## Features
 
-- Simple - [44 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L44)
+- Simple - [54 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L54)
 - Lightweight - [0.8 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
 - Robust - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
 - Built for [any](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L9) environment
@@ -49,8 +49,8 @@
 
 - [x] [`Vector.sub(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L38)
 - [x] [`Vector.prototype.sub(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L42)
-- [ ] `Vector.isub(one, another)`
-- [ ] `Vector.prototype.isub(vector)`
+- [x] [`Vector.isub(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L46)
+- [x] [`Vector.prototype.isub(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L50)
 
 **Multiplication**
 
@@ -138,16 +138,18 @@ Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v4.2.4
 
 Vectory benchmark:
 
-	√ Vector(x, y) x 50,366,685 ops/sec ±2.58% (87 runs sampled)
-	√ Vector.from([x, y]) x 47,611,878 ops/sec ±1.77% (87 runs sampled)
-	√ Vector.fromAngle(angle, magnitude) x 13,044,574 ops/sec ±0.86% (90 runs sampled)
-	√ Vector.parse(string) x 935,430 ops/sec ±0.81% (90 runs sampled)
-	√ Vector.add(one, another) x 47,596,150 ops/sec ±0.68% (91 runs sampled)
-	√ Vector#add(vector) x 50,156,803 ops/sec ±0.85% (88 runs sampled)
-	√ Vector.iadd(one, another) x 61,788,722 ops/sec ±0.88% (91 runs sampled)
-	√ Vector#iadd(vector) x 63,903,805 ops/sec ±1.13% (91 runs sampled)
-	√ Vector.sub(one, another) x 47,381,781 ops/sec ±1.02% (89 runs sampled)
-	√ Vector#sub(vector) x 49,837,257 ops/sec ±1.29% (92 runs sampled)
+	√ Vector(x, y) x 49,756,491 ops/sec ±2.67% (83 runs sampled)
+	√ Vector.from([x, y]) x 47,844,813 ops/sec ±1.04% (90 runs sampled)
+	√ Vector.fromAngle(angle, magnitude) x 13,322,042 ops/sec ±0.83% (89 runs sampled)
+	√ Vector.parse(string) x 865,386 ops/sec ±0.80% (87 runs sampled)
+	√ Vector.add(one, another) x 46,511,780 ops/sec ±0.91% (91 runs sampled)
+	√ Vector#add(vector) x 49,658,076 ops/sec ±0.90% (88 runs sampled)
+	√ Vector.iadd(one, another) x 60,715,700 ops/sec ±0.97% (91 runs sampled)
+	√ Vector#iadd(vector) x 63,456,765 ops/sec ±1.02% (90 runs sampled)
+	√ Vector.sub(one, another) x 46,736,193 ops/sec ±0.79% (88 runs sampled)
+	√ Vector#sub(vector) x 50,081,805 ops/sec ±0.68% (90 runs sampled)
+	√ Vector.isub(one, another) x 59,493,960 ops/sec ±1.37% (87 runs sampled)
+	√ Vector#isub(vector) x 63,903,662 ops/sec ±0.89% (90 runs sampled)
 
 ```
 

@@ -42,3 +42,13 @@ Vector.sub = function (one, another) {
 Vector.prototype.sub = function (vector) {
   return new Vector(this.x - vector.x, this.y - vector.y)
 }
+
+Vector.isub = function (one, another) {
+  return one.isub(another)
+}
+
+Vector.prototype.isub = function (vector) {
+  this.x -= vector.x
+  this.y -= vector.y
+  return this
+}

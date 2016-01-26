@@ -168,4 +168,42 @@ describe('Substraction', function () {
       expect(result.y).to.be(2)
     })
   })
+
+  describe('Vector.isub(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.isub).to.be.a(Function)
+    })
+    it('should substract second vector from first', function () {
+      var one = new Vector(3, 4)
+      var another = new Vector(1, 2)
+      Vector.isub(one, another)
+      expect(one.x).to.be(2)
+      expect(one.y).to.be(2)
+    })
+    it('should return first vector', function () {
+      var one = new Vector(3, 4)
+      var another = new Vector(1, 2)
+      var result = Vector.isub(one, another)
+      expect(result).to.be(one)
+    })
+  })
+
+  describe('Vector#isub(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.isub).to.be.a(Function)
+    })
+    it('should substract vector from self', function () {
+      var one = new Vector(3, 4)
+      var another = new Vector(1, 2)
+      one.isub(another)
+      expect(one.x).to.be(2)
+      expect(one.y).to.be(2)
+    })
+    it('should return self instance', function () {
+      var one = new Vector(3, 4)
+      var another = new Vector(1, 2)
+      var result = one.isub(another)
+      expect(result).to.be(one)
+    })
+  })
 })
