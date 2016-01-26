@@ -52,3 +52,11 @@ Vector.prototype.isub = function (vector) {
   this.y -= vector.y
   return this
 }
+
+Vector.mul = function (vector, scalar) {
+  return vector.mul(scalar)
+}
+
+Vector.prototype.mul = function (scalar) {
+  return new Vector(this.x * scalar, this.y * scalar)
+}

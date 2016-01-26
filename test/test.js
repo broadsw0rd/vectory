@@ -207,3 +207,31 @@ describe('Substraction', function () {
     })
   })
 })
+
+describe('Multiplication', function () {
+  describe('Vector.mul(vector, scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.mul).to.be.a(Function)
+    })
+    it('should multiply vector on scalar', function () {
+      var vector = new Vector(2, 3)
+      var scalar = 2
+      var result = Vector.mul(vector, scalar)
+      expect(result.x).to.be(4)
+      expect(result.y).to.be(6)
+    })
+  })
+
+  describe('Vector#mul(scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.mul).to.be.a(Function)
+    })
+    it('should multiply self on scalar', function () {
+      var vector = new Vector(2, 3)
+      var scalar = 2
+      var result = vector.mul(scalar)
+      expect(result.x).to.be(4)
+      expect(result.y).to.be(6)
+    })
+  })
+})

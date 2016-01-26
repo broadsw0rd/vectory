@@ -106,6 +106,24 @@ var benchmarks = {
     return function () {
       return one.isub(another)
     }
+  }()),
+
+  'Vector.mul(vector, scalar)': (function () {
+    var vector = new Vector(rand(0, 100), rand(0, 100))
+    var scalar = 2
+
+    return function () {
+      return Vector.mul(vector, scalar)
+    }
+  }()),
+
+  'Vector#mul(vector)': (function () {
+    var vector = new Vector(rand(0, 100), rand(0, 100))
+    var scalar = 2
+
+    return function () {
+      return vector.mul(scalar)
+    }
   }())
 }
 
