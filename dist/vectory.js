@@ -16,7 +16,7 @@
     root[name] = factory()
   }
 }(
-'Vectory',
+'Vector',
 // better `this` reference, inspired [here](https://github.com/facebook/regenerator/blob/master/runtime.js#L662)
 typeof global === 'object' ? global : 
 /* istanbul ignore next */
