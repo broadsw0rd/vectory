@@ -60,3 +60,13 @@ Vector.mul = function (vector, scalar) {
 Vector.prototype.mul = function (scalar) {
   return new Vector(this.x * scalar, this.y * scalar)
 }
+
+Vector.imul = function (vector, scalar) {
+  return vector.imul(scalar)
+}
+
+Vector.prototype.imul = function (scalar) {
+  this.x *= scalar
+  this.y *= scalar
+  return this
+}

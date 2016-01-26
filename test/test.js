@@ -234,4 +234,42 @@ describe('Multiplication', function () {
       expect(result.y).to.be(6)
     })
   })
+
+  describe('Vector.imul(vector, scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.imul).to.be.a(Function)
+    })
+    it('should multiply vector on scalar', function () {
+      var vector = new Vector(2, 3)
+      var scalar = 2
+      var result = Vector.imul(vector, scalar)
+      expect(result.x).to.be(4)
+      expect(result.y).to.be(6)
+    })
+    it('should return vector', function () {
+      var vector = new Vector(2, 3)
+      var scalar = 2
+      var result = Vector.imul(vector, scalar)
+      expect(result).to.be(vector)
+    })
+  })
+
+  describe('Vector#imul(scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.imul).to.be.a(Function)
+    })
+    it('should multiply self on scalar', function () {
+      var vector = new Vector(2, 3)
+      var scalar = 2
+      var result = vector.imul(scalar)
+      expect(result.x).to.be(4)
+      expect(result.y).to.be(6)
+    })
+    it('should return self instance', function () {
+      var vector = new Vector(2, 3)
+      var scalar = 2
+      var result = vector.imul(scalar)
+      expect(result).to.be(vector)
+    })
+  })
 })
