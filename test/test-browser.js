@@ -18,7 +18,7 @@
     root[name] = factory()
   }
 }(
-'Vectory',
+'Vector',
 // better `this` reference, inspired [here](https://github.com/facebook/regenerator/blob/master/runtime.js#L662)
 typeof global === 'object' ? global : 
 /* istanbul ignore next */
@@ -69,6 +69,34 @@ Vector.sub = function (one, another) {
 
 Vector.prototype.sub = function (vector) {
   return new Vector(this.x - vector.x, this.y - vector.y)
+}
+
+Vector.isub = function (one, another) {
+  return one.isub(another)
+}
+
+Vector.prototype.isub = function (vector) {
+  this.x -= vector.x
+  this.y -= vector.y
+  return this
+}
+
+Vector.mul = function (vector, scalar) {
+  return vector.mul(scalar)
+}
+
+Vector.prototype.mul = function (scalar) {
+  return new Vector(this.x * scalar, this.y * scalar)
+}
+
+Vector.imul = function (vector, scalar) {
+  return vector.imul(scalar)
+}
+
+Vector.prototype.imul = function (scalar) {
+  this.x *= scalar
+  this.y *= scalar
+  return this
 }
 
 return Vector
@@ -3201,6 +3229,110 @@ describe('Substraction', function () {
       expect(result).to.be.a(Vector)
       expect(result.x).to.be(2)
       expect(result.y).to.be(2)
+    })
+  })
+
+  describe('Vector.isub(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.isub).to.be.a(Function)
+    })
+    it('should substract second vector from first', function () {
+      var one = new Vector(3, 4)
+      var another = new Vector(1, 2)
+      Vector.isub(one, another)
+      expect(one.x).to.be(2)
+      expect(one.y).to.be(2)
+    })
+    it('should return first vector', function () {
+      var one = new Vector(3, 4)
+      var another = new Vector(1, 2)
+      var result = Vector.isub(one, another)
+      expect(result).to.be(one)
+    })
+  })
+
+  describe('Vector#isub(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.isub).to.be.a(Function)
+    })
+    it('should substract vector from self', function () {
+      var one = new Vector(3, 4)
+      var another = new Vector(1, 2)
+      one.isub(another)
+      expect(one.x).to.be(2)
+      expect(one.y).to.be(2)
+    })
+    it('should return self instance', function () {
+      var one = new Vector(3, 4)
+      var another = new Vector(1, 2)
+      var result = one.isub(another)
+      expect(result).to.be(one)
+    })
+  })
+})
+
+describe('Multiplication', function () {
+  describe('Vector.mul(vector, scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.mul).to.be.a(Function)
+    })
+    it('should multiply vector on scalar', function () {
+      var vector = new Vector(2, 3)
+      var scalar = 2
+      var result = Vector.mul(vector, scalar)
+      expect(result.x).to.be(4)
+      expect(result.y).to.be(6)
+    })
+  })
+
+  describe('Vector#mul(scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.mul).to.be.a(Function)
+    })
+    it('should multiply self on scalar', function () {
+      var vector = new Vector(2, 3)
+      var scalar = 2
+      var result = vector.mul(scalar)
+      expect(result.x).to.be(4)
+      expect(result.y).to.be(6)
+    })
+  })
+
+  describe('Vector.imul(vector, scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.imul).to.be.a(Function)
+    })
+    it('should multiply vector on scalar', function () {
+      var vector = new Vector(2, 3)
+      var scalar = 2
+      var result = Vector.imul(vector, scalar)
+      expect(result.x).to.be(4)
+      expect(result.y).to.be(6)
+    })
+    it('should return vector', function () {
+      var vector = new Vector(2, 3)
+      var scalar = 2
+      var result = Vector.imul(vector, scalar)
+      expect(result).to.be(vector)
+    })
+  })
+
+  describe('Vector#imul(scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.imul).to.be.a(Function)
+    })
+    it('should multiply self on scalar', function () {
+      var vector = new Vector(2, 3)
+      var scalar = 2
+      var result = vector.imul(scalar)
+      expect(result.x).to.be(4)
+      expect(result.y).to.be(6)
+    })
+    it('should return self instance', function () {
+      var vector = new Vector(2, 3)
+      var scalar = 2
+      var result = vector.imul(scalar)
+      expect(result).to.be(vector)
     })
   })
 })
