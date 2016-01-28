@@ -66,6 +66,11 @@
 - [ ] `Vector.idiv(vector, scalar)`
 - [ ] `Vector.prototype.idiv(scalar)`
 
+**Linear interpolation**
+
+- [ ] `Vector.lerp(one, another, t)`
+- [ ] `Vector.prototype.lerp(vector, t)`
+
 **Normalization**
 
 - [ ] `Vector.normalized(vector)`
