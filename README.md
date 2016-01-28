@@ -83,6 +83,11 @@
 - [ ] `Vector.dot(one, another)`
 - [ ] `Vector.prototype.dot(vector)`
 
+**Cross product computing**
+
+- [ ] `Vector.cross(one, another)`
+- [ ] `Vector.prototype.cross(vector)`
+
 **Distance computing**
 
 - [ ] `Vector.distance(one, another)`
