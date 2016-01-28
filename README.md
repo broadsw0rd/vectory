@@ -107,6 +107,8 @@
 
 **Resetting**
 
+- [ ] `Vector.reset(one, another)`
+- [ ] `Vector.prototype.reset(vector)`
 - [ ] `Vector.zero(vector)`
 - [ ] `Vector.prototype.zero()`
 
