@@ -21,7 +21,7 @@
 
 ## Features
 
-- Simple - [72 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L72)
+- Simple - [100 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L100)
 - Lightweight - [0.8 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
 - Robust - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
 - Built for [any](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L9) environment
@@ -78,22 +78,22 @@
 - [ ] `Vector.normalize(vector)`
 - [ ] `Vector.prototype.normalize()`
 
-**Magnitude computing**
+**Magnitude**
 
 - [ ] `Vector.magnitude(vector)`
 - [ ] `Vector.prototype.magnitude()`
 
-**Dot product computing**
+**Dot product**
 
 - [ ] `Vector.dot(one, another)`
 - [ ] `Vector.prototype.dot(vector)`
 
-**Cross product computing**
+**Cross product**
 
 - [ ] `Vector.cross(one, another)`
 - [ ] `Vector.prototype.cross(vector)`
 
-**Distance computing**
+**Distance**
 
 - [ ] `Vector.distance(one, another)`
 - [ ] `Vector.prototype.distance(vector)`

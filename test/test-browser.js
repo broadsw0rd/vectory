@@ -81,7 +81,7 @@ Vector.prototype.isub = function (vector) {
   return this
 }
 
-Vector.mul = function (vector, scalar) {
+Vector.mul = function (scalar, vector) {
   return vector.mul(scalar)
 }
 
@@ -89,7 +89,7 @@ Vector.prototype.mul = function (scalar) {
   return new Vector(this.x * scalar, this.y * scalar)
 }
 
-Vector.imul = function (vector, scalar) {
+Vector.imul = function (scalar, vector) {
   return vector.imul(scalar)
 }
 
@@ -97,6 +97,34 @@ Vector.prototype.imul = function (scalar) {
   this.x *= scalar
   this.y *= scalar
   return this
+}
+
+Vector.div = function (scalar, vector) {
+  return vector.div(scalar)
+}
+
+Vector.prototype.div = function (scalar) {
+  return new Vector(this.x / scalar, this.y / scalar)
+}
+
+Vector.idiv = function (scalar, vector) {
+  return vector.idiv(scalar)
+}
+
+Vector.prototype.idiv = function (scalar) {
+  this.x /= scalar
+  this.y /= scalar
+  return this
+}
+
+Vector.lerp = function (one, another, t) {
+  return one.lerp(another, t)
+}
+
+Vector.prototype.lerp = function (vector, t) {
+  var x = (1 - t) * this.x + t * vector.x
+  var y = (1 - t) * this.y + t * vector.y
+  return new Vector(x, y)
 }
 
 return Vector
@@ -3272,14 +3300,14 @@ describe('Substraction', function () {
 })
 
 describe('Multiplication', function () {
-  describe('Vector.mul(vector, scalar)', function () {
+  describe('Vector.mul(scalar, vector)', function () {
     it('should be a function', function () {
       expect(Vector.mul).to.be.a(Function)
     })
     it('should multiply vector on scalar', function () {
       var vector = new Vector(2, 3)
       var scalar = 2
-      var result = Vector.mul(vector, scalar)
+      var result = Vector.mul(scalar, vector)
       expect(result.x).to.be(4)
       expect(result.y).to.be(6)
     })
@@ -3298,21 +3326,21 @@ describe('Multiplication', function () {
     })
   })
 
-  describe('Vector.imul(vector, scalar)', function () {
+  describe('Vector.imul(scalar, vector)', function () {
     it('should be a function', function () {
       expect(Vector.imul).to.be.a(Function)
     })
     it('should multiply vector on scalar', function () {
       var vector = new Vector(2, 3)
       var scalar = 2
-      var result = Vector.imul(vector, scalar)
+      var result = Vector.imul(scalar, vector)
       expect(result.x).to.be(4)
       expect(result.y).to.be(6)
     })
     it('should return vector', function () {
       var vector = new Vector(2, 3)
       var scalar = 2
-      var result = Vector.imul(vector, scalar)
+      var result = Vector.imul(scalar, vector)
       expect(result).to.be(vector)
     })
   })
@@ -3333,6 +3361,102 @@ describe('Multiplication', function () {
       var scalar = 2
       var result = vector.imul(scalar)
       expect(result).to.be(vector)
+    })
+  })
+})
+
+describe('Division', function () {
+  describe('Vector.div(scalar, vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.div).to.be.a(Function)
+    })
+    it('should divide vector on scalar', function () {
+      var vector = new Vector(4, 6)
+      var scalar = 2
+      var result = Vector.div(scalar, vector)
+      expect(result.x).to.be(2)
+      expect(result.y).to.be(3)
+    })
+  })
+
+  describe('Vector.prototype.div(scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.div).to.be.a(Function)
+    })
+    it('should divide self on scalar', function () {
+      var vector = new Vector(4, 6)
+      var scalar = 2
+      var result = vector.div(scalar)
+      expect(result.x).to.be(2)
+      expect(result.y).to.be(3)
+    })
+  })
+
+  describe('Vector.idiv(scalar, vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.idiv).to.be.a(Function)
+    })
+    it('should multiply vector on scalar', function () {
+      var vector = new Vector(4, 6)
+      var scalar = 2
+      var result = Vector.idiv(scalar, vector)
+      expect(result.x).to.be(2)
+      expect(result.y).to.be(3)
+    })
+    it('should return vector', function () {
+      var vector = new Vector(4, 6)
+      var scalar = 2
+      var result = Vector.idiv(scalar, vector)
+      expect(result).to.be(vector)
+    })
+  })
+
+  describe('Vector#idiv(scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.idiv).to.be.a(Function)
+    })
+    it('should multiply self on scalar', function () {
+      var vector = new Vector(4, 6)
+      var scalar = 2
+      var result = vector.idiv(scalar)
+      expect(result.x).to.be(2)
+      expect(result.y).to.be(3)
+    })
+    it('should return self instance', function () {
+      var vector = new Vector(4, 6)
+      var scalar = 2
+      var result = vector.idiv(scalar)
+      expect(result).to.be(vector)
+    })
+  })
+})
+
+describe('Linear interpolation', function () {
+  describe('Vector.lerp(one, another, t)', function () {
+    it('should be a function', function () {
+      expect(Vector.lerp).to.be.a(Function)
+    })
+    it('should return linear interpolant between the vectors', function () {
+      var one = new Vector(2, 2)
+      var another = new Vector(4, 4)
+      var time = 0.5
+      var result = Vector.lerp(one, another, time)
+      expect(result.x).to.be(3)
+      expect(result.y).to.be(3)
+    })
+  })
+
+  describe('Vector.prototype.lerp(vector, t)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.lerp).to.be.a(Function)
+    })
+    it('should return linear interpolant between the vectors', function () {
+      var one = new Vector(2, 2)
+      var another = new Vector(4, 4)
+      var time = 0.5
+      var result = one.lerp(another, time)
+      expect(result.x).to.be(3)
+      expect(result.y).to.be(3)
     })
   })
 })
