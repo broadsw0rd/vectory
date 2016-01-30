@@ -339,3 +339,33 @@ describe('Division', function () {
     })
   })
 })
+
+describe('Linear interpolation', function () {
+  describe('Vector.lerp(one, another, t)', function () {
+    it('should be a function', function () {
+      expect(Vector.lerp).to.be.a(Function)
+    })
+    it('should return linear interpolant between the vectors', function () {
+      var one = new Vector(2, 2)
+      var another = new Vector(4, 4)
+      var time = 0.5
+      var result = Vector.lerp(one, another, time)
+      expect(result.x).to.be(3)
+      expect(result.y).to.be(3)
+    })
+  })
+
+  describe('Vector.prototype.lerp(vector, t)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.lerp).to.be.a(Function)
+    })
+    it('should return linear interpolant between the vectors', function () {
+      var one = new Vector(2, 2)
+      var another = new Vector(4, 4)
+      var time = 0.5
+      var result = one.lerp(another, time)
+      expect(result.x).to.be(3)
+      expect(result.y).to.be(3)
+    })
+  })
+})
