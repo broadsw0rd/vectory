@@ -78,6 +78,11 @@
 - [ ] `Vector.normalize(vector)`
 - [ ] `Vector.prototype.normalize()`
 
+**Magnitude computing**
+
+- [ ] `Vector.magnitude(vector)`
+- [ ] `Vector.prototype.magnitude()`
+
 **Dot product computing**
 
 - [ ] `Vector.dot(one, another)`
@@ -92,11 +97,6 @@
 
 - [ ] `Vector.distance(one, another)`
 - [ ] `Vector.prototype.distance(vector)`
-
-**Magnitude computing**
-
-- [ ] `Vector.magnitude(vector)`
-- [ ] `Vector.prototype.magnitude()`
 
 **Angle computing**
 
@@ -127,8 +127,8 @@
 
 **Equality**
 
-- [ ] `Vector.equal(one, another)`
-- [ ] `Vector.protototype.equal(vector)`
+- [ ] `Vector.equals(one, another)`
+- [ ] `Vector.protototype.equals(vector)`
 
 **Swizzling**
 
