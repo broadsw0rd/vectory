@@ -63,8 +63,8 @@
 
 - [x] [`Vector.div(vector, scalar)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L74)
 - [x] [`Vector.prototype.div(scalar)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L78)
-- [ ] `Vector.idiv(vector, scalar)`
-- [ ] `Vector.prototype.idiv(scalar)`
+- [x] [`Vector.idiv(vector, scalar)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L82)
+- [x] [`Vector.prototype.idiv(scalar)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L86)
 
 **Linear interpolation**
 
@@ -150,24 +150,26 @@ Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v4.2.4
 
 Vectory benchmark:
 
-	√ Vector(x, y) x 47,735,955 ops/sec ±2.64% (85 runs sampled)
-	√ Vector.from([x, y]) x 48,252,081 ops/sec ±0.69% (92 runs sampled)
-	√ Vector.fromAngle(angle, magnitude) x 13,389,443 ops/sec ±0.82% (91 runs sampled)
-	√ Vector.parse(string) x 877,026 ops/sec ±0.55% (91 runs sampled)
-	√ Vector.add(one, another) x 46,152,677 ops/sec ±0.99% (90 runs sampled)
-	√ Vector#add(vector) x 48,790,259 ops/sec ±1.06% (90 runs sampled)
-	√ Vector.iadd(one, another) x 60,709,919 ops/sec ±0.87% (89 runs sampled)
-	√ Vector#iadd(vector) x 62,657,452 ops/sec ±1.33% (84 runs sampled)
-	√ Vector.sub(one, another) x 45,794,132 ops/sec ±1.54% (91 runs sampled)
-	√ Vector#sub(vector) x 49,865,291 ops/sec ±0.84% (89 runs sampled)
-	√ Vector.isub(one, another) x 60,261,634 ops/sec ±0.88% (91 runs sampled)
-	√ Vector#isub(vector) x 63,105,631 ops/sec ±1.11% (87 runs sampled)
-	√ Vector.mul(vector, scalar) x 47,609,123 ops/sec ±0.62% (91 runs sampled)
-	√ Vector#mul(vector) x 49,621,452 ops/sec ±0.83% (89 runs sampled)
-	√ Vector.imul(vector, scalar) x 62,808,549 ops/sec ±0.89% (91 runs sampled)
-	√ Vector#imul(vector) x 66,804,311 ops/sec ±1.17% (86 runs sampled)
-	√ Vector.div(vector, scalar) x 45,581,733 ops/sec ±1.85% (87 runs sampled)
-	√ Vector#div(vector) x 47,474,648 ops/sec ±0.79% (91 runs sampled)
+	√ Vector(x, y) x 50,351,101 ops/sec ±2.35% (88 runs sampled)
+	√ Vector.from([x, y]) x 48,615,357 ops/sec ±0.90% (87 runs sampled)
+	√ Vector.fromAngle(angle, magnitude) x 13,047,615 ops/sec ±0.74% (91 runs sampled)
+	√ Vector.parse(string) x 929,819 ops/sec ±0.67% (81 runs sampled)
+	√ Vector.add(one, another) x 47,371,483 ops/sec ±0.79% (92 runs sampled)
+	√ Vector#add(vector) x 50,056,576 ops/sec ±0.91% (90 runs sampled)
+	√ Vector.iadd(one, another) x 60,886,457 ops/sec ±0.99% (89 runs sampled)
+	√ Vector#iadd(vector) x 63,957,641 ops/sec ±1.03% (85 runs sampled)
+	√ Vector.sub(one, another) x 46,581,980 ops/sec ±2.85% (90 runs sampled)
+	√ Vector#sub(vector) x 49,902,905 ops/sec ±0.78% (88 runs sampled)
+	√ Vector.isub(one, another) x 61,176,032 ops/sec ±0.87% (88 runs sampled)
+	√ Vector#isub(vector) x 63,685,387 ops/sec ±1.07% (86 runs sampled)
+	√ Vector.mul(vector, scalar) x 48,266,420 ops/sec ±0.65% (93 runs sampled)
+	√ Vector#mul(vector) x 50,296,578 ops/sec ±0.75% (92 runs sampled)
+	√ Vector.imul(vector, scalar) x 63,564,453 ops/sec ±0.74% (86 runs sampled)
+	√ Vector#imul(vector) x 66,604,544 ops/sec ±1.30% (88 runs sampled)
+	√ Vector.div(vector, scalar) x 47,211,631 ops/sec ±0.76% (92 runs sampled)
+	√ Vector#div(vector) x 48,474,559 ops/sec ±1.00% (87 runs sampled)
+	√ Vector.idiv(vector, scalar) x 61,674,295 ops/sec ±0.98% (92 runs sampled)
+	√ Vector#idiv(vector) x 64,395,042 ops/sec ±1.02% (88 runs sampled)
 
 ```
 

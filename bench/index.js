@@ -160,6 +160,24 @@ var benchmarks = {
     return function () {
       return vector.div(scalar)
     }
+  }()),
+
+  'Vector.idiv(vector, scalar)': (function () {
+    var vector = new Vector(rand(0, 100), rand(0, 100))
+    var scalar = 2
+
+    return function () {
+      return Vector.idiv(vector, scalar)
+    }
+  }()),
+
+  'Vector#idiv(vector)': (function () {
+    var vector = new Vector(rand(0, 100), rand(0, 100))
+    var scalar = 2
+
+    return function () {
+      return vector.idiv(scalar)
+    }
   }())
 }
 

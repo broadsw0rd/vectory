@@ -287,6 +287,7 @@ describe('Division', function () {
       expect(result.y).to.be(3)
     })
   })
+
   describe('Vector.prototype.div(scalar)', function () {
     it('should be a function', function () {
       expect(Vector.prototype.div).to.be.a(Function)
@@ -297,6 +298,44 @@ describe('Division', function () {
       var result = vector.div(scalar)
       expect(result.x).to.be(2)
       expect(result.y).to.be(3)
+    })
+  })
+
+  describe('Vector.idiv(vector, scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.idiv).to.be.a(Function)
+    })
+    it('should multiply vector on scalar', function () {
+      var vector = new Vector(4, 6)
+      var scalar = 2
+      var result = Vector.idiv(vector, scalar)
+      expect(result.x).to.be(2)
+      expect(result.y).to.be(3)
+    })
+    it('should return vector', function () {
+      var vector = new Vector(4, 6)
+      var scalar = 2
+      var result = Vector.idiv(vector, scalar)
+      expect(result).to.be(vector)
+    })
+  })
+
+  describe('Vector#idiv(scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.idiv).to.be.a(Function)
+    })
+    it('should multiply self on scalar', function () {
+      var vector = new Vector(4, 6)
+      var scalar = 2
+      var result = vector.idiv(scalar)
+      expect(result.x).to.be(2)
+      expect(result.y).to.be(3)
+    })
+    it('should return self instance', function () {
+      var vector = new Vector(4, 6)
+      var scalar = 2
+      var result = vector.idiv(scalar)
+      expect(result).to.be(vector)
     })
   })
 })

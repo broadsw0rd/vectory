@@ -78,3 +78,13 @@ Vector.div = function (vector, scalar) {
 Vector.prototype.div = function (scalar) {
   return new Vector(this.x / scalar, this.y / scalar)
 }
+
+Vector.idiv = function (vector, scalar) {
+  return vector.idiv(scalar)
+}
+
+Vector.prototype.idiv = function (scalar) {
+  this.x /= scalar
+  this.y /= scalar
+  return this
+}
