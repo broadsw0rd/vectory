@@ -108,12 +108,12 @@ var benchmarks = {
     }
   }()),
 
-  'Vector.mul(vector, scalar)': (function () {
+  'Vector.mul(scalar, vector)': (function () {
     var vector = new Vector(rand(0, 100), rand(0, 100))
     var scalar = 2
 
     return function () {
-      return Vector.mul(vector, scalar)
+      return Vector.mul(scalar, vector)
     }
   }()),
 
@@ -126,12 +126,12 @@ var benchmarks = {
     }
   }()),
 
-  'Vector.imul(vector, scalar)': (function () {
+  'Vector.imul(scalar, vector)': (function () {
     var vector = new Vector(rand(0, 100), rand(0, 100))
     var scalar = 2
 
     return function () {
-      return Vector.imul(vector, scalar)
+      return Vector.imul(scalar, vector)
     }
   }()),
 
@@ -144,12 +144,12 @@ var benchmarks = {
     }
   }()),
 
-  'Vector.div(vector, scalar)': (function () {
+  'Vector.div(scalar, vector)': (function () {
     var vector = new Vector(rand(0, 100), rand(0, 100))
     var scalar = 2
 
     return function () {
-      return Vector.div(vector, scalar)
+      return Vector.div(scalar, vector)
     }
   }()),
 
@@ -162,12 +162,12 @@ var benchmarks = {
     }
   }()),
 
-  'Vector.idiv(vector, scalar)': (function () {
+  'Vector.idiv(scalar, vector)': (function () {
     var vector = new Vector(rand(0, 100), rand(0, 100))
     var scalar = 2
 
     return function () {
-      return Vector.idiv(vector, scalar)
+      return Vector.idiv(scalar, vector)
     }
   }()),
 

@@ -209,14 +209,14 @@ describe('Substraction', function () {
 })
 
 describe('Multiplication', function () {
-  describe('Vector.mul(vector, scalar)', function () {
+  describe('Vector.mul(scalar, vector)', function () {
     it('should be a function', function () {
       expect(Vector.mul).to.be.a(Function)
     })
     it('should multiply vector on scalar', function () {
       var vector = new Vector(2, 3)
       var scalar = 2
-      var result = Vector.mul(vector, scalar)
+      var result = Vector.mul(scalar, vector)
       expect(result.x).to.be(4)
       expect(result.y).to.be(6)
     })
@@ -235,21 +235,21 @@ describe('Multiplication', function () {
     })
   })
 
-  describe('Vector.imul(vector, scalar)', function () {
+  describe('Vector.imul(scalar, vector)', function () {
     it('should be a function', function () {
       expect(Vector.imul).to.be.a(Function)
     })
     it('should multiply vector on scalar', function () {
       var vector = new Vector(2, 3)
       var scalar = 2
-      var result = Vector.imul(vector, scalar)
+      var result = Vector.imul(scalar, vector)
       expect(result.x).to.be(4)
       expect(result.y).to.be(6)
     })
     it('should return vector', function () {
       var vector = new Vector(2, 3)
       var scalar = 2
-      var result = Vector.imul(vector, scalar)
+      var result = Vector.imul(scalar, vector)
       expect(result).to.be(vector)
     })
   })
@@ -275,14 +275,14 @@ describe('Multiplication', function () {
 })
 
 describe('Division', function () {
-  describe('Vector.div(vector, scalar)', function () {
+  describe('Vector.div(scalar, vector)', function () {
     it('should be a function', function () {
       expect(Vector.div).to.be.a(Function)
     })
     it('should divide vector on scalar', function () {
       var vector = new Vector(4, 6)
       var scalar = 2
-      var result = Vector.div(vector, scalar)
+      var result = Vector.div(scalar, vector)
       expect(result.x).to.be(2)
       expect(result.y).to.be(3)
     })
@@ -301,21 +301,21 @@ describe('Division', function () {
     })
   })
 
-  describe('Vector.idiv(vector, scalar)', function () {
+  describe('Vector.idiv(scalar, vector)', function () {
     it('should be a function', function () {
       expect(Vector.idiv).to.be.a(Function)
     })
     it('should multiply vector on scalar', function () {
       var vector = new Vector(4, 6)
       var scalar = 2
-      var result = Vector.idiv(vector, scalar)
+      var result = Vector.idiv(scalar, vector)
       expect(result.x).to.be(2)
       expect(result.y).to.be(3)
     })
     it('should return vector', function () {
       var vector = new Vector(4, 6)
       var scalar = 2
-      var result = Vector.idiv(vector, scalar)
+      var result = Vector.idiv(scalar, vector)
       expect(result).to.be(vector)
     })
   })

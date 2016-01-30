@@ -54,16 +54,16 @@
 
 **Multiplication**
 
-- [x] [`Vector.mul(vector, scalar)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L56)
+- [x] [`Vector.mul(scalar, vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L56)
 - [x] [`Vector.prototype.mul(scalar)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L60)
-- [x] [`Vector.imul(vector, scalar)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L64)
+- [x] [`Vector.imul(scalar, vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L64)
 - [x] [`Vector.prototype.imul(scalar)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L68)
 
 **Division**
 
-- [x] [`Vector.div(vector, scalar)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L74)
+- [x] [`Vector.div(scalar, vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L74)
 - [x] [`Vector.prototype.div(scalar)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L78)
-- [x] [`Vector.idiv(vector, scalar)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L82)
+- [x] [`Vector.idiv(scalar, vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L82)
 - [x] [`Vector.prototype.idiv(scalar)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L86)
 
 **Linear interpolation**
@@ -162,13 +162,13 @@ Vectory benchmark:
 	√ Vector#sub(vector) x 49,902,905 ops/sec ±0.78% (88 runs sampled)
 	√ Vector.isub(one, another) x 61,176,032 ops/sec ±0.87% (88 runs sampled)
 	√ Vector#isub(vector) x 63,685,387 ops/sec ±1.07% (86 runs sampled)
-	√ Vector.mul(vector, scalar) x 48,266,420 ops/sec ±0.65% (93 runs sampled)
+	√ Vector.mul(scalar, vector) x 48,266,420 ops/sec ±0.65% (93 runs sampled)
 	√ Vector#mul(vector) x 50,296,578 ops/sec ±0.75% (92 runs sampled)
-	√ Vector.imul(vector, scalar) x 63,564,453 ops/sec ±0.74% (86 runs sampled)
+	√ Vector.imul(scalar, vector) x 63,564,453 ops/sec ±0.74% (86 runs sampled)
 	√ Vector#imul(vector) x 66,604,544 ops/sec ±1.30% (88 runs sampled)
-	√ Vector.div(vector, scalar) x 47,211,631 ops/sec ±0.76% (92 runs sampled)
+	√ Vector.div(scalar, vector) x 47,211,631 ops/sec ±0.76% (92 runs sampled)
 	√ Vector#div(vector) x 48,474,559 ops/sec ±1.00% (87 runs sampled)
-	√ Vector.idiv(vector, scalar) x 61,674,295 ops/sec ±0.98% (92 runs sampled)
+	√ Vector.idiv(scalar, vector) x 61,674,295 ops/sec ±0.98% (92 runs sampled)
 	√ Vector#idiv(vector) x 64,395,042 ops/sec ±1.02% (88 runs sampled)
 
 ```

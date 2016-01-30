@@ -79,7 +79,7 @@ Vector.prototype.isub = function (vector) {
   return this
 }
 
-Vector.mul = function (vector, scalar) {
+Vector.mul = function (scalar, vector) {
   return vector.mul(scalar)
 }
 
@@ -87,7 +87,7 @@ Vector.prototype.mul = function (scalar) {
   return new Vector(this.x * scalar, this.y * scalar)
 }
 
-Vector.imul = function (vector, scalar) {
+Vector.imul = function (scalar, vector) {
   return vector.imul(scalar)
 }
 
@@ -97,7 +97,7 @@ Vector.prototype.imul = function (scalar) {
   return this
 }
 
-Vector.div = function (vector, scalar) {
+Vector.div = function (scalar, vector) {
   return vector.div(scalar)
 }
 
@@ -105,7 +105,7 @@ Vector.prototype.div = function (scalar) {
   return new Vector(this.x / scalar, this.y / scalar)
 }
 
-Vector.idiv = function (vector, scalar) {
+Vector.idiv = function (scalar, vector) {
   return vector.idiv(scalar)
 }
 
