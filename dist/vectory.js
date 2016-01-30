@@ -97,6 +97,14 @@ Vector.prototype.imul = function (scalar) {
   return this
 }
 
+Vector.div = function (vector, scalar) {
+  return vector.div(scalar)
+}
+
+Vector.prototype.div = function (scalar) {
+  return new Vector(this.x / scalar, this.y / scalar)
+}
+
 return Vector
 
 }))

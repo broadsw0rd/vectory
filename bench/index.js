@@ -142,6 +142,24 @@ var benchmarks = {
     return function () {
       return vector.imul(scalar)
     }
+  }()),
+
+  'Vector.div(vector, scalar)': (function () {
+    var vector = new Vector(rand(0, 100), rand(0, 100))
+    var scalar = 2
+
+    return function () {
+      return Vector.div(vector, scalar)
+    }
+  }()),
+
+  'Vector#div(vector)': (function () {
+    var vector = new Vector(rand(0, 100), rand(0, 100))
+    var scalar = 2
+
+    return function () {
+      return vector.div(scalar)
+    }
   }())
 }
 

@@ -273,3 +273,30 @@ describe('Multiplication', function () {
     })
   })
 })
+
+describe('Division', function () {
+  describe('Vector.div(vector, scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.div).to.be.a(Function)
+    })
+    it('should divide vector on scalar', function () {
+      var vector = new Vector(4, 6)
+      var scalar = 2
+      var result = Vector.div(vector, scalar)
+      expect(result.x).to.be(2)
+      expect(result.y).to.be(3)
+    })
+  })
+  describe('Vector.prototype.div(scalar)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.div).to.be.a(Function)
+    })
+    it('should divide self on scalar', function () {
+      var vector = new Vector(4, 6)
+      var scalar = 2
+      var result = vector.div(scalar)
+      expect(result.x).to.be(2)
+      expect(result.y).to.be(3)
+    })
+  })
+})
