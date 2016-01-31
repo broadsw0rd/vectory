@@ -198,6 +198,22 @@ var benchmarks = {
     return function () {
       return one.lerp(another, time)
     }
+  }()),
+
+  'Vector.normalized(vector)': (function () {
+    var vector = new Vector(rand(0, 100), rand(0, 100))
+
+    return function () {
+      return Vector.normalized(vector)
+    }
+  }()),
+
+  'Vector#normalized()': (function () {
+    var vector = new Vector(rand(0, 100), rand(0, 100))
+
+    return function () {
+      return vector.normalized()
+    }
   }())
 }
 

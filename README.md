@@ -73,8 +73,8 @@
 
 **Normalization**
 
-- [ ] `Vector.normalized(vector)`
-- [ ] `Vector.prototype.normalized()`
+- [x] [`Vector.normalized(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L102)
+- [x] [`Vector.prototype.normalized()`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L106)
 - [ ] `Vector.normalize(vector)`
 - [ ] `Vector.prototype.normalize()`
 
@@ -150,28 +150,30 @@ Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v4.2.4
 
 Vectory benchmark:
 
-	√ Vector(x, y) x 47,919,557 ops/sec ±3.30% (81 runs sampled)
-	√ Vector.from([x, y]) x 47,616,024 ops/sec ±1.16% (90 runs sampled)
-	√ Vector.fromAngle(angle, magnitude) x 13,124,575 ops/sec ±0.84% (91 runs sampled)
-	√ Vector.parse(string) x 917,971 ops/sec ±0.70% (83 runs sampled)
-	√ Vector.add(one, another) x 47,479,295 ops/sec ±0.81% (87 runs sampled)
-	√ Vector#add(vector) x 50,048,805 ops/sec ±0.90% (89 runs sampled)
-	√ Vector.iadd(one, another) x 58,621,649 ops/sec ±1.13% (87 runs sampled)
-	√ Vector#iadd(vector) x 63,102,217 ops/sec ±1.14% (86 runs sampled)
-	√ Vector.sub(one, another) x 47,476,637 ops/sec ±0.73% (93 runs sampled)
-	√ Vector#sub(vector) x 49,548,362 ops/sec ±1.08% (86 runs sampled)
-	√ Vector.isub(one, another) x 60,285,387 ops/sec ±0.95% (89 runs sampled)
-	√ Vector#isub(vector) x 63,162,346 ops/sec ±0.90% (87 runs sampled)
-	√ Vector.mul(scalar, vector) x 48,061,570 ops/sec ±0.65% (91 runs sampled)
-	√ Vector#mul(vector) x 49,773,014 ops/sec ±0.86% (89 runs sampled)
-	√ Vector.imul(scalar, vector) x 63,415,406 ops/sec ±0.76% (90 runs sampled)
-	√ Vector#imul(vector) x 68,208,076 ops/sec ±0.97% (90 runs sampled)
-	√ Vector.div(scalar, vector) x 44,850,557 ops/sec ±0.96% (90 runs sampled)
-	√ Vector#div(vector) x 48,647,537 ops/sec ±1.15% (92 runs sampled)
-	√ Vector.idiv(scalar, vector) x 61,268,740 ops/sec ±0.89% (86 runs sampled)
-	√ Vector#idiv(vector) x 63,822,725 ops/sec ±0.88% (89 runs sampled)
-	√ Vector.lerp(one, another, t) x 41,578,953 ops/sec ±0.71% (91 runs sampled)
-	√ Vector#lerp(vector, t) x 43,443,051 ops/sec ±0.86% (90 runs sampled)
+	√ Vector(x, y) x 47,757,545 ops/sec ±3.88% (83 runs sampled)
+	√ Vector.from([x, y]) x 48,347,584 ops/sec ±0.92% (92 runs sampled)
+	√ Vector.fromAngle(angle, magnitude) x 12,681,203 ops/sec ±0.96% (88 runs sampled)
+	√ Vector.parse(string) x 920,616 ops/sec ±0.66% (91 runs sampled)
+	√ Vector.add(one, another) x 46,433,970 ops/sec ±1.03% (90 runs sampled)
+	√ Vector#add(vector) x 49,388,108 ops/sec ±0.79% (91 runs sampled)
+	√ Vector.iadd(one, another) x 60,422,023 ops/sec ±1.18% (87 runs sampled)
+	√ Vector#iadd(vector) x 63,371,804 ops/sec ±0.89% (90 runs sampled)
+	√ Vector.sub(one, another) x 46,890,073 ops/sec ±0.80% (85 runs sampled)
+	√ Vector#sub(vector) x 45,989,342 ops/sec ±0.96% (89 runs sampled)
+	√ Vector.isub(one, another) x 60,357,567 ops/sec ±0.93% (92 runs sampled)
+	√ Vector#isub(vector) x 63,368,120 ops/sec ±0.98% (89 runs sampled)
+	√ Vector.mul(scalar, vector) x 47,626,354 ops/sec ±0.67% (90 runs sampled)
+	√ Vector#mul(vector) x 49,914,480 ops/sec ±0.75% (89 runs sampled)
+	√ Vector.imul(scalar, vector) x 63,101,653 ops/sec ±0.89% (85 runs sampled)
+	√ Vector#imul(vector) x 66,682,488 ops/sec ±1.17% (88 runs sampled)
+	√ Vector.div(scalar, vector) x 46,562,089 ops/sec ±0.70% (87 runs sampled)
+	√ Vector#div(vector) x 48,129,893 ops/sec ±1.03% (88 runs sampled)
+	√ Vector.idiv(scalar, vector) x 61,233,615 ops/sec ±1.13% (92 runs sampled)
+	√ Vector#idiv(vector) x 63,934,978 ops/sec ±1.06% (90 runs sampled)
+	√ Vector.lerp(one, another, t) x 41,664,345 ops/sec ±0.67% (89 runs sampled)
+	√ Vector#lerp(vector, t) x 42,541,461 ops/sec ±0.84% (89 runs sampled)
+	√ Vector.normalized(vector) x 32,452,975 ops/sec ±4.15% (80 runs sampled)
+	√ Vector#normalized() x 36,790,158 ops/sec ±0.78% (93 runs sampled)
 
 ```
 

@@ -369,3 +369,41 @@ describe('Linear interpolation', function () {
     })
   })
 })
+
+describe('Normalization', function () {
+  describe('Vector.normalized(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.normalized).to.be.a(Function)
+    })
+    it('should return unit vector', function () {
+      var vector = new Vector(2, 0)
+      var result = Vector.normalized(vector)
+      expect(result.x).to.be(1)
+      expect(result.y).to.be(0)
+    })
+    it('should return zero vector if zero vector was passed', function () {
+      var vector = new Vector(0, 0)
+      var result = Vector.normalized(vector)
+      expect(result.x).to.be(0)
+      expect(result.y).to.be(0)
+    })
+  })
+
+  describe('Vector.prototype.normalized()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.normalized).to.be.a(Function)
+    })
+    it('should return unit vector', function () {
+      var vector = new Vector(2, 0)
+      var result = vector.normalized()
+      expect(result.x).to.be(1)
+      expect(result.y).to.be(0)
+    })
+    it('should return zero vector from zero vector', function () {
+      var vector = new Vector(0, 0)
+      var result = vector.normalized()
+      expect(result.x).to.be(0)
+      expect(result.y).to.be(0)
+    })
+  })
+})
