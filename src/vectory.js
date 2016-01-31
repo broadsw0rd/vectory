@@ -18,7 +18,7 @@ Vector.parse = function (string) {
 }
 
 Vector.add = function (one, another) {
-  return one.add(another)
+  return another.add(one)
 }
 
 Vector.prototype.add = function (vector) {
@@ -26,7 +26,7 @@ Vector.prototype.add = function (vector) {
 }
 
 Vector.iadd = function (one, another) {
-  return one.iadd(another)
+  return another.iadd(one)
 }
 
 Vector.prototype.iadd = function (vector) {
@@ -36,7 +36,7 @@ Vector.prototype.iadd = function (vector) {
 }
 
 Vector.sub = function (one, another) {
-  return one.sub(another)
+  return another.sub(one)
 }
 
 Vector.prototype.sub = function (vector) {
@@ -44,7 +44,7 @@ Vector.prototype.sub = function (vector) {
 }
 
 Vector.isub = function (one, another) {
-  return one.isub(another)
+  return another.isub(one)
 }
 
 Vector.prototype.isub = function (vector) {

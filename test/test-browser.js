@@ -46,7 +46,7 @@ Vector.parse = function (string) {
 }
 
 Vector.add = function (one, another) {
-  return one.add(another)
+  return another.add(one)
 }
 
 Vector.prototype.add = function (vector) {
@@ -54,7 +54,7 @@ Vector.prototype.add = function (vector) {
 }
 
 Vector.iadd = function (one, another) {
-  return one.iadd(another)
+  return another.iadd(one)
 }
 
 Vector.prototype.iadd = function (vector) {
@@ -64,7 +64,7 @@ Vector.prototype.iadd = function (vector) {
 }
 
 Vector.sub = function (one, another) {
-  return one.sub(another)
+  return another.sub(one)
 }
 
 Vector.prototype.sub = function (vector) {
@@ -72,7 +72,7 @@ Vector.prototype.sub = function (vector) {
 }
 
 Vector.isub = function (one, another) {
-  return one.isub(another)
+  return another.isub(one)
 }
 
 Vector.prototype.isub = function (vector) {
@@ -3183,7 +3183,7 @@ describe('Addition', function () {
     it('should be a function', function () {
       expect(Vector.add).to.be.a(Function)
     })
-    it('should return sum of two vectors', function () {
+    it('should add one vector to another', function () {
       var one = new Vector(1, 2)
       var another = new Vector(3, 4)
       var result = Vector.add(one, another)
@@ -3198,9 +3198,9 @@ describe('Addition', function () {
       expect(Vector.prototype.add).to.be.a(Function)
     })
     it('should return sum of two vectors', function () {
-      var one = new Vector(1, 2)
-      var another = new Vector(3, 4)
-      var result = one.add(another)
+      var self = new Vector(1, 2)
+      var vector = new Vector(3, 4)
+      var result = self.add(vector)
       expect(result).to.be.a(Vector)
       expect(result.x).to.be(4)
       expect(result.y).to.be(6)
@@ -3211,18 +3211,18 @@ describe('Addition', function () {
     it('should be a function', function () {
       expect(Vector.iadd).to.be.a(Function)
     })
-    it('should add second vector to first', function () {
+    it('should add one vector to another', function () {
       var one = new Vector(1, 2)
       var another = new Vector(3, 4)
       Vector.iadd(one, another)
-      expect(one.x).to.be(4)
-      expect(one.y).to.be(6)
+      expect(another.x).to.be(4)
+      expect(another.y).to.be(6)
     })
-    it('should return first vector', function () {
+    it('should return another vector', function () {
       var one = new Vector(1, 2)
       var another = new Vector(3, 4)
       var result = Vector.iadd(one, another)
-      expect(result).to.be(one)
+      expect(result).to.be(another)
     })
   })
 
@@ -3231,17 +3231,17 @@ describe('Addition', function () {
       expect(Vector.prototype.iadd).to.be.a(Function)
     })
     it('should add vector to self', function () {
-      var one = new Vector(1, 2)
-      var another = new Vector(3, 4)
-      one.iadd(another)
-      expect(one.x).to.be(4)
-      expect(one.y).to.be(6)
+      var self = new Vector(1, 2)
+      var vector = new Vector(3, 4)
+      self.iadd(vector)
+      expect(self.x).to.be(4)
+      expect(self.y).to.be(6)
     })
     it('should return self instance', function () {
-      var one = new Vector(1, 2)
-      var another = new Vector(3, 4)
-      var result = one.iadd(another)
-      expect(result).to.be(one)
+      var self = new Vector(1, 2)
+      var vector = new Vector(3, 4)
+      var result = self.iadd(vector)
+      expect(result).to.be(self)
     })
   })
 })
@@ -3251,9 +3251,9 @@ describe('Substraction', function () {
     it('should be a function', function () {
       expect(Vector.sub).to.be.a(Function)
     })
-    it('should return diff of two vectors', function () {
-      var one = new Vector(3, 4)
-      var another = new Vector(1, 2)
+    it('should substract one vector from another', function () {
+      var one = new Vector(1, 2)
+      var another = new Vector(3, 4)
       var result = Vector.sub(one, another)
       expect(result).to.be.a(Vector)
       expect(result.x).to.be(2)
@@ -3266,9 +3266,9 @@ describe('Substraction', function () {
       expect(Vector.prototype.sub).to.be.a(Function)
     })
     it('should return diff of two vectors', function () {
-      var one = new Vector(3, 4)
-      var another = new Vector(1, 2)
-      var result = one.sub(another)
+      var self = new Vector(3, 4)
+      var vector = new Vector(1, 2)
+      var result = self.sub(vector)
       expect(result).to.be.a(Vector)
       expect(result.x).to.be(2)
       expect(result.y).to.be(2)
@@ -3279,18 +3279,18 @@ describe('Substraction', function () {
     it('should be a function', function () {
       expect(Vector.isub).to.be.a(Function)
     })
-    it('should substract second vector from first', function () {
-      var one = new Vector(3, 4)
-      var another = new Vector(1, 2)
+    it('should substract one vector from another', function () {
+      var one = new Vector(1, 2)
+      var another = new Vector(3, 4)
       Vector.isub(one, another)
-      expect(one.x).to.be(2)
-      expect(one.y).to.be(2)
+      expect(another.x).to.be(2)
+      expect(another.y).to.be(2)
     })
-    it('should return first vector', function () {
-      var one = new Vector(3, 4)
-      var another = new Vector(1, 2)
+    it('should return another vector', function () {
+      var one = new Vector(1, 2)
+      var another = new Vector(3, 4)
       var result = Vector.isub(one, another)
-      expect(result).to.be(one)
+      expect(result).to.be(another)
     })
   })
 
@@ -3299,17 +3299,17 @@ describe('Substraction', function () {
       expect(Vector.prototype.isub).to.be.a(Function)
     })
     it('should substract vector from self', function () {
-      var one = new Vector(3, 4)
-      var another = new Vector(1, 2)
-      one.isub(another)
-      expect(one.x).to.be(2)
-      expect(one.y).to.be(2)
+      var self = new Vector(3, 4)
+      var vector = new Vector(1, 2)
+      self.isub(vector)
+      expect(self.x).to.be(2)
+      expect(self.y).to.be(2)
     })
     it('should return self instance', function () {
-      var one = new Vector(3, 4)
-      var another = new Vector(1, 2)
-      var result = one.isub(another)
-      expect(result).to.be(one)
+      var self = new Vector(3, 4)
+      var vector = new Vector(1, 2)
+      var result = self.isub(vector)
+      expect(result).to.be(self)
     })
   })
 })
