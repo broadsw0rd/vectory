@@ -494,3 +494,29 @@ describe('Dot product', function () {
     })
   })
 })
+
+describe('Distance', function () {
+  describe('Vector.distance(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.distance).to.be.a(Function)
+    })
+    it('should return dot product', function () {
+      var one = new Vector(4, 3)
+      var another = new Vector(8, 6)
+      var distance = Vector.distance(one, another)
+      expect(distance).to.be(5)
+    })
+  })
+
+  describe('Vector.prototype.distance(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.distance).to.be.a(Function)
+    })
+    it('should return dot product', function () {
+      var self = new Vector(8, 6)
+      var vector = new Vector(4, 3)
+      var distance = self.distance(vector)
+      expect(distance).to.be(5)
+    })
+  })
+})

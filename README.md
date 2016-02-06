@@ -90,8 +90,8 @@
 
 **Distance**
 
-- [ ] `Vector.distance(one, another)`
-- [ ] `Vector.prototype.distance(vector)`
+- [x] [`Vector.distance(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L148)
+- [x] [`Vector.prototype.distance(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L152)
 
 **Angle computing**
 
