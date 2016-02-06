@@ -142,6 +142,47 @@ Vector.prototype.normalized = function () {
   }
 }
 
+Vector.normalize = function (vector) {
+  return vector.normalize()
+}
+
+Vector.prototype.normalize = function () {
+  var x = this.x
+  var y = this.y
+  var length = Math.sqrt(x * x + y * y)
+  if (length > 0) {
+    this.x = x / length
+    this.y = y / length
+  }
+  return this
+}
+
+Vector.magnitude = function (vector) {
+  return vector.magnitude()
+}
+
+Vector.prototype.magnitude = function () {
+  return Math.sqrt(this.x * this.x + this.y * this.y)
+}
+
+Vector.dot = function (one, another) {
+  return another.dot(one)
+}
+
+Vector.prototype.dot = function (vector) {
+  return this.x * vector.x + this.y * vector.y
+}
+
+Vector.distance = function (one, another) {
+  return another.distance(one)
+}
+
+Vector.prototype.distance = function (vector) {
+  var x = this.x - vector.x
+  var y = this.y - vector.y
+  return Math.sqrt(x * x + y * y)
+}
+
 return Vector
 
 }))
@@ -3510,6 +3551,119 @@ describe('Normalization', function () {
       var result = vector.normalized()
       expect(result.x).to.be(0)
       expect(result.y).to.be(0)
+    })
+  })
+
+  describe('Vector.normalize(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.normalize).to.be.a(Function)
+    })
+    it('should convert passed vector to unit vector', function () {
+      var vector = new Vector(2, 0)
+      var result = Vector.normalize(vector)
+      expect(result.x).to.be(1)
+      expect(result.y).to.be(0)
+      expect(result).to.be(vector)
+    })
+    it('should do nothing if zero vector was passed', function () {
+      var vector = new Vector(0, 0)
+      var result = Vector.normalize(vector)
+      expect(result.x).to.be(0)
+      expect(result.y).to.be(0)
+      expect(result).to.be(vector)
+    })
+  })
+
+  describe('Vector.prototype.normalize()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.normalize).to.be.a(Function)
+    })
+    it('should convert vector to unit vector', function () {
+      var vector = new Vector(2, 0)
+      vector.normalize()
+      expect(vector.x).to.be(1)
+      expect(vector.y).to.be(0)
+    })
+    it('should return self', function () {
+      var vector = new Vector(0, 0)
+      var result = vector.normalize()
+      expect(result).to.be(vector)
+    })
+  })
+})
+
+describe('Magnitude', function () {
+  describe('Vector.magnitude(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.magnitude).to.be.a(Function)
+    })
+    it('should return vector magnitude', function () {
+      var vector = new Vector(3, 4)
+      var magnitude = Vector.magnitude(vector)
+      expect(magnitude).to.be(5)
+    })
+  })
+
+  describe('Vector.prototype.magnitude()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.magnitude).to.be.a(Function)
+    })
+    it('should return vector magnitude', function () {
+      var vector = new Vector(3, 4)
+      var magnitude = vector.magnitude()
+      expect(magnitude).to.be(5)
+    })
+  })
+})
+
+describe('Dot product', function () {
+  describe('Vector.dot(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.dot).to.be.a(Function)
+    })
+    it('should return dot product', function () {
+      var one = new Vector(2, 3)
+      var another = new Vector(3, 2)
+      var product = Vector.dot(one, another)
+      expect(product).to.be(12)
+    })
+  })
+
+  describe('Vector.prototype.dot(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.dot).to.be.a(Function)
+    })
+    it('should return dot product', function () {
+      var self = new Vector(2, 3)
+      var vector = new Vector(3, 2)
+      var product = self.dot(vector)
+      expect(product).to.be(12)
+    })
+  })
+})
+
+describe('Distance', function () {
+  describe('Vector.distance(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.distance).to.be.a(Function)
+    })
+    it('should return dot product', function () {
+      var one = new Vector(4, 3)
+      var another = new Vector(8, 6)
+      var distance = Vector.distance(one, another)
+      expect(distance).to.be(5)
+    })
+  })
+
+  describe('Vector.prototype.distance(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.distance).to.be.a(Function)
+    })
+    it('should return dot product', function () {
+      var self = new Vector(8, 6)
+      var vector = new Vector(4, 3)
+      var distance = self.distance(vector)
+      expect(distance).to.be(5)
     })
   })
 })
