@@ -136,3 +136,11 @@ Vector.magnitude = function (vector) {
 Vector.prototype.magnitude = function () {
   return Math.sqrt(this.x * this.x + this.y * this.y)
 }
+
+Vector.dot = function (one, another) {
+  return another.dot(one)
+}
+
+Vector.prototype.dot = function (vector) {
+  return this.x * vector.x + this.y * vector.y
+}

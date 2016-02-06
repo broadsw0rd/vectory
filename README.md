@@ -85,8 +85,8 @@
 
 **Dot product**
 
-- [ ] `Vector.dot(one, another)`
-- [ ] `Vector.prototype.dot(vector)`
+- [x] [`Vector.dot(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L140)
+- [x] [`Vector.prototype.dot(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L144)
 
 **Cross product**
 

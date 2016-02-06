@@ -468,3 +468,29 @@ describe('Magnitude', function () {
     })
   })
 })
+
+describe('Dot product', function () {
+  describe('Vector.dot(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.dot).to.be.a(Function)
+    })
+    it('should return dot product', function () {
+      var one = new Vector(2, 3)
+      var another = new Vector(3, 2)
+      var product = Vector.dot(one, another)
+      expect(product).to.be(12)
+    })
+  })
+
+  describe('Vector.prototype.dot(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.dot).to.be.a(Function)
+    })
+    it('should return dot product', function () {
+      var self = new Vector(2, 3)
+      var vector = new Vector(3, 2)
+      var product = self.dot(vector)
+      expect(product).to.be(12)
+    })
+  })
+})
