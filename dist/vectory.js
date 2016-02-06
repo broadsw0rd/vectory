@@ -155,6 +155,14 @@ Vector.prototype.normalize = function () {
   return this
 }
 
+Vector.magnitude = function (vector) {
+  return vector.magnitude()
+}
+
+Vector.prototype.magnitude = function () {
+  return Math.sqrt(this.x * this.x + this.y * this.y)
+}
+
 return Vector
 
 }))

@@ -80,8 +80,8 @@
 
 **Magnitude**
 
-- [ ] `Vector.magnitude(vector)`
-- [ ] `Vector.prototype.magnitude()`
+- [x] [`Vector.magnitude(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L132)
+- [x] [`Vector.prototype.magnitude()`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L136)
 
 **Dot product**
 

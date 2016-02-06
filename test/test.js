@@ -444,3 +444,27 @@ describe('Normalization', function () {
     })
   })
 })
+
+describe('Magnitude', function () {
+  describe('Vector.magnitude(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.magnitude).to.be.a(Function)
+    })
+    it('should return vector magnitude', function () {
+      var vector = new Vector(3, 4)
+      var magnitude = Vector.magnitude(vector)
+      expect(magnitude).to.be(5)
+    })
+  })
+
+  describe('Vector.prototype.magnitude()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.magnitude).to.be.a(Function)
+    })
+    it('should return vector magnitude', function () {
+      var vector = new Vector(3, 4)
+      var magnitude = vector.magnitude()
+      expect(magnitude).to.be(5)
+    })
+  })
+})
