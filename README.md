@@ -75,8 +75,8 @@
 
 - [x] [`Vector.normalized(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L102)
 - [x] [`Vector.prototype.normalized()`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L106)
-- [ ] `Vector.normalize(vector)`
-- [ ] `Vector.prototype.normalize()`
+- [x] [`Vector.normalize(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L117)
+- [x] [`Vector.prototype.normalize()`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L121)
 
 **Magnitude**
 

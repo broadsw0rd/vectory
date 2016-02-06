@@ -406,4 +406,41 @@ describe('Normalization', function () {
       expect(result.y).to.be(0)
     })
   })
+
+  describe('Vector.normalize(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.normalize).to.be.a(Function)
+    })
+    it('should convert passed vector to unit vector', function () {
+      var vector = new Vector(2, 0)
+      var result = Vector.normalize(vector)
+      expect(result.x).to.be(1)
+      expect(result.y).to.be(0)
+      expect(result).to.be(vector)
+    })
+    it('should do nothing if zero vector was passed', function () {
+      var vector = new Vector(0, 0)
+      var result = Vector.normalize(vector)
+      expect(result.x).to.be(0)
+      expect(result.y).to.be(0)
+      expect(result).to.be(vector)
+    })
+  })
+
+  describe('Vector.prototype.normalize()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.normalize).to.be.a(Function)
+    })
+    it('should convert vector to unit vector', function () {
+      var vector = new Vector(2, 0)
+      vector.normalize()
+      expect(vector.x).to.be(1)
+      expect(vector.y).to.be(0)
+    })
+    it('should return self', function () {
+      var vector = new Vector(0, 0)
+      var result = vector.normalize()
+      expect(result).to.be(vector)
+    })
+  })
 })
