@@ -233,6 +233,14 @@ Vector.prototype.toJSON = function () {
   return [this.x, this.y]
 }
 
+Vector.toString = function (vector) {
+  return vector.toString()
+}
+
+Vector.prototype.toString = function () {
+  return this.x.toFixed(3) + ' ' + this.y.toFixed(3)
+}
+
 return Vector
 
 }))

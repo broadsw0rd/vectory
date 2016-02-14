@@ -693,4 +693,26 @@ describe('Convertion', function () {
       expect(result[1]).to.be(2)
     })
   })
+
+  describe('Vector.toString(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.toString).to.be.a(Function)
+    })
+    it('should convert to string passed vector', function () {
+      var vector = new Vector(1, 2)
+      var result = Vector.toString(vector)
+      expect(result).to.be('1.000 2.000')
+    })
+  })
+
+  describe('Vector.prototype.toString()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.toString).to.be.a(Function)
+    })
+    it('should convert self to JSON', function () {
+      var self = new Vector(1, 2)
+      var result = self.toString()
+      expect(result).to.be('1.000 2.000')
+    })
+  })
 })

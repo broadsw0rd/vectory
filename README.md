@@ -116,8 +116,8 @@
 
 - [x] [`Vector.toJSON(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L202)
 - [x] [`Vector.prototype.toJSON()`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L206)
-- [ ] `Vector.toString(vector)`
-- [ ] `Vector.prototype.toString()`
+- [x] [`Vector.toString(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L210)
+- [x] [`Vector.prototype.toString()`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L214)
 
 
 **Equality**
