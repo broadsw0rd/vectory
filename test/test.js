@@ -741,4 +741,28 @@ describe('Equality', function () {
       expect(result).to.be(true)
     })
   })
+
+  describe('Vector.compare(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.compare).to.be.a(Function)
+    })
+    it('should check vectors equality', function () {
+      var one = new Vector(2, 2)
+      var another = new Vector(1, 2)
+      var result = Vector.compare(one, another)
+      expect(result).to.be(1)
+    })
+  })
+
+  describe('Vector.prototype.compare(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.compare).to.be.a(Function)
+    })
+    it('should check vectors equality', function () {
+      var self = new Vector(1, 2)
+      var vector = new Vector(2, 2)
+      var result = self.compare(vector)
+      expect(result).to.be(-1)
+    })
+  })
 })

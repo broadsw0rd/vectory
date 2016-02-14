@@ -124,8 +124,8 @@
 
 - [x] [`Vector.equals(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L218)
 - [x] [`Vector.protototype.equals(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L222)
-- [ ] `Vector.compare(one, another)`
-- [ ] `Vector.protototype.compare(vector)`
+- [x] [`Vector.compare(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L226)
+- [x] [`Vector.protototype.compare(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L230)
 
 **Swizzling**
 
