@@ -21,8 +21,8 @@
 
 ## Features
 
-- Simple - [156 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L156)
-- Lightweight - [2.1 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
+- Simple - [234 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L156)
+- Lightweight - [3 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
 - Robust - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
 - Built for [any](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L9) environment
 - Designed with performance in mind and reviewed with [IRHydra](http://mrale.ph/irhydra/2/)
