@@ -716,3 +716,29 @@ describe('Convertion', function () {
     })
   })
 })
+
+describe('Equality', function () {
+  describe('Vector.equals(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.equals).to.be.a(Function)
+    })
+    it('should check vectors equality', function () {
+      var one = new Vector(1, 2)
+      var another = new Vector(1, 2)
+      var result = Vector.equals(one, another)
+      expect(result).to.be(true)
+    })
+  })
+
+  describe('Vector.prototype.equals(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.equals).to.be.a(Function)
+    })
+    it('should check vectors equality', function () {
+      var self = new Vector(1, 2)
+      var vector = new Vector(1, 2)
+      var result = self.equals(vector)
+      expect(result).to.be(true)
+    })
+  })
+})

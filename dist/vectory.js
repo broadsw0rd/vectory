@@ -241,6 +241,14 @@ Vector.prototype.toString = function () {
   return this.x.toFixed(3) + ' ' + this.y.toFixed(3)
 }
 
+Vector.equals = function (one, another) {
+  return one.equals(another)
+}
+
+Vector.prototype.equals = function (vector) {
+  return this.x === vector.x && this.y === vector.y
+}
+
 return Vector
 
 }))
