@@ -114,8 +114,8 @@
 
 **Convertion**
 
-- [ ] `Vector.toJSON(vector)`
-- [ ] `Vector.prototype.toJSON()`
+- [x] [`Vector.toJSON(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L202)
+- [x] [`Vector.prototype.toJSON()`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L206)
 - [ ] `Vector.toString(vector)`
 - [ ] `Vector.prototype.toString()`
 

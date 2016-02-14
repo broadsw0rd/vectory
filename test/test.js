@@ -668,3 +668,29 @@ describe('Copy', function () {
     })
   })
 })
+
+describe('Convertion', function () {
+  describe('Vector.toJSON(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.toJSON).to.be.a(Function)
+    })
+    it('should convert to JSON passed vector', function () {
+      var vector = new Vector(1, 2)
+      var result = Vector.toJSON(vector)
+      expect(result[0]).to.be(1)
+      expect(result[1]).to.be(2)
+    })
+  })
+
+  describe('Vector.prototype.toJSON()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.toJSON).to.be.a(Function)
+    })
+    it('should convert self to JSON', function () {
+      var self = new Vector(1, 2)
+      var result = self.toJSON()
+      expect(result[0]).to.be(1)
+      expect(result[1]).to.be(2)
+    })
+  })
+})

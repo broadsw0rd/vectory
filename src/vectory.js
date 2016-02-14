@@ -198,3 +198,11 @@ Vector.copy = function (vector) {
 Vector.prototype.copy = function () {
   return new Vector(this.x, this.y)
 }
+
+Vector.toJSON = function (vector) {
+  return vector.toJSON()
+}
+
+Vector.prototype.toJSON = function () {
+  return [this.x, this.y]
+}
