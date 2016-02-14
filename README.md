@@ -102,8 +102,8 @@
 
 **Resetting**
 
-- [ ] `Vector.reset(one, another)`
-- [ ] `Vector.prototype.reset(vector)`
+- [x] [`Vector.reset(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L174)
+- [x] [`Vector.prototype.reset(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L178)
 - [ ] `Vector.zero(vector)`
 - [ ] `Vector.prototype.zero()`
 

@@ -544,7 +544,7 @@ describe('Angle computing', function () {
     })
   })
 
-  describe('Vector.angleTo(vector)', function () {
+  describe('Vector.angleTo(one, another)', function () {
     it('should be a function', function () {
       expect(Vector.angleTo).to.be.a(Function)
     })
@@ -556,7 +556,7 @@ describe('Angle computing', function () {
     })
   })
 
-  describe('Vector.prototype.angleTo()', function () {
+  describe('Vector.prototype.angleTo(vector)', function () {
     it('should be a function', function () {
       expect(Vector.prototype.angleTo).to.be.a(Function)
     })
@@ -565,6 +565,46 @@ describe('Angle computing', function () {
       var vector = new Vector(1, 0)
       var result = self.angleTo(vector)
       expect(result * 180 / Math.PI).to.be(90)
+    })
+  })
+})
+
+describe('Resetting', function () {
+  describe('Vector.reset(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.reset).to.be.a(Function)
+    })
+    it('should reset vector values', function () {
+      var one = new Vector(1, 2)
+      var another = new Vector(0, 0)
+      Vector.reset(one, another)
+      expect(another.x).to.be(1)
+      expect(another.y).to.be(2)
+    })
+    it('should return another vector', function () {
+      var one = new Vector(1, 2)
+      var another = new Vector(0, 0)
+      var result = Vector.reset(one, another)
+      expect(result).to.be(another)
+    })
+  })
+
+  describe('Vector.prototype.reset(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.reset).to.be.a(Function)
+    })
+    it('should reset vector values', function () {
+      var self = new Vector(0, 0)
+      var vector = new Vector(1, 2)
+      self.reset(vector)
+      expect(self.x).to.be(1)
+      expect(self.y).to.be(2)
+    })
+    it('should return self', function () {
+      var self = new Vector(0, 0)
+      var vector = new Vector(1, 2)
+      var result = self.reset(vector)
+      expect(result).to.be(self)
     })
   })
 })

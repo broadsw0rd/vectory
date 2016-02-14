@@ -170,3 +170,13 @@ Vector.angleTo = function (one, another) {
 Vector.prototype.angleTo = function (vector) {
   return Math.acos(this.dot(vector) / this.magnitude() * vector.magnitude())
 }
+
+Vector.reset = function (one, another) {
+  return another.reset(one)
+}
+
+Vector.prototype.reset = function (vector) {
+  this.x = vector.x
+  this.y = vector.y
+  return this
+}
