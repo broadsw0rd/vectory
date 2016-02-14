@@ -183,6 +183,84 @@ Vector.prototype.distance = function (vector) {
   return Math.sqrt(x * x + y * y)
 }
 
+Vector.angleOf = function (vector) {
+  return vector.angleOf()
+}
+
+Vector.prototype.angleOf = function () {
+  return Math.atan2(this.y, this.x)
+}
+
+Vector.angleTo = function (one, another) {
+  return another.angleTo(one)
+}
+
+Vector.prototype.angleTo = function (vector) {
+  return Math.acos(this.dot(vector) / this.magnitude() * vector.magnitude())
+}
+
+Vector.reset = function (one, another) {
+  return another.reset(one)
+}
+
+Vector.prototype.reset = function (vector) {
+  this.x = vector.x
+  this.y = vector.y
+  return this
+}
+
+Vector.zero = function (vector) {
+  return vector.zero()
+}
+
+Vector.prototype.zero = function () {
+  this.x = 0
+  this.y = 0
+  return this
+}
+
+Vector.copy = function (vector) {
+  return vector.copy()
+}
+
+Vector.prototype.copy = function () {
+  return new Vector(this.x, this.y)
+}
+
+Vector.toJSON = function (vector) {
+  return vector.toJSON()
+}
+
+Vector.prototype.toJSON = function () {
+  return [this.x, this.y]
+}
+
+Vector.toString = function (vector) {
+  return vector.toString()
+}
+
+Vector.prototype.toString = function () {
+  return this.x.toFixed(3) + ' ' + this.y.toFixed(3)
+}
+
+Vector.equals = function (one, another) {
+  return one.equals(another)
+}
+
+Vector.prototype.equals = function (vector) {
+  return this.x === vector.x && this.y === vector.y
+}
+
+Vector.compare = function (one, another) {
+  return one.compare(another)
+}
+
+Vector.prototype.compare = function (vector) {
+  var thisMagnitude = this.magnitude()
+  var vectorMagnitude = vector.magnitude()
+  return (thisMagnitude > vectorMagnitude) - (vectorMagnitude > thisMagnitude)
+}
+
 return Vector
 
 }))
@@ -3664,6 +3742,252 @@ describe('Distance', function () {
       var vector = new Vector(4, 3)
       var distance = self.distance(vector)
       expect(distance).to.be(5)
+    })
+  })
+})
+
+describe('Angle computing', function () {
+  describe('Vector.angleOf(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.angleOf).to.be.a(Function)
+    })
+    it('should return the angle theta of vector', function () {
+      var vector = new Vector(0, 1)
+      var result = Vector.angleOf(vector)
+      expect(result * 180 / Math.PI).to.be(90)
+    })
+  })
+
+  describe('Vector.prototype.angleOf()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.angleOf).to.be.a(Function)
+    })
+    it('should return the angle theta of vector', function () {
+      var self = new Vector(0, 1)
+      var result = self.angleOf()
+      expect(result * 180 / Math.PI).to.be(90)
+    })
+  })
+
+  describe('Vector.angleTo(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.angleTo).to.be.a(Function)
+    })
+    it('should return the angle between vectors', function () {
+      var one = new Vector(0, 1)
+      var another = new Vector(1, 0)
+      var result = Vector.angleTo(one, another)
+      expect(result * 180 / Math.PI).to.be(90)
+    })
+  })
+
+  describe('Vector.prototype.angleTo(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.angleTo).to.be.a(Function)
+    })
+    it('should return the angle between vectors', function () {
+      var self = new Vector(0, 1)
+      var vector = new Vector(1, 0)
+      var result = self.angleTo(vector)
+      expect(result * 180 / Math.PI).to.be(90)
+    })
+  })
+})
+
+describe('Resetting', function () {
+  describe('Vector.reset(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.reset).to.be.a(Function)
+    })
+    it('should reset vector values', function () {
+      var one = new Vector(1, 2)
+      var another = new Vector(0, 0)
+      Vector.reset(one, another)
+      expect(another.x).to.be(1)
+      expect(another.y).to.be(2)
+    })
+    it('should return another vector', function () {
+      var one = new Vector(1, 2)
+      var another = new Vector(0, 0)
+      var result = Vector.reset(one, another)
+      expect(result).to.be(another)
+    })
+  })
+
+  describe('Vector.prototype.reset(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.reset).to.be.a(Function)
+    })
+    it('should reset vector values', function () {
+      var self = new Vector(0, 0)
+      var vector = new Vector(1, 2)
+      self.reset(vector)
+      expect(self.x).to.be(1)
+      expect(self.y).to.be(2)
+    })
+    it('should return self', function () {
+      var self = new Vector(0, 0)
+      var vector = new Vector(1, 2)
+      var result = self.reset(vector)
+      expect(result).to.be(self)
+    })
+  })
+
+  describe('Vector.zero(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.zero).to.be.a(Function)
+    })
+    it('should reset vector values to zero', function () {
+      var vector = new Vector(1, 2)
+      Vector.zero(vector)
+      expect(vector.x).to.be(0)
+      expect(vector.y).to.be(0)
+    })
+    it('should return passed vector', function () {
+      var vector = new Vector(1, 2)
+      var result = Vector.zero(vector)
+      expect(result).to.be(vector)
+    })
+  })
+
+  describe('Vector.prototype.zero()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.zero).to.be.a(Function)
+    })
+    it('should reset vector values to zero', function () {
+      var self = new Vector(1, 2)
+      self.zero()
+      expect(self.x).to.be(0)
+      expect(self.y).to.be(0)
+    })
+    it('should return self', function () {
+      var self = new Vector(1, 2)
+      var result = self.zero()
+      expect(result).to.be(self)
+    })
+  })
+})
+
+describe('Copy', function () {
+  describe('Vector.copy(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.copy).to.be.a(Function)
+    })
+    it('should copy passed vector', function () {
+      var vector = new Vector(1, 2)
+      var result = Vector.copy(vector)
+      expect(result.x).to.be(1)
+      expect(result.y).to.be(2)
+    })
+  })
+
+  describe('Vector.prototype.copy()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.copy).to.be.a(Function)
+    })
+    it('should copy self', function () {
+      var self = new Vector(1, 2)
+      var result = self.copy()
+      expect(result.x).to.be(1)
+      expect(result.y).to.be(2)
+    })
+  })
+})
+
+describe('Convertion', function () {
+  describe('Vector.toJSON(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.toJSON).to.be.a(Function)
+    })
+    it('should convert to JSON passed vector', function () {
+      var vector = new Vector(1, 2)
+      var result = Vector.toJSON(vector)
+      expect(result[0]).to.be(1)
+      expect(result[1]).to.be(2)
+    })
+  })
+
+  describe('Vector.prototype.toJSON()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.toJSON).to.be.a(Function)
+    })
+    it('should convert self to JSON', function () {
+      var self = new Vector(1, 2)
+      var result = self.toJSON()
+      expect(result[0]).to.be(1)
+      expect(result[1]).to.be(2)
+    })
+  })
+
+  describe('Vector.toString(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.toString).to.be.a(Function)
+    })
+    it('should convert to string passed vector', function () {
+      var vector = new Vector(1, 2)
+      var result = Vector.toString(vector)
+      expect(result).to.be('1.000 2.000')
+    })
+  })
+
+  describe('Vector.prototype.toString()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.toString).to.be.a(Function)
+    })
+    it('should convert self to JSON', function () {
+      var self = new Vector(1, 2)
+      var result = self.toString()
+      expect(result).to.be('1.000 2.000')
+    })
+  })
+})
+
+describe('Equality', function () {
+  describe('Vector.equals(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.equals).to.be.a(Function)
+    })
+    it('should check vectors equality', function () {
+      var one = new Vector(1, 2)
+      var another = new Vector(1, 2)
+      var result = Vector.equals(one, another)
+      expect(result).to.be(true)
+    })
+  })
+
+  describe('Vector.prototype.equals(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.equals).to.be.a(Function)
+    })
+    it('should check vectors equality', function () {
+      var self = new Vector(1, 2)
+      var vector = new Vector(1, 2)
+      var result = self.equals(vector)
+      expect(result).to.be(true)
+    })
+  })
+
+  describe('Vector.compare(one, another)', function () {
+    it('should be a function', function () {
+      expect(Vector.compare).to.be.a(Function)
+    })
+    it('should check vectors equality', function () {
+      var one = new Vector(2, 2)
+      var another = new Vector(1, 2)
+      var result = Vector.compare(one, another)
+      expect(result).to.be(1)
+    })
+  })
+
+  describe('Vector.prototype.compare(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.compare).to.be.a(Function)
+    })
+    it('should check vectors equality', function () {
+      var self = new Vector(1, 2)
+      var vector = new Vector(2, 2)
+      var result = self.compare(vector)
+      expect(result).to.be(-1)
     })
   })
 })
