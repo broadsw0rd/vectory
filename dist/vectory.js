@@ -207,6 +207,16 @@ Vector.prototype.reset = function (vector) {
   return this
 }
 
+Vector.zero = function (vector) {
+  return vector.zero()
+}
+
+Vector.prototype.zero = function () {
+  this.x = 0
+  this.y = 0
+  return this
+}
+
 return Vector
 
 }))

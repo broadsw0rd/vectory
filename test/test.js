@@ -607,4 +607,38 @@ describe('Resetting', function () {
       expect(result).to.be(self)
     })
   })
+
+  describe('Vector.zero(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.zero).to.be.a(Function)
+    })
+    it('should reset vector values to zero', function () {
+      var vector = new Vector(1, 2)
+      Vector.zero(vector)
+      expect(vector.x).to.be(0)
+      expect(vector.y).to.be(0)
+    })
+    it('should return passed vector', function () {
+      var vector = new Vector(1, 2)
+      var result = Vector.zero(vector)
+      expect(result).to.be(vector)
+    })
+  })
+
+  describe('Vector.prototype.zero()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.zero).to.be.a(Function)
+    })
+    it('should reset vector values to zero', function () {
+      var self = new Vector(1, 2)
+      self.zero()
+      expect(self.x).to.be(0)
+      expect(self.y).to.be(0)
+    })
+    it('should return self', function () {
+      var self = new Vector(1, 2)
+      var result = self.zero()
+      expect(result).to.be(self)
+    })
+  })
 })

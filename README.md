@@ -104,8 +104,8 @@
 
 - [x] [`Vector.reset(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L174)
 - [x] [`Vector.prototype.reset(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L178)
-- [ ] `Vector.zero(vector)`
-- [ ] `Vector.prototype.zero()`
+- [x] [`Vector.zero(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L184)
+- [x] [`Vector.prototype.zero()`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L188)
 
 **Copy**
 
