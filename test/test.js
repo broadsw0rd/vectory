@@ -642,3 +642,29 @@ describe('Resetting', function () {
     })
   })
 })
+
+describe('Copy', function () {
+  describe('Vector.copy(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.copy).to.be.a(Function)
+    })
+    it('should copy passed vector', function () {
+      var vector = new Vector(1, 2)
+      var result = Vector.copy(vector)
+      expect(result.x).to.be(1)
+      expect(result.y).to.be(2)
+    })
+  })
+
+  describe('Vector.prototype.copy()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.copy).to.be.a(Function)
+    })
+    it('should copy self', function () {
+      var self = new Vector(1, 2)
+      var result = self.copy()
+      expect(result.x).to.be(1)
+      expect(result.y).to.be(2)
+    })
+  })
+})

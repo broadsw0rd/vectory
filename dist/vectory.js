@@ -217,6 +217,14 @@ Vector.prototype.zero = function () {
   return this
 }
 
+Vector.copy = function (vector) {
+  return vector.copy()
+}
+
+Vector.prototype.copy = function () {
+  return new Vector(this.x, this.y)
+}
+
 return Vector
 
 }))

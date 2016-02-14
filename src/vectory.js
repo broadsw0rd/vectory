@@ -190,3 +190,11 @@ Vector.prototype.zero = function () {
   this.y = 0
   return this
 }
+
+Vector.copy = function (vector) {
+  return vector.copy()
+}
+
+Vector.prototype.copy = function () {
+  return new Vector(this.x, this.y)
+}

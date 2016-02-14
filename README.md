@@ -109,8 +109,8 @@
 
 **Copy**
 
-- [ ] `Vector.copy(vector)`
-- [ ] `Vector.prototype.copy()`
+- [x] [`Vector.copy(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L194)
+- [x] [`Vector.prototype.copy()`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L198)
 
 **Convertion**
 
