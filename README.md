@@ -97,8 +97,8 @@
 
 - [x] [`Vector.angleOf(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L158)
 - [x] [`Vector.prototype.angleOf()`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L162)
-- [ ] `Vector.angleTo(one, another)`
-- [ ] `Vector.prototype.angleTo(vector)`
+- [x] [`Vector.angleTo(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L166)
+- [x] [`Vector.prototype.angleTo(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L170)
 
 **Resetting**
 

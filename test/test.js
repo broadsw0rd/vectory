@@ -532,6 +532,7 @@ describe('Angle computing', function () {
       expect(result * 180 / Math.PI).to.be(90)
     })
   })
+
   describe('Vector.prototype.angleOf()', function () {
     it('should be a function', function () {
       expect(Vector.prototype.angleOf).to.be.a(Function)
@@ -539,6 +540,30 @@ describe('Angle computing', function () {
     it('should return the angle theta of vector', function () {
       var self = new Vector(0, 1)
       var result = self.angleOf()
+      expect(result * 180 / Math.PI).to.be(90)
+    })
+  })
+
+  describe('Vector.angleTo(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.angleTo).to.be.a(Function)
+    })
+    it('should return the angle between vectors', function () {
+      var one = new Vector(0, 1)
+      var another = new Vector(1, 0)
+      var result = Vector.angleTo(one, another)
+      expect(result * 180 / Math.PI).to.be(90)
+    })
+  })
+
+  describe('Vector.prototype.angleTo()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.angleTo).to.be.a(Function)
+    })
+    it('should return the angle between vectors', function () {
+      var self = new Vector(0, 1)
+      var vector = new Vector(1, 0)
+      var result = self.angleTo(vector)
       expect(result * 180 / Math.PI).to.be(90)
     })
   })
