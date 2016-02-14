@@ -181,6 +181,14 @@ Vector.prototype.distance = function (vector) {
   return Math.sqrt(x * x + y * y)
 }
 
+Vector.angleOf = function (vector) {
+  return vector.angleOf()
+}
+
+Vector.prototype.angleOf = function () {
+  return Math.atan2(this.y, this.x)
+}
+
 return Vector
 
 }))

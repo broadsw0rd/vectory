@@ -520,3 +520,26 @@ describe('Distance', function () {
     })
   })
 })
+
+describe('Angle computing', function () {
+  describe('Vector.angleOf(vector)', function () {
+    it('should be a function', function () {
+      expect(Vector.angleOf).to.be.a(Function)
+    })
+    it('should return the angle theta of vector', function () {
+      var vector = new Vector(0, 1)
+      var result = Vector.angleOf(vector)
+      expect(result * 180 / Math.PI).to.be(90)
+    })
+  })
+  describe('Vector.prototype.angleOf()', function () {
+    it('should be a function', function () {
+      expect(Vector.prototype.angleOf).to.be.a(Function)
+    })
+    it('should return the angle theta of vector', function () {
+      var self = new Vector(0, 1)
+      var result = self.angleOf()
+      expect(result * 180 / Math.PI).to.be(90)
+    })
+  })
+})

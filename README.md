@@ -95,8 +95,8 @@
 
 **Angle computing**
 
-- [ ] `Vector.angleOf(vector)`
-- [ ] `Vector.prototype.angleOf()`
+- [x] [`Vector.angleOf(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L158)
+- [x] [`Vector.prototype.angleOf()`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L162)
 - [ ] `Vector.angleTo(one, another)`
 - [ ] `Vector.prototype.angleTo(vector)`
 

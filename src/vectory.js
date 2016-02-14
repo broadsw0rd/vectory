@@ -154,3 +154,11 @@ Vector.prototype.distance = function (vector) {
   var y = this.y - vector.y
   return Math.sqrt(x * x + y * y)
 }
+
+Vector.angleOf = function (vector) {
+  return vector.angleOf()
+}
+
+Vector.prototype.angleOf = function () {
+  return Math.atan2(this.y, this.x)
+}
