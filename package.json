@@ -23,16 +23,16 @@
     "url": "https://github.com/broadsw0rd/vectory"
   },
   "devDependencies": {
-    "uglify-js": "latest",
-    "mocha": "latest",
-    "expect.js": "latest",
-    "coveralls": "latest",
-    "istanbul": "latest",
-    "snazzy": "latest",
-    "benchmark": "latest",
-    "chalk": "latest",
-    "log-symbols": "latest",
-    "browserify": "latest"
+    "uglify-js": "^2.6.1",
+    "mocha": "^2.4.5",
+    "expect.js": "^0.3.1",
+    "coveralls": "^2.11.6",
+    "istanbul": "^0.4.2",
+    "snazzy": "^3.0.0",
+    "benchmark": "^2.1.0",
+    "chalk": "^1.1.1",
+    "log-symbols": "^1.0.2",
+    "browserify": "^13.0.0"
   },
   "scripts": {
     "check": "snazzy src/vectory.js test/test.js bench/index.js",
