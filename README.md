@@ -11,6 +11,9 @@
    <a href="https://github.com/feross/standard" target="_blank">
       <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat" alt="js-standard-style"></img>
    </a>
+   <a href="https://www.bithound.io/github/broadsw0rd/vectory">
+   	<img src="https://www.bithound.io/github/broadsw0rd/vectory/badges/code.svg" alt="bitHound Code">
+   </a>
 </p>
 
 <p align="center">
