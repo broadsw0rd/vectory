@@ -232,3 +232,16 @@ Vector.prototype.compare = function (vector) {
   var vectorMagnitude = vector.magnitude()
   return (thisMagnitude > vectorMagnitude) - (vectorMagnitude > thisMagnitude)
 }
+
+Object.defineProperties(Vector.prototype, {
+  xx: {
+    configurable: true,
+    get: function () {
+      return new Vector(this.x, this.x)
+    },
+    set: function (vector) {
+      this.x = vector.x
+      this.y = vector.x
+    }
+  }
+})
