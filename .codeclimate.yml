@@ -1,7 +1,0 @@
-languages:
-  JavaScript: true
-exclude_paths:
-- "tools/header.js"
-- "tools/footer.js"
-- "test/test.js"
-- "dist/**"
