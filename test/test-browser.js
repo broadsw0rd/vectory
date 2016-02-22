@@ -261,6 +261,49 @@ Vector.prototype.compare = function (vector) {
   return (thisMagnitude > vectorMagnitude) - (vectorMagnitude > thisMagnitude)
 }
 
+Object.defineProperties(Vector.prototype, {
+  xx: {
+    configurable: true,
+    get: function () {
+      return new Vector(this.x, this.x)
+    },
+    set: function (vector) {
+      this.x = vector.x
+      this.y = vector.x
+    }
+  },
+  xy: {
+    configurable: true,
+    get: function () {
+      return new Vector(this.x, this.y)
+    },
+    set: function (vector) {
+      this.x = vector.x
+      this.y = vector.y
+    }
+  },
+  yx: {
+    configurable: true,
+    get: function () {
+      return new Vector(this.y, this.x)
+    },
+    set: function (vector) {
+      this.x = vector.y
+      this.y = vector.x
+    }
+  },
+  yy: {
+    configurable: true,
+    get: function () {
+      return new Vector(this.y, this.y)
+    },
+    set: function (vector) {
+      this.x = vector.y
+      this.y = vector.y
+    }
+  }
+})
+
 return Vector
 
 }))
@@ -3988,6 +4031,108 @@ describe('Equality', function () {
       var vector = new Vector(2, 2)
       var result = self.compare(vector)
       expect(result).to.be(-1)
+    })
+  })
+})
+
+describe('Swizzling', function () {
+  describe('Vector.prototype.xx', function () {
+    it('should be an accessor', function () {
+      expect(Vector.prototype.xx).to.be.ok()
+      var descriptor = Object.getOwnPropertyDescriptor(Vector.prototype, 'xx')
+      expect(descriptor.configurable).to.be(true)
+      expect(descriptor.enumerable).to.be(false)
+      expect(descriptor.get).to.be.a(Function)
+      expect(descriptor.set).to.be.a(Function)
+    })
+    it('should have getter which return new vector', function () {
+      var self = new Vector(1, 2)
+      var result = self.xx
+      expect(result).to.be.a(Vector)
+      expect(result.x).to.be(1)
+      expect(result.y).to.be(1)
+    })
+    it('should have setter which set vector values', function () {
+      var self = new Vector(1, 2)
+      var vector = new Vector(3, 4)
+      self.xx = vector
+      expect(self.x).to.be(3)
+      expect(self.y).to.be(3)
+    })
+  })
+
+  describe('Vector.prototype.xy', function () {
+    it('should be an accessor', function () {
+      expect(Vector.prototype.xy).to.be.ok()
+      var descriptor = Object.getOwnPropertyDescriptor(Vector.prototype, 'xy')
+      expect(descriptor.configurable).to.be(true)
+      expect(descriptor.enumerable).to.be(false)
+      expect(descriptor.get).to.be.a(Function)
+      expect(descriptor.set).to.be.a(Function)
+    })
+    it('should have getter which return new vector', function () {
+      var self = new Vector(1, 2)
+      var result = self.xy
+      expect(result).to.be.a(Vector)
+      expect(result.x).to.be(1)
+      expect(result.y).to.be(2)
+    })
+    it('should have setter which set vector values', function () {
+      var self = new Vector(1, 2)
+      var vector = new Vector(3, 4)
+      self.xy = vector
+      expect(self.x).to.be(3)
+      expect(self.y).to.be(4)
+    })
+  })
+
+  describe('Vector.prototype.yx', function () {
+    it('should be an accessor', function () {
+      expect(Vector.prototype.yx).to.be.ok()
+      var descriptor = Object.getOwnPropertyDescriptor(Vector.prototype, 'yx')
+      expect(descriptor.configurable).to.be(true)
+      expect(descriptor.enumerable).to.be(false)
+      expect(descriptor.get).to.be.a(Function)
+      expect(descriptor.set).to.be.a(Function)
+    })
+    it('should have getter which return new vector', function () {
+      var self = new Vector(1, 2)
+      var result = self.yx
+      expect(result).to.be.a(Vector)
+      expect(result.x).to.be(2)
+      expect(result.y).to.be(1)
+    })
+    it('should have setter which set vector values', function () {
+      var self = new Vector(1, 2)
+      var vector = new Vector(3, 4)
+      self.yx = vector
+      expect(self.x).to.be(4)
+      expect(self.y).to.be(3)
+    })
+  })
+
+  describe('Vector.prototype.yy', function () {
+    it('should be an accessor', function () {
+      expect(Vector.prototype.yy).to.be.ok()
+      var descriptor = Object.getOwnPropertyDescriptor(Vector.prototype, 'yy')
+      expect(descriptor.configurable).to.be(true)
+      expect(descriptor.enumerable).to.be(false)
+      expect(descriptor.get).to.be.a(Function)
+      expect(descriptor.set).to.be.a(Function)
+    })
+    it('should have getter which return new vector', function () {
+      var self = new Vector(1, 2)
+      var result = self.yy
+      expect(result).to.be.a(Vector)
+      expect(result.x).to.be(2)
+      expect(result.y).to.be(2)
+    })
+    it('should have setter which set vector values', function () {
+      var self = new Vector(1, 2)
+      var vector = new Vector(3, 4)
+      self.yy = vector
+      expect(self.x).to.be(4)
+      expect(self.y).to.be(4)
     })
   })
 })

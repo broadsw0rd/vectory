@@ -21,8 +21,8 @@
 
 ## Features
 
-- Simplicity - [234 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L156)
-- Lightness - [3 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
+- Simplicity - [277 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L277)
+- Lightness - [3.6 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
 - Reliability - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
 - Rich [api](#api) - 29 methods
 - Built for [any](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L9) environment
@@ -130,10 +130,10 @@
 
 **Swizzling**
 
-- [x] `Vector.prototype.xx`
-- [x] `Vector.prototype.xy`
-- [x] `Vector.prototype.yx`
-- [x] `Vector.prototype.yy`
+- [x] [`Vector.prototype.xx`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L237)
+- [x] [`Vector.prototype.xy`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L247)
+- [x] [`Vector.prototype.yx`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L257)
+- [x] [`Vector.prototype.yy`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L267)
 
 **Iterator**
 
