@@ -253,5 +253,15 @@ Object.defineProperties(Vector.prototype, {
       this.x = vector.x
       this.y = vector.y
     }
+  },
+  yx: {
+    configurable: true,
+    get: function () {
+      return new Vector(this.y, this.x)
+    },
+    set: function (vector) {
+      this.y = vector.x
+      this.x = vector.y
+    }
   }
 })

@@ -132,7 +132,7 @@
 
 - [x] `Vector.prototype.xx`
 - [x] `Vector.prototype.xy`
-- [ ] `Vector.prototype.yx`
+- [x] `Vector.prototype.yx`
 - [ ] `Vector.prototype.yy`
 
 **Iterator**
