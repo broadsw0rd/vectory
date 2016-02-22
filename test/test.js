@@ -842,4 +842,29 @@ describe('Swizzling', function () {
       expect(self.y).to.be(3)
     })
   })
+
+  describe('Vector.prototype.yy', function () {
+    it('should be an accessor', function () {
+      expect(Vector.prototype.yy).to.be.ok()
+      var descriptor = Object.getOwnPropertyDescriptor(Vector.prototype, 'yy')
+      expect(descriptor.configurable).to.be(true)
+      expect(descriptor.enumerable).to.be(false)
+      expect(descriptor.get).to.be.a(Function)
+      expect(descriptor.set).to.be.a(Function)
+    })
+    it('should have getter which return new vector', function () {
+      var self = new Vector(1, 2)
+      var result = self.yy
+      expect(result).to.be.a(Vector)
+      expect(result.x).to.be(2)
+      expect(result.y).to.be(2)
+    })
+    it('should have setter which set vector values', function () {
+      var self = new Vector(1, 2)
+      var vector = new Vector(3, 4)
+      self.yy = vector
+      expect(self.x).to.be(4)
+      expect(self.y).to.be(4)
+    })
+  })
 })
