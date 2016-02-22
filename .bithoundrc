@@ -5,5 +5,13 @@
     "**/static/**",
     "**/test/**",
     "**/tools/**"
-  ]
+  ],
+  "critics": {
+    "lint": {
+      "engine": "standard"
+    },
+    "wc": { 
+      "limit": 400 
+    }
+  }
 }
