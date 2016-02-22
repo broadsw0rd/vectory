@@ -131,7 +131,7 @@
 **Swizzling**
 
 - [x] `Vector.prototype.xx`
-- [ ] `Vector.prototype.xy`
+- [x] `Vector.prototype.xy`
 - [ ] `Vector.prototype.yx`
 - [ ] `Vector.prototype.yy`
 
