@@ -703,6 +703,9 @@ describe('Convertion', function () {
       var result = Vector.toString(vector)
       expect(result).to.be('1.000 2.000')
     })
+    it('should call base .toString() if passed nothing', function () {
+      expect(Vector.toString()).to.be(Function.prototype.toString.call(Vector))
+    })
   })
 
   describe('Vector.prototype.toString()', function () {

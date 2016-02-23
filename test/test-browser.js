@@ -236,7 +236,7 @@ Vector.prototype.toJSON = function () {
 }
 
 Vector.toString = function (vector) {
-  return vector.toString()
+  return vector ? vector.toString() : Function.prototype.toString.call(this)
 }
 
 Vector.prototype.toString = function () {
@@ -4028,6 +4028,9 @@ describe('Convertion', function () {
       var vector = new Vector(1, 2)
       var result = Vector.toString(vector)
       expect(result).to.be('1.000 2.000')
+    })
+    it('should call base .toString() if passed nothing', function () {
+      expect(Vector.toString()).to.be(Function.prototype.toString.call(Vector))
     })
   })
 

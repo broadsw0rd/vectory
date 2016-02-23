@@ -208,7 +208,7 @@ Vector.prototype.toJSON = function () {
 }
 
 Vector.toString = function (vector) {
-  return vector.toString()
+  return vector ? vector.toString() : Function.prototype.toString.call(this)
 }
 
 Vector.prototype.toString = function () {
