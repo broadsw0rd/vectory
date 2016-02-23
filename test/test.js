@@ -868,3 +868,22 @@ describe('Swizzling', function () {
     })
   })
 })
+
+if (typeof Symbol !== 'undefined' && Symbol.iterator) {
+  describe('Iterator', function () {
+    describe('Vector.prototype[Symbol.iterator]()', function () {
+      it('shoud be a function', function () {
+        expect(Vector.prototype[Symbol.iterator]).to.be.a(Function)
+      })
+      it('should return an iterator', function () {
+        var vector = new Vector(3, 4)
+        var iterator = vector[Symbol.iterator]()
+        expect(iterator).to.be.ok()
+        expect(iterator.next).to.be.a(Function)
+        expect(iterator.next()).to.eql({ done: false, value: 3 })
+        expect(iterator.next()).to.eql({ done: false, value: 4 })
+        expect(iterator.next()).to.eql({ done: true, value: void 0 })
+      })
+    })
+  })
+}

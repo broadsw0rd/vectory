@@ -304,6 +304,41 @@ Object.defineProperties(Vector.prototype, {
   }
 })
 
+function VectorIterator (vector) {
+  this.vector = vector
+  this.__idx = 0
+}
+
+VectorIterator.prototype.next = function () {
+  if (this.__idx === 0) {
+    this.__idx++
+    return {
+      done: false,
+      value: this.vector.x
+    }
+  } else if (this.__idx === 1) {
+    this.__idx++
+    return {
+      done: false,
+      value: this.vector.y
+    }
+  } else {
+    return {
+      done: true,
+      value: void 0
+    }
+  }
+}
+
+if (typeof Symbol !== 'undefined' && Symbol.iterator) {
+  Object.defineProperty(Vector.prototype, Symbol.iterator, {
+    configurable: true,
+    value: function iterator () {
+      return new VectorIterator(this)
+    }
+  })
+}
+
 return Vector
 
 }))
@@ -4159,5 +4194,24 @@ describe('Swizzling', function () {
     })
   })
 })
+
+if (typeof Symbol !== 'undefined' && Symbol.iterator) {
+  describe('Iterator', function () {
+    describe('Vector.prototype[Symbol.iterator]()', function () {
+      it('shoud be a function', function () {
+        expect(Vector.prototype[Symbol.iterator]).to.be.a(Function)
+      })
+      it('should return an iterator', function () {
+        var vector = new Vector(3, 4)
+        var iterator = vector[Symbol.iterator]()
+        expect(iterator).to.be.ok()
+        expect(iterator.next).to.be.a(Function)
+        expect(iterator.next()).to.eql({ done: false, value: 3 })
+        expect(iterator.next()).to.eql({ done: false, value: 4 })
+        expect(iterator.next()).to.eql({ done: true, value: void 0 })
+      })
+    })
+  })
+}
 
 },{"../dist/vectory.js":1,"expect.js":6}]},{},[7]);

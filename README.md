@@ -24,8 +24,8 @@
 
 ## Features
 
-- Simplicity - [277 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L277)
-- Lightness - [3.6 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
+- Simplicity - [312 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L312)
+- Lightness - [3.9 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
 - Reliability - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
 - Rich [api](#api) - 29 methods
 - Built for [any](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L9) environment
@@ -140,7 +140,7 @@
 
 **Iterator**
 
-- [ ] `Vector.prototype[Symbol.iterator]()`
+- [x] [`Vector.prototype[Symbol.iterator]()`](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L308) (Latest Chrome and FF or shim)
 
 ## Benchmark
 
