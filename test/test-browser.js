@@ -330,6 +330,7 @@ VectorIterator.prototype.next = function () {
   }
 }
 
+/* istanbul ignore else */
 if (typeof Symbol !== 'undefined' && Symbol.iterator) {
   Object.defineProperty(Vector.prototype, Symbol.iterator, {
     configurable: true,
