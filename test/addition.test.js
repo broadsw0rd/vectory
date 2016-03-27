@@ -33,3 +33,18 @@ test('`Vector.iadd(one, another)` should return another vector', (t) => {
   var result = Vector.iadd(one, another)
   t.is(result, another)
 })
+
+test('`Vector#iadd(vector)` should add vector to self', (t) => {
+  var self = new Vector(1, 2)
+  var vector = new Vector(3, 4)
+  self.iadd(vector)
+  t.is(self.x, 4)
+  t.is(self.y, 6)
+})
+
+test('`Vector#iadd(vector)` should return self instance', (t) => {
+  var self = new Vector(1, 2)
+  var vector = new Vector(3, 4)
+  var result = self.iadd(vector)
+  t.is(result, self)
+})
