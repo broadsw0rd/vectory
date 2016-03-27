@@ -40,3 +40,29 @@ test('`Vector.fromAngle(angle, magnitude)` should return new vector from angle a
   t.is(Math.round(vector.x), 0)
   t.is(vector.y, 1)
 })
+
+test('`Vector.parse` should be a function', (t) => {
+  t.true(typeof Vector.parse === 'function')
+})
+
+test('`Vector.parse(string)` should return new vector from string', (t) => {
+  var vector = Vector.parse('1.1, 2.2')
+  t.true(vector instanceof Vector)
+  t.is(vector.x, 1.1)
+  t.is(vector.y, 2.2)
+
+  vector = Vector.parse('1.1,2.2')
+  t.true(vector instanceof Vector)
+  t.is(vector.x, 1.1)
+  t.is(vector.y, 2.2)
+
+  vector = Vector.parse('1.1 2.2')
+  t.true(vector instanceof Vector)
+  t.is(vector.x, 1.1)
+  t.is(vector.y, 2.2)
+
+  vector = Vector.parse(' 1.1 2.2 ')
+  t.true(vector instanceof Vector)
+  t.is(vector.x, 1.1)
+  t.is(vector.y, 2.2)
+})
