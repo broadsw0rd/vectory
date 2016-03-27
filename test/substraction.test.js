@@ -9,3 +9,12 @@ test('`Vector.sub(one, another)` should return diff of two vectors', (t) => {
   t.is(result.x, 2)
   t.is(result.y, 2)
 })
+
+test('`Vector#sub(vector)` should return diff of two vectors', (t) => {
+  var self = new Vector(3, 4)
+  var vector = new Vector(1, 2)
+  var result = self.sub(vector)
+  t.true(result instanceof Vector)
+  t.is(result.x, 2)
+  t.is(result.y, 2)
+})
