@@ -27,13 +27,13 @@
 
 ## Install & Usage
 
-## API
-
 ## Support
 
 - Latest Chrome, FF, Safari
 - IE 9+
 - Node 0.10+
+
+## API
 
 **Creation**
 
