@@ -16,12 +16,6 @@
    </a>
 </p>
 
-<p align="center">
-   <a href="https://saucelabs.com/u/fantabulous-js" target="_blank">
-      <img src="https://saucelabs.com/browser-matrix/fantabulous-js.svg" alt="Sauce Test Status"/>
-   </a>
-</p>
-
 ## Features
 
 - Simplicity - [313 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L313)
