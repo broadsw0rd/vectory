@@ -29,3 +29,14 @@ test('`Vector.from([x, y])` should return new vector from data', (t) => {
   t.is(vector.x, 1)
   t.is(vector.y, 2)
 })
+
+test('`Vector.fromAngle` should be a function', (t) => {
+  t.true(typeof Vector.fromAngle === 'function')
+})
+
+test('`Vector.fromAngle(angle, magnitude)` should return new vector from angle and magnitude', (t) => {
+  var vector = Vector.fromAngle(90 * (Math.PI / 180), 1)
+  t.true(vector instanceof Vector)
+  t.is(Math.round(vector.x), 0)
+  t.is(vector.y, 1)
+})
