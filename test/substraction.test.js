@@ -33,3 +33,18 @@ test('`Vector.isub(one, another)` should return another vector', (t) => {
   var result = Vector.isub(one, another)
   t.is(result, another)
 })
+
+test('`Vector#isub(vector)` should substract vector from self', (t) => {
+  var self = new Vector(3, 4)
+  var vector = new Vector(1, 2)
+  self.isub(vector)
+  t.is(self.x, 2)
+  t.is(self.y, 2)
+})
+
+test('`Vector#isub(vector)` should return self instance', (t) => {
+  var self = new Vector(3, 4)
+  var vector = new Vector(1, 2)
+  var result = self.isub(vector)
+  t.is(result, self)
+})
