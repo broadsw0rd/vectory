@@ -31,7 +31,7 @@
 
 - Latest Chrome, FF, Safari
 - IE 9+
-- Node 0.10+
+- Node 0.12+
 
 ## API
 
