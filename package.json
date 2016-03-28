@@ -23,24 +23,21 @@
     "url": "https://github.com/broadsw0rd/vectory"
   },
   "devDependencies": {
-    "uglify-js": "^2.6.1",
-    "mocha": "^2.4.5",
-    "expect.js": "^0.3.1",
-    "coveralls": "^2.11.6",
-    "istanbul": "^0.4.2",
-    "snazzy": "^3.0.0",
+    "ava": "^0.13.0",
     "benchmark": "^2.1.0",
     "chalk": "^1.1.1",
+    "coveralls": "^2.11.6",
     "log-symbols": "^1.0.2",
-    "browserify": "^13.0.0"
+    "nyc": "^6.1.1",
+    "snazzy": "^3.0.0",
+    "uglify-js": "^2.6.1"
   },
   "scripts": {
-    "check": "snazzy src/vectory.js test/test.js bench/index.js",
+    "check": "snazzy src/vectory.js test/*.js bench/index.js",
     "wrap": "cat tools/header.js src/vectory.js tools/footer.js > dist/vectory.js",
-    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec test/test.js",
+    "test": "nyc --cache --reporter=html --reporter=lcov --reporter=text ava",
     "bench": "node ./bench/index.js",
     "build": "uglifyjs -c -m -- dist/vectory.js > dist/vectory.min.js",
-    "test-browser": "browserify test/test.js -o test/test-browser.js",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {}

@@ -16,12 +16,6 @@
    </a>
 </p>
 
-<p align="center">
-   <a href="https://saucelabs.com/u/fantabulous-js" target="_blank">
-      <img src="https://saucelabs.com/browser-matrix/fantabulous-js.svg" alt="Sauce Test Status"/>
-   </a>
-</p>
-
 ## Features
 
 - Simplicity - [313 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L313)
@@ -32,6 +26,12 @@
 - Designed with performance in mind and reviewed with [IRHydra](http://mrale.ph/irhydra/2/)
 
 ## Install & Usage
+
+## Support
+
+- Latest Chrome, FF, Safari
+- IE 9+
+- Node 0.10+
 
 ## API
 
@@ -185,6 +185,5 @@ Command | Description
 `npm run check` | Check standard code style by [snazzy](https://www.npmjs.com/package/snazzy)
 `npm run wrap` | Wrap source code in [UMD](https://github.com/umdjs/umd)
 `npm run bench` | Run [benchmark](http://benchmarkjs.com/)
-`npm run test` | Run tests by [mocha](https://mochajs.org/) and compute code coverage by [istanbul](https://github.com/gotwarlost/istanbul)
+`npm run test` | Run tests by [ava](https://github.com/sindresorhus/ava) and compute code coverage by [nyc](https://github.com/bcoe/nyc)
 `npm run build` | Minify code by [UglifyJS](https://github.com/mishoo/UglifyJS)
-`npm run test-browser` | Make tests available from browser
