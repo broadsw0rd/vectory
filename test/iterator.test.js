@@ -4,8 +4,8 @@ import test from 'ava'
 if (typeof Symbol !== 'undefined' && Symbol.iterator) {
   test('`Vector.prototype[Symbol.iterator]()` should return an iterator', (t) => {
     var vector = new Vector(3, 4)
+    console.log(vector, Symbol, Symbol.iterator, vector[Symbol.iterator])
     var iterator = vector[Symbol.iterator]()
-    console.log(iterator, Symbol, Symbol.iterator)
     t.ok(iterator)
     t.true(typeof iterator.next === 'function')
     t.same(iterator.next(), { done: false, value: 3 })
