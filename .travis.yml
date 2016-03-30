@@ -6,4 +6,3 @@ node_js:
   - '5'
 after_script:
   - npm run coveralls
-  - npm run bench
