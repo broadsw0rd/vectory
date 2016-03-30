@@ -8,7 +8,8 @@ var benchmarks = {
   'Multiplication': require('./benchmarks/multiplication.bench.js'),
   'Division': require('./benchmarks/division.bench.js'),
   'Linear Interpolation': require('./benchmarks/lerp.bench.js'),
-  'Normalization': require('./benchmarks/normalization.bench.js')
+  'Normalization': require('./benchmarks/normalization.bench.js'),
+  'Magnitude': require('./benchmarks/magnitude.bench.js')
 }
 
 var keys = Object.keys(benchmarks)

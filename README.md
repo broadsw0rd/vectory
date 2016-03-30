@@ -191,6 +191,10 @@ i start benchmark, plase wait a bit...
     √ Vector#normalized() x 22,180,009 ops/sec ±2.16% (75 runs sampled)
     √ Vector.normalize(vector) x 33,361,316 ops/sec ±1.91% (76 runs sampled)
     √ Vector#normalize() x 34,148,672 ops/sec ±1.64% (77 runs sampled)
+    
+  Magnitude
+    √ Vector.magnitude(vector) x 34,972,494 ops/sec ±2.85% (69 runs sampled)
+    √ Vector#magnitude() x 38,121,545 ops/sec ±2.06% (73 runs sampled)
 
 ```
 
