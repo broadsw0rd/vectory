@@ -9,7 +9,8 @@ var benchmarks = {
   'Division': require('./benchmarks/division.bench.js'),
   'Linear Interpolation': require('./benchmarks/lerp.bench.js'),
   'Normalization': require('./benchmarks/normalization.bench.js'),
-  'Magnitude': require('./benchmarks/magnitude.bench.js')
+  'Magnitude': require('./benchmarks/magnitude.bench.js'),
+  'Dot Product': require('./benchmarks/dot-product.bench.js')
 }
 
 var keys = Object.keys(benchmarks)
