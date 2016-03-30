@@ -186,6 +186,12 @@ i start benchmark, plase wait a bit...
     √ Vector.lerp(one, another, t) x 41,307,587 ops/sec ±0.88% (92 runs sampled)
     √ Vector#lerp(vector, t) x 44,044,565 ops/sec ±0.70% (91 runs sampled)
 
+  Normalization
+    √ Vector.normalized(vector) x 20,717,304 ops/sec ±2.00% (71 runs sampled)
+    √ Vector#normalized() x 22,180,009 ops/sec ±2.16% (75 runs sampled)
+    √ Vector.normalize(vector) x 33,361,316 ops/sec ±1.91% (76 runs sampled)
+    √ Vector#normalize() x 34,148,672 ops/sec ±1.64% (77 runs sampled)
+
 ```
 
 ## Development
