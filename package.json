@@ -25,7 +25,6 @@
   "devDependencies": {
     "ava": "^0.13.0",
     "benchmark": "^2.1.0",
-    "chalk": "^1.1.1",
     "coveralls": "^2.11.6",
     "log-symbols": "^1.0.2",
     "nyc": "^6.1.1",
@@ -33,7 +32,7 @@
     "uglify-js": "^2.6.1"
   },
   "scripts": {
-    "check": "snazzy src/vectory.js test/*.js bench/index.js",
+    "check": "snazzy src/vectory.js test/*.js bench/*.js bench/**/*.js",
     "wrap": "cat tools/header.js src/vectory.js tools/footer.js > dist/vectory.js",
     "test": "nyc --cache --reporter=html --reporter=lcov --reporter=text ava",
     "bench": "node ./bench/index.js",
