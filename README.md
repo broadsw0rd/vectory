@@ -147,34 +147,44 @@
 Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v4.2.4
 
 ```
+> vectory@0.0.1 bench d:\Projects\vectory
 > node ./bench/index.js
 
-Vectory benchmark:
+i start benchmark, plase wait a bit...
 
-	√ Vector(x, y) x 47,757,545 ops/sec ±3.88% (83 runs sampled)
-	√ Vector.from([x, y]) x 48,347,584 ops/sec ±0.92% (92 runs sampled)
-	√ Vector.fromAngle(angle, magnitude) x 12,681,203 ops/sec ±0.96% (88 runs sampled)
-	√ Vector.parse(string) x 920,616 ops/sec ±0.66% (91 runs sampled)
-	√ Vector.add(one, another) x 46,433,970 ops/sec ±1.03% (90 runs sampled)
-	√ Vector#add(vector) x 49,388,108 ops/sec ±0.79% (91 runs sampled)
-	√ Vector.iadd(one, another) x 60,422,023 ops/sec ±1.18% (87 runs sampled)
-	√ Vector#iadd(vector) x 63,371,804 ops/sec ±0.89% (90 runs sampled)
-	√ Vector.sub(one, another) x 46,890,073 ops/sec ±0.80% (85 runs sampled)
-	√ Vector#sub(vector) x 45,989,342 ops/sec ±0.96% (89 runs sampled)
-	√ Vector.isub(one, another) x 60,357,567 ops/sec ±0.93% (92 runs sampled)
-	√ Vector#isub(vector) x 63,368,120 ops/sec ±0.98% (89 runs sampled)
-	√ Vector.mul(scalar, vector) x 47,626,354 ops/sec ±0.67% (90 runs sampled)
-	√ Vector#mul(vector) x 49,914,480 ops/sec ±0.75% (89 runs sampled)
-	√ Vector.imul(scalar, vector) x 63,101,653 ops/sec ±0.89% (85 runs sampled)
-	√ Vector#imul(vector) x 66,682,488 ops/sec ±1.17% (88 runs sampled)
-	√ Vector.div(scalar, vector) x 46,562,089 ops/sec ±0.70% (87 runs sampled)
-	√ Vector#div(vector) x 48,129,893 ops/sec ±1.03% (88 runs sampled)
-	√ Vector.idiv(scalar, vector) x 61,233,615 ops/sec ±1.13% (92 runs sampled)
-	√ Vector#idiv(vector) x 63,934,978 ops/sec ±1.06% (90 runs sampled)
-	√ Vector.lerp(one, another, t) x 41,664,345 ops/sec ±0.67% (89 runs sampled)
-	√ Vector#lerp(vector, t) x 42,541,461 ops/sec ±0.84% (89 runs sampled)
-	√ Vector.normalized(vector) x 32,452,975 ops/sec ±4.15% (80 runs sampled)
-	√ Vector#normalized() x 36,790,158 ops/sec ±0.78% (93 runs sampled)
+  Cteation
+    √ Vector(x, y) x 48,738,184 ops/sec ±3.25% (80 runs sampled)
+    √ Vector.from([x, y]) x 48,661,066 ops/sec ±0.93% (89 runs sampled)
+    √ Vector.fromAngle(angle, magnitude) x 13,660,343 ops/sec ±0.91% (92 runs sampled)
+    √ Vector.parse(string) x 907,646 ops/sec ±0.73% (83 runs sampled)
+
+  Addition
+    √ Vector.add(one, another) x 46,406,837 ops/sec ±1.39% (88 runs sampled)
+    √ Vector#add(vector) x 48,038,377 ops/sec ±0.79% (88 runs sampled)
+    √ Vector.iadd(one, another) x 59,606,793 ops/sec ±1.27% (87 runs sampled)
+    √ Vector#iadd(vector) x 57,243,055 ops/sec ±0.89% (90 runs sampled)
+
+  Substraction
+    √ Vector.sub(one, another) x 46,400,583 ops/sec ±1.83% (88 runs sampled)
+    √ Vector#sub(vector) x 50,428,891 ops/sec ±0.96% (90 runs sampled)
+    √ Vector.isub(one, another) x 60,077,172 ops/sec ±1.51% (88 runs sampled)
+    √ Vector#isub(vector) x 62,758,590 ops/sec ±1.08% (89 runs sampled)
+
+  Multiplication
+    √ Vector.mul(scalar, vector) x 48,308,190 ops/sec ±0.82% (90 runs sampled)
+    √ Vector#mul(vector) x 50,691,670 ops/sec ±0.79% (90 runs sampled)
+    √ Vector.imul(scalar, vector) x 62,480,807 ops/sec ±0.90% (88 runs sampled)
+    √ Vector#imul(vector) x 66,755,450 ops/sec ±1.03% (89 runs sampled)
+
+  Division
+    √ Vector.div(scalar, vector) x 46,791,132 ops/sec ±0.99% (88 runs sampled)
+    √ Vector#div(vector) x 49,188,655 ops/sec ±0.88% (88 runs sampled)
+    √ Vector.idiv(scalar, vector) x 60,979,579 ops/sec ±1.03% (89 runs sampled)
+    √ Vector#idiv(vector) x 61,906,327 ops/sec ±0.96% (88 runs sampled)
+
+  Linear Interpolation
+    √ Vector.lerp(one, another, t) x 41,307,587 ops/sec ±0.88% (92 runs sampled)
+    √ Vector#lerp(vector, t) x 44,044,565 ops/sec ±0.70% (91 runs sampled)
 
 ```
 

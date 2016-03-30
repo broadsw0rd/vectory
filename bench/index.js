@@ -6,7 +6,8 @@ var benchmarks = {
   'Addition': require('./benchmarks/addition.bench.js'),
   'Substraction': require('./benchmarks/substraction.bench.js'),
   'Multiplication': require('./benchmarks/multiplication.bench.js'),
-  'Division': require('./benchmarks/division.bench.js')
+  'Division': require('./benchmarks/division.bench.js'),
+  'Linear Interpolation': require('./benchmarks/lerp.bench.js')
 }
 
 var keys = Object.keys(benchmarks)
