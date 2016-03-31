@@ -200,6 +200,10 @@ i start benchmark, plase wait a bit...
     √ Vector.dot(one, another) x 57,703,637 ops/sec ±0.77% (89 runs sampled)
     √ Vector#dot(vector) x 59,823,363 ops/sec ±1.22% (91 runs sampled)
 
+  Distance
+    √ Vector.distance(one, another) x 48,746,551 ops/sec ±1.34% (87 runs sampled)
+    √ Vector#distance(vector) x 51,477,832 ops/sec ±1.06% (88 runs sampled)
+    
 ```
 
 ## Development

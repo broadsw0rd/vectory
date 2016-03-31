@@ -10,12 +10,13 @@ var benchmarks = {
   'Linear Interpolation': require('./benchmarks/lerp.bench.js'),
   'Normalization': require('./benchmarks/normalization.bench.js'),
   'Magnitude': require('./benchmarks/magnitude.bench.js'),
-  'Dot Product': require('./benchmarks/dot-product.bench.js')
+  'Dot Product': require('./benchmarks/dot-product.bench.js'),
+  'Distance': require('./benchmarks/distance.bench.js')
 }
 
 var keys = Object.keys(benchmarks)
 
-console.log(logSymbols.info + ' start benchmark, plase wait a bit...' + '\r\n')
+console.log(logSymbols.info + ' start benchmark, please wait a bit...' + '\r\n')
 
 for (var i = 0; i < keys.length; i++) {
   var title = keys[i]
