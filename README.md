@@ -203,6 +203,12 @@ i start benchmark, plase wait a bit...
   Distance
     √ Vector.distance(one, another) x 48,746,551 ops/sec ±1.34% (87 runs sampled)
     √ Vector#distance(vector) x 51,477,832 ops/sec ±1.06% (88 runs sampled)
+
+  Angle computing
+    √ Vector.angleOf(vector) x 10,650,060 ops/sec ±0.55% (90 runs sampled)
+    √ Vector#angleOf() x 10,789,058 ops/sec ±0.73% (87 runs sampled)
+    √ Vector.angleTo(one, another) x 8,421,258 ops/sec ±0.64% (87 runs sampled)
+    √ Vector#angleTo(vector) x 8,619,643 ops/sec ±0.56% (88 runs sampled)
     
 ```
 

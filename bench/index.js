@@ -11,7 +11,8 @@ var benchmarks = {
   'Normalization': require('./benchmarks/normalization.bench.js'),
   'Magnitude': require('./benchmarks/magnitude.bench.js'),
   'Dot Product': require('./benchmarks/dot-product.bench.js'),
-  'Distance': require('./benchmarks/distance.bench.js')
+  'Distance': require('./benchmarks/distance.bench.js'),
+  'Angle computing': require('./benchmarks/angle.bench.js')
 }
 
 var keys = Object.keys(benchmarks)
