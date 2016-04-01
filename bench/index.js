@@ -12,7 +12,8 @@ var benchmarks = {
   'Magnitude': require('./benchmarks/magnitude.bench.js'),
   'Dot Product': require('./benchmarks/dot-product.bench.js'),
   'Distance': require('./benchmarks/distance.bench.js'),
-  'Angle computing': require('./benchmarks/angle.bench.js')
+  'Angle computing': require('./benchmarks/angle.bench.js'),
+  'Resetting': require('./benchmarks/resetting.bench.js')
 }
 
 var keys = Object.keys(benchmarks)

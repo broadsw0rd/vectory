@@ -210,6 +210,12 @@ i start benchmark, plase wait a bit...
     √ Vector.angleTo(one, another) x 8,421,258 ops/sec ±0.64% (87 runs sampled)
     √ Vector#angleTo(vector) x 8,619,643 ops/sec ±0.56% (88 runs sampled)
     
+  Resetting
+    √ Vector.reset(one, another) x 66,055,223 ops/sec ±1.14% (87 runs sampled)
+    √ Vector#reset(vector) x 66,533,103 ops/sec ±1.55% (86 runs sampled)
+    √ Vector.zero(vector) x 66,881,416 ops/sec ±1.42% (82 runs sampled)
+    √ Vector#zero() x 67,109,780 ops/sec ±6.07% (74 runs sampled)
+    
 ```
 
 ## Development
