@@ -220,6 +220,12 @@ i start benchmark, plase wait a bit...
     √ Vector.copy(vector) x 47,457,591 ops/sec ±4.61% (80 runs sampled)
     √ Vector#copy() x 55,116,766 ops/sec ±1.17% (89 runs sampled)
 
+  Convertion
+    √ Vector.toJSON(vector) x 32,471,330 ops/sec ±9.73% (66 runs sampled)
+    √ Vector#toJSON() x 45,244,859 ops/sec ±4.17% (80 runs sampled)
+    √ Vector.toString(vector) x 1,508,856 ops/sec ±4.47% (79 runs sampled)
+    √ Vector#toString() x 1,717,979 ops/sec ±0.56% (90 runs sampled)
+
 ```
 
 ## Development
