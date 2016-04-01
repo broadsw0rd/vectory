@@ -215,7 +215,11 @@ i start benchmark, plase wait a bit...
     √ Vector#reset(vector) x 66,533,103 ops/sec ±1.55% (86 runs sampled)
     √ Vector.zero(vector) x 66,881,416 ops/sec ±1.42% (82 runs sampled)
     √ Vector#zero() x 67,109,780 ops/sec ±6.07% (74 runs sampled)
-    
+
+  Copy
+    √ Vector.copy(vector) x 47,457,591 ops/sec ±4.61% (80 runs sampled)
+    √ Vector#copy() x 55,116,766 ops/sec ±1.17% (89 runs sampled)
+
 ```
 
 ## Development
