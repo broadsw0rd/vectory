@@ -17,7 +17,8 @@ var benchmarks = {
   'Copy': require('./benchmarks/copy.bench.js'),
   'Convertion': require('./benchmarks/convertion.bench.js'),
   'Equality': require('./benchmarks/equality.bench.js'),
-  'Swizzling': require('./benchmarks/swizzling.bench.js')
+  'Swizzling': require('./benchmarks/swizzling.bench.js'),
+  'Iterator': require('./benchmarks/iterator.bench.js')
 }
 
 var keys = Object.keys(benchmarks)

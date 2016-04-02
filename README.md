@@ -242,6 +242,10 @@ i start benchmark, plase wait a bit...
     √ Vector#yy get x 55,269,776 ops/sec ±0.82% (91 runs sampled)
     √ Vector#yy set x 66,758,513 ops/sec ±1.81% (87 runs sampled)
 
+  Iterator
+    √ Spread operator x 1,590,265 ops/sec ±0.65% (89 runs sampled)
+    √ for..of loop x 5,345,565 ops/sec ±8.79% (63 runs sampled)
+
 ```
 
 ## Development
