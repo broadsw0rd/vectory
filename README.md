@@ -232,6 +232,16 @@ i start benchmark, plase wait a bit...
     √ Vector.compare(one, another) x 12,602,642 ops/sec ±0.46% (90 runs sampled)
     √ Vector#compare(vector) x 12,578,055 ops/sec ±0.45% (92 runs sampled)
 
+  Swizzling
+    √ Vector#xx get x 54,254,690 ops/sec ±0.76% (86 runs sampled)
+    √ Vector#xx set x 67,339,613 ops/sec ±1.10% (89 runs sampled)
+    √ Vector#xy get x 53,523,706 ops/sec ±1.24% (87 runs sampled)
+    √ Vector#xy set x 67,609,437 ops/sec ±0.81% (91 runs sampled)
+    √ Vector#yx get x 55,187,445 ops/sec ±0.92% (91 runs sampled)
+    √ Vector#yx set x 66,091,327 ops/sec ±1.02% (88 runs sampled)
+    √ Vector#yy get x 55,269,776 ops/sec ±0.82% (91 runs sampled)
+    √ Vector#yy set x 66,758,513 ops/sec ±1.81% (87 runs sampled)
+
 ```
 
 ## Development

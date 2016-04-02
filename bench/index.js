@@ -16,7 +16,8 @@ var benchmarks = {
   'Resetting': require('./benchmarks/resetting.bench.js'),
   'Copy': require('./benchmarks/copy.bench.js'),
   'Convertion': require('./benchmarks/convertion.bench.js'),
-  'Equality': require('./benchmarks/equality.bench.js')
+  'Equality': require('./benchmarks/equality.bench.js'),
+  'Swizzling': require('./benchmarks/swizzling.bench.js')
 }
 
 var keys = Object.keys(benchmarks)
