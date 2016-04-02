@@ -15,7 +15,8 @@ var benchmarks = {
   'Angle computing': require('./benchmarks/angle.bench.js'),
   'Resetting': require('./benchmarks/resetting.bench.js'),
   'Copy': require('./benchmarks/copy.bench.js'),
-  'Convertion': require('./benchmarks/convertion.bench.js')
+  'Convertion': require('./benchmarks/convertion.bench.js'),
+  'Equality': require('./benchmarks/equality.bench.js')
 }
 
 var keys = Object.keys(benchmarks)

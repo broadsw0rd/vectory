@@ -226,6 +226,12 @@ i start benchmark, plase wait a bit...
     √ Vector.toString(vector) x 1,508,856 ops/sec ±4.47% (79 runs sampled)
     √ Vector#toString() x 1,717,979 ops/sec ±0.56% (90 runs sampled)
 
+  Equality
+    √ Vector.equals(one, another) x 61,387,704 ops/sec ±1.22% (89 runs sampled)
+    √ Vector#equals(vector) x 65,455,156 ops/sec ±1.65% (86 runs sampled)
+    √ Vector.compare(one, another) x 12,602,642 ops/sec ±0.46% (90 runs sampled)
+    √ Vector#compare(vector) x 12,578,055 ops/sec ±0.45% (92 runs sampled)
+
 ```
 
 ## Development
