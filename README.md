@@ -16,6 +16,15 @@
    </a>
 </p>
 
+## Table of Contents
+
+- [Features](#features)
+- [Install & Usage](install--usage)
+- [Support](#support)
+- [API](#api)
+- [Benchmark](#benchmark)
+- [Development](#development)
+
 ## Features
 
 - Simplicity - [313 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L313)
@@ -31,7 +40,7 @@
 
 - Latest Chrome, FF, Safari
 - IE 9+
-- Node 0.12+
+- Node 0.10+
 
 ## API
 
