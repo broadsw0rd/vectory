@@ -23,13 +23,13 @@
     "url": "https://github.com/broadsw0rd/vectory"
   },
   "devDependencies": {
-    "ava": "^0.13.0",
+    "ava": "^0.14.0",
     "benchmark": "^2.1.0",
-    "coveralls": "^2.11.6",
+    "coveralls": "^2.11.9",
     "log-symbols": "^1.0.2",
-    "nyc": "^6.1.1",
-    "snazzy": "^3.0.0",
-    "uglify-js": "^2.6.1"
+    "nyc": "^6.4.3",
+    "snazzy": "^4.0.0",
+    "uglify-js": "^2.6.2"
   },
   "scripts": {
     "check": "snazzy src/vectory.js test/*.js bench/*.js bench/**/*.js",
