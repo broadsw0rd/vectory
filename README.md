@@ -12,7 +12,7 @@
       <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat" alt="js-standard-style"></img>
    </a>
    <a href="https://www.bithound.io/github/broadsw0rd/vectory">
-   	<img src="https://www.bithound.io/github/broadsw0rd/vectory/badges/code.svg" alt="bitHound Code">
+      <img src="https://www.bithound.io/github/broadsw0rd/vectory/badges/score.svg" alt="bitHound Overall Score">
    </a>
 </p>
 
