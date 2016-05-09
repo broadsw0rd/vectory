@@ -28,12 +28,18 @@
     "coveralls": "^2.11.9",
     "log-symbols": "^1.0.2",
     "nyc": "^6.4.3",
+    "rollup": "^0.26.2",
     "snazzy": "^4.0.0",
     "uglify-js": "^2.6.2"
   },
+  "standard": {
+    "ignore": [
+      "src/index.js"
+    ]
+  },
   "scripts": {
-    "check": "snazzy src/vectory.js test/*.js bench/*.js bench/**/*.js",
-    "wrap": "cat tools/header.js src/vectory.js tools/footer.js > dist/vectory.js",
+    "check": "snazzy src/*.js test/*.js bench/*.js bench/**/*.js",
+    "wrap": "cat tools/header.js > dist/vectory.js && rollup -f iife -n Vector src/index.js >> dist/vectory.js && cat tools/footer.js >> dist/vectory.js",
     "test": "nyc --cache --reporter=html --reporter=lcov --reporter=text ava",
     "bench": "node ./bench/index.js",
     "build": "uglifyjs -c -m -- dist/vectory.js > dist/vectory.min.js",
