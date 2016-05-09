@@ -27,8 +27,8 @@
 
 ## Features
 
-- Simplicity - [313 LOC](https://github.com/broadsw0rd/vectory/blob/master/src/vectory.js#L313)
-- Lightness - [3.9 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
+- Simplicity - [350 LOC](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L350)
+- Lightness - [4 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
 - Reliability - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
 - Rich [api](#api) - 29 methods
 - Built for [any](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L9) environment
