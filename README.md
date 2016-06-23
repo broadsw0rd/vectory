@@ -19,7 +19,7 @@
 ## Table of Contents
 
 - [Features](#features)
-- [Install & Usage](install--usage)
+- [Install & Usage](#install--usage)
 - [Support](#support)
 - [API](#api)
 - [Benchmark](#benchmark)
