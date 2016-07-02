@@ -8,6 +8,10 @@
   ],
   "license": "MIT",
   "homepage": "http://broadsw0rd.github.io/vectory/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/broadsw0rd/vectory"
+  },
   "bugs": {
     "url": "https://github.com/broadsw0rd/vectory/issues",
     "email": "broadsw.rd@yandex.ru"
@@ -17,11 +21,10 @@
     "email": "broadsw.rd@yandex.ru",
     "url": "https://github.com/broadsw0rd"
   },
+  "files": [
+    "dist"
+  ],
   "main": "dist/vectory.min.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/broadsw0rd/vectory"
-  },
   "devDependencies": {
     "ava": "^0.15.2",
     "benchmark": "^2.1.0",
