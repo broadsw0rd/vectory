@@ -8,11 +8,11 @@
    <a href='https://coveralls.io/github/broadsw0rd/vectory?branch=master' target="_blank">
       <img src='https://coveralls.io/repos/broadsw0rd/vectory/badge.svg?branch=master&service=github' alt='Coverage Status' />
    </a>
-   <a href="https://github.com/feross/standard" target="_blank">
-      <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat" alt="js-standard-style"></img>
-   </a>
    <a href="https://www.bithound.io/github/broadsw0rd/vectory">
       <img src="https://www.bithound.io/github/broadsw0rd/vectory/badges/score.svg" alt="bitHound Overall Score">
+   </a>
+   <a href="https://github.com/feross/standard" target="_blank">
+      <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat" alt="js-standard-style"></img>
    </a>
 </p>
 
@@ -27,8 +27,8 @@
 
 ## Features
 
-- Simplicity - [350 LOC](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L350)
-- Lightness - [4 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
+- Simplicity - [323 LOC](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L323)
+- Lightness - [3.9 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
 - Reliability - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
 - Rich [api](#api) - 29 methods
 - Built for [any](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L9) environment
