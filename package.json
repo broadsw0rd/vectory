@@ -39,10 +39,10 @@
   },
   "scripts": {
     "check": "snazzy src/*.js test/*.js bench/*.js bench/**/*.js",
-    "wrap": "cat tools/header.js > dist/vectory.js && rollup -f iife -n Vector src/index.js >> dist/vectory.js && cat tools/footer.js >> dist/vectory.js",
+    "build": "rollup -c",
     "test": "nyc --cache --reporter=html --reporter=lcov --reporter=text ava",
     "bench": "node ./bench/index.js",
-    "build": "uglifyjs -c -m -- dist/vectory.js > dist/vectory.min.js",
+    "min": "uglifyjs -c -m -- dist/vectory.js > dist/vectory.min.js",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {}
