@@ -1,6 +1,6 @@
 {
   "name": "vectory",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "High performance, DevTools friendly, Crankshaft tolerant 2d vectors",
   "keywords": [
     "vector",
