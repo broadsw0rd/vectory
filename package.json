@@ -7,7 +7,7 @@
     "2d"
   ],
   "license": "MIT",
-  "homepage": "http://broadsw0rd.github.io/vectory/",
+  "homepage": "https://github.com/broadsw0rd/vectory",
   "repository": {
     "type": "git",
     "url": "https://github.com/broadsw0rd/vectory"
@@ -28,12 +28,12 @@
   "devDependencies": {
     "ava": "^0.15.2",
     "benchmark": "^2.1.0",
-    "coveralls": "^2.11.9",
+    "coveralls": "^2.11.11",
     "log-symbols": "^1.0.2",
-    "nyc": "^6.6.1",
-    "rollup": "^0.33.0",
+    "nyc": "^7.0.0",
+    "rollup": "^0.34.1",
     "snazzy": "^4.0.0",
-    "uglify-js": "^2.6.4"
+    "uglify-js": "^2.7.0"
   },
   "standard": {
     "ignore": [

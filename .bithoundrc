@@ -2,9 +2,7 @@
   "ignore": [
     "**/bench/**",
     "**/dist/**",
-    "**/static/**",
-    "**/test/**",
-    "**/tools/**"
+    "**/test/**"
   ],
   "critics": {
     "lint": {
