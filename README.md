@@ -2,6 +2,9 @@
 <h4 align="center">High performance, DevTools friendly, Crankshaft tolerant 2d vectors</h4>
 
 <p align="center">
+   <a href="https://www.npmjs.com/package/vectory" target="_blank">
+      <img src="https://img.shields.io/npm/v/vectory.svg" alt="NPM version" target="_blank"></img>
+   </a>
    <a href="https://travis-ci.org/broadsw0rd/vectory" target="_blank">
       <img src="https://travis-ci.org/broadsw0rd/vectory.svg?branch=master" alt="Build Status" target="_blank"></img>
    </a>
@@ -19,7 +22,8 @@
 ## Table of Contents
 
 - [Features](#features)
-- [Install & Usage](#install--usage)
+- [Install](#install)
+- [Usage](#usage)
 - [Support](#support)
 - [API](#api)
 - [Benchmark](#benchmark)
@@ -33,7 +37,30 @@
 - Rich [api](#api) - 29 methods
 - Designed with performance in mind and reviewed with [IRHydra](http://mrale.ph/irhydra/2/)
 
-## Install & Usage
+## Install
+
+```
+npm install --save vectory
+```
+
+```js
+import Vector from 'vectory'
+var position = new Vector(0, 0)
+```
+
+or
+
+```html
+<script src="https://rawgit.com/broadsw0rd/vectory/master/dist/vectory.min.js"></script>
+```
+
+```js
+var position = new Vector(0, 0)
+```
+
+## Usage
+
+Nice [article](https://processing.org/tutorials/pvector/) about vector usage by Daniel Shiffman
 
 ## Support
 
