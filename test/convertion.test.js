@@ -35,11 +35,15 @@ test('`Vector#toString()` should convert self to JSON', function (t) {
   t.is(result, '1.000 2.000')
 })
 
-test('`Vector.prototype[Symbol.toStringTag]` should specified [object ___] stringification', function (t) {
-  var vector = new Vector(1, 2)
-  var result = Object.prototype.toString.call(vector)
-  t.is(result, '[object Vector]')
-})
+if (typeof Symbol !== 'undefined' && Symbol.toStringTag && Vector.prototype[Symbol.toStringTag]) {
+  test('`Vector.prototype[Symbol.toStringTag]` should specified [object ___] stringification', function (t) {
+    var vector = new Vector(1, 2)
+    var result = Object.prototype.toString.call(vector)
+    t.is(result, '[object Vector]')
+  })
+} else {
+  test.skip('`Vector.prototype[Symbol.toStringTag]` should specified [object ___] stringification', function (t) {})
+}
 
 test('`Vector.toArray(vector)` should convert passed vector to array', function (t) {
   var vector = new Vector(1, 2)
