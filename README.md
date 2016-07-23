@@ -184,7 +184,7 @@ Nice [article](https://processing.org/tutorials/pvector/) about vector usage by 
 
 ## Benchmark
 
-Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v5.10.0
+Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v6.3.1
 
 ```
 > vectory@0.0.1 bench d:\Projects\vectory
@@ -193,98 +193,102 @@ Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v5.10.0
 i start benchmark, please wait a bit...
 
   Cteation
-    √ Vector(x, y) x 53,348,398 ops/sec ±0.69% (89 runs sampled)
-    √ Vector.from([x, y]) x 48,612,322 ops/sec ±1.14% (85 runs sampled)
-    √ Vector.fromAngle(angle, magnitude) x 13,210,711 ops/sec ±0.76% (90 runs sampled)
-    √ Vector.parse(string) x 896,306 ops/sec ±0.82% (87 runs sampled)
+    √ Vector(x, y) x 49,512,710 ops/sec ±0.81% (87 runs sampled)
+    √ Vector.from([x, y]) x 47,104,546 ops/sec ±0.92% (88 runs sampled)
+    √ Vector.fromAngle(angle, magnitude) x 12,662,508 ops/sec ±0.80% (90 runs sampled)
+    √ Vector.parse(string) x 652,311 ops/sec ±0.76% (89 runs sampled)
 
   Addition
-    √ Vector.add(one, another) x 47,443,019 ops/sec ±0.84% (91 runs sampled)
-    √ Vector#add(vector) x 50,905,843 ops/sec ±1.08% (89 runs sampled)
-    √ Vector.iadd(one, another) x 59,167,753 ops/sec ±1.21% (85 runs sampled)
-    √ Vector#iadd(vector) x 61,101,575 ops/sec ±1.27% (90 runs sampled)
+    √ Vector.add(one, another) x 46,077,828 ops/sec ±0.80% (91 runs sampled)
+    √ Vector#add(vector) x 48,307,437 ops/sec ±0.89% (85 runs sampled)
+    √ Vector.iadd(one, another) x 58,040,869 ops/sec ±1.02% (90 runs sampled)
+    √ Vector#iadd(vector) x 59,066,303 ops/sec ±1.50% (89 runs sampled)
 
   Substraction
-    √ Vector.sub(one, another) x 47,062,946 ops/sec ±0.97% (87 runs sampled)
-    √ Vector#sub(vector) x 49,834,764 ops/sec ±0.94% (86 runs sampled)
-    √ Vector.isub(one, another) x 59,405,842 ops/sec ±0.83% (91 runs sampled)
-    √ Vector#isub(vector) x 61,927,552 ops/sec ±1.16% (87 runs sampled)
+    √ Vector.sub(one, another) x 45,984,263 ops/sec ±1.04% (90 runs sampled)
+    √ Vector#sub(vector) x 48,748,601 ops/sec ±0.92% (91 runs sampled)
+    √ Vector.isub(one, another) x 57,212,440 ops/sec ±1.33% (87 runs sampled)
+    √ Vector#isub(vector) x 59,872,144 ops/sec ±0.88% (88 runs sampled)
 
   Multiplication
-    √ Vector.mul(scalar, vector) x 46,162,401 ops/sec ±1.00% (85 runs sampled)
-    √ Vector#mul(vector) x 51,100,212 ops/sec ±0.73% (90 runs sampled)
-    √ Vector.imul(scalar, vector) x 61,484,440 ops/sec ±1.17% (89 runs sampled)
-    √ Vector#imul(vector) x 64,707,513 ops/sec ±1.18% (89 runs sampled)
+    √ Vector.mul(scalar, vector) x 46,318,979 ops/sec ±0.72% (90 runs sampled)
+    √ Vector#mul(vector) x 48,208,856 ops/sec ±1.02% (85 runs sampled)
+    √ Vector.imul(scalar, vector) x 60,006,913 ops/sec ±0.86% (89 runs sampled)
+    √ Vector#imul(vector) x 64,025,854 ops/sec ±0.92% (87 runs sampled)
 
   Division
-    √ Vector.div(scalar, vector) x 45,731,565 ops/sec ±1.10% (88 runs sampled)
-    √ Vector#div(vector) x 49,149,095 ops/sec ±1.11% (85 runs sampled)
-    √ Vector.idiv(scalar, vector) x 61,187,030 ops/sec ±0.90% (87 runs sampled)
-    √ Vector#idiv(vector) x 63,406,263 ops/sec ±0.83% (90 runs sampled)
+    √ Vector.div(scalar, vector) x 44,440,514 ops/sec ±1.09% (91 runs sampled)
+    √ Vector#div(vector) x 47,104,740 ops/sec ±1.00% (86 runs sampled)
+    √ Vector.idiv(scalar, vector) x 56,566,257 ops/sec ±2.31% (85 runs sampled)
+    √ Vector#idiv(vector) x 61,024,679 ops/sec ±1.01% (87 runs sampled)
 
   Linear Interpolation
-    √ Vector.lerp(one, another, t) x 41,626,105 ops/sec ±0.94% (90 runs sampled)
-    √ Vector#lerp(vector, t) x 43,755,974 ops/sec ±0.79% (89 runs sampled)
+    √ Vector.lerp(one, another, t) x 39,208,489 ops/sec ±1.94% (91 runs sampled)
+    √ Vector#lerp(vector, t) x 42,296,249 ops/sec ±0.87% (88 runs sampled)
 
   Normalization
-    √ Vector.normalized(vector) x 36,564,936 ops/sec ±0.88% (89 runs sampled)
-    √ Vector#normalized() x 36,594,317 ops/sec ±0.95% (91 runs sampled)
-    √ Vector.normalize(vector) x 46,605,194 ops/sec ±0.37% (89 runs sampled)
-    √ Vector#normalize() x 46,345,188 ops/sec ±0.65% (90 runs sampled)
+    √ Vector.normalized(vector) x 33,836,031 ops/sec ±0.74% (90 runs sampled)
+    √ Vector#normalized() x 35,412,207 ops/sec ±1.48% (88 runs sampled)
+    √ Vector.normalize(vector) x 52,856,590 ops/sec ±1.20% (86 runs sampled)
+    √ Vector#normalize() x 54,077,054 ops/sec ±0.65% (88 runs sampled)
 
   Magnitude
-    √ Vector.magnitude(vector) x 57,184,952 ops/sec ±1.11% (88 runs sampled)
-    √ Vector#magnitude() x 59,954,064 ops/sec ±1.19% (91 runs sampled)
+    √ Vector.magnitude(vector) x 55,322,298 ops/sec ±1.15% (88 runs sampled)
+    √ Vector#magnitude() x 57,453,229 ops/sec ±1.06% (89 runs sampled)
 
   Dot Product
-    √ Vector.dot(one, another) x 55,660,710 ops/sec ±1.22% (90 runs sampled)
-    √ Vector#dot(vector) x 58,028,028 ops/sec ±1.14% (88 runs sampled)
+    √ Vector.dot(one, another) x 53,461,194 ops/sec ±1.01% (90 runs sampled)
+    √ Vector#dot(vector) x 53,250,294 ops/sec ±1.76% (87 runs sampled)
 
   Distance
-    √ Vector.distance(one, another) x 52,515,846 ops/sec ±1.40% (85 runs sampled)
-    √ Vector#distance(vector) x 53,330,350 ops/sec ±0.76% (86 runs sampled)
+    √ Vector.distance(one, another) x 49,628,596 ops/sec ±2.08% (86 runs sampled)
+    √ Vector#distance(vector) x 51,163,629 ops/sec ±1.06% (88 runs sampled)
 
   Angle computing
-    √ Vector.angleOf(vector) x 9,901,181 ops/sec ±0.72% (91 runs sampled)
-    √ Vector#angleOf() x 12,351,848 ops/sec ±0.85% (91 runs sampled)
-    √ Vector.angleTo(one, another) x 8,400,104 ops/sec ±0.95% (88 runs sampled)
-    √ Vector#angleTo(vector) x 8,480,427 ops/sec ±0.73% (88 runs sampled)
+    √ Vector.angleOf(vector) x 9,324,785 ops/sec ±0.76% (87 runs sampled)
+    √ Vector#angleOf() x 9,480,884 ops/sec ±0.70% (88 runs sampled)
+    √ Vector.angleTo(one, another) x 7,580,951 ops/sec ±0.79% (89 runs sampled)
+    √ Vector#angleTo(vector) x 7,916,520 ops/sec ±1.15% (91 runs sampled)
 
   Resetting
-    √ Vector.reset(one, another) x 60,904,144 ops/sec ±1.43% (84 runs sampled)
-    √ Vector#reset(vector) x 64,218,486 ops/sec ±1.34% (88 runs sampled)
-    √ Vector.zero(vector) x 67,420,267 ops/sec ±1.28% (87 runs sampled)
-    √ Vector#zero() x 71,791,298 ops/sec ±1.68% (83 runs sampled)
+    √ Vector.reset(one, another) x 62,069,347 ops/sec ±1.02% (84 runs sampled)
+    √ Vector#reset(vector) x 62,803,906 ops/sec ±0.97% (86 runs sampled)
+    √ Vector.zero(vector) x 64,707,806 ops/sec ±1.18% (86 runs sampled)
+    √ Vector#zero() x 71,958,947 ops/sec ±1.18% (88 runs sampled)
+    √ Vector.set(x, y, vector) x 56,381,229 ops/sec ±1.21% (88 runs sampled)
+    √ Vector#set(vector) x 58,844,000 ops/sec ±2.53% (83 runs sampled)
 
   Copy
-    √ Vector.copy(vector) x 50,231,506 ops/sec ±1.12% (86 runs sampled)
-    √ Vector#copy() x 53,683,436 ops/sec ±3.12% (86 runs sampled)
+    √ Vector.copy(vector) x 48,914,566 ops/sec ±1.23% (88 runs sampled)
+    √ Vector#copy() x 45,898,400 ops/sec ±2.81% (81 runs sampled)
 
   Convertion
-    √ Vector.toJSON(vector) x 47,047,162 ops/sec ±1.12% (91 runs sampled)
-    √ Vector#toJSON() x 48,523,699 ops/sec ±1.92% (85 runs sampled)
-    √ Vector.toString(vector) x 1,228,097 ops/sec ±6.24% (73 runs sampled)
-    √ Vector#toString() x 1,552,068 ops/sec ±2.84% (84 runs sampled)
+    √ Vector.toJSON(vector) x 43,851,372 ops/sec ±1.07% (89 runs sampled)
+    √ Vector#toJSON() x 46,252,815 ops/sec ±1.16% (89 runs sampled)
+    √ Vector.toString(vector) x 1,595,817 ops/sec ±0.74% (89 runs sampled)
+    √ Vector#toString() x 1,610,517 ops/sec ±0.66% (90 runs sampled)
+    √ Vector.toArray(vector) x 44,316,711 ops/sec ±0.85% (91 runs sampled)
+    √ Vector#toArray() x 47,084,035 ops/sec ±0.92% (90 runs sampled)
 
   Equality
-    √ Vector.equals(one, another) x 52,155,518 ops/sec ±2.97% (81 runs sampled)
-    √ Vector#equals(vector) x 65,605,360 ops/sec ±1.70% (91 runs sampled)
-    √ Vector.compare(one, another) x 12,514,780 ops/sec ±2.21% (88 runs sampled)
-    √ Vector#compare(vector) x 13,060,100 ops/sec ±0.31% (90 runs sampled)
+    √ Vector.equals(one, another) x 60,568,526 ops/sec ±0.77% (91 runs sampled)
+    √ Vector#equals(vector) x 65,289,973 ops/sec ±1.19% (87 runs sampled)
+    √ Vector.compare(one, another) x 12,351,913 ops/sec ±2.40% (85 runs sampled)
+    √ Vector#compare(vector) x 13,029,982 ops/sec ±0.34% (91 runs sampled)
 
   Swizzling
-    √ Vector#xx get x 55,685,201 ops/sec ±0.91% (90 runs sampled)
-    √ Vector#xx set x 67,897,612 ops/sec ±1.13% (89 runs sampled)
-    √ Vector#xy get x 54,026,813 ops/sec ±1.43% (90 runs sampled)
-    √ Vector#xy set x 68,333,655 ops/sec ±0.97% (89 runs sampled)
-    √ Vector#yx get x 54,857,330 ops/sec ±1.30% (90 runs sampled)
-    √ Vector#yx set x 67,266,556 ops/sec ±1.45% (89 runs sampled)
-    √ Vector#yy get x 54,545,907 ops/sec ±1.15% (89 runs sampled)
-    √ Vector#yy set x 68,067,535 ops/sec ±1.04% (89 runs sampled)
+    √ Vector#xx get x 52,683,890 ops/sec ±0.94% (90 runs sampled)
+    √ Vector#xx set x 65,997,193 ops/sec ±0.84% (91 runs sampled)
+    √ Vector#xy get x 51,679,447 ops/sec ±0.96% (88 runs sampled)
+    √ Vector#xy set x 65,912,948 ops/sec ±0.86% (88 runs sampled)
+    √ Vector#yx get x 49,653,537 ops/sec ±1.48% (86 runs sampled)
+    √ Vector#yx set x 62,334,747 ops/sec ±1.98% (84 runs sampled)
+    √ Vector#yy get x 51,242,161 ops/sec ±1.55% (88 runs sampled)
+    √ Vector#yy set x 63,577,072 ops/sec ±1.58% (88 runs sampled)
 
   Iterator
-    √ Spread operator x 1,480,281 ops/sec ±0.67% (89 runs sampled)
-    √ for..of loop x 6,435,854 ops/sec ±0.84% (91 runs sampled)
+    √ Spread operator x 3,515,449 ops/sec ±0.92% (89 runs sampled)
+    √ for..of loop x 8,514,056 ops/sec ±3.96% (79 runs sampled)
 
 ```
 
