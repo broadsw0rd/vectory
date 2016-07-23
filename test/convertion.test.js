@@ -40,3 +40,21 @@ test('`Vector.prototype[Symbol.toStringTag]` should specified [object ___] strin
   var result = Object.prototype.toString.call(vector)
   t.is(result, '[object Vector]')
 })
+
+test('`Vector.toArray(vector)` should convert passed vector to array', function (t) {
+  var vector = new Vector(1, 2)
+  var result = Vector.toArray(vector)
+  t.true(result instanceof Array)
+  t.is(result.length, 2)
+  t.is(result[0], 1)
+  t.is(result[1], 2)
+})
+
+test('`Vector#toArray()` should convert self to array', function (t) {
+  var self = new Vector(1, 2)
+  var result = self.toArray()
+  t.true(result instanceof Array)
+  t.is(result.length, 2)
+  t.is(result[0], 1)
+  t.is(result[1], 2)
+})

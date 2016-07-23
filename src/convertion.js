@@ -21,4 +21,12 @@ if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
   Vector.prototype[Symbol.toStringTag] = 'Vector'
 }
 
+Vector.toArray = function (vector) {
+  return vector.toArray()
+}
+
+Vector.prototype.toArray = function () {
+  return [this.x, this.y]
+}
+
 export default Vector
