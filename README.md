@@ -1,5 +1,5 @@
 <h1 align="center">Vectory</h1>
-<h4 align="center">High performance, DevTools friendly, Crankshaft tolerant 2d vectors</h4>
+<h4 align="center">High performant, DevTools friendly, Crankshaft tolerant 2d vectors</h4>
 
 <p align="center">
    <a href="https://www.npmjs.com/package/vectory" target="_blank">
@@ -31,8 +31,8 @@
 
 ## Features
 
-- Simple - [323 LOC](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L323)
-- Lightweight - [3.9 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
+- Simple - [343 LOC](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L343)
+- Lightweight - [4.1 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
 - Well tested - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
 - Rich [api](#api) - 29 methods
 - Designed with performance in mind and reviewed with [IRHydra](http://mrale.ph/irhydra/2/)
@@ -51,7 +51,7 @@ var position = new Vector(0, 0)
 or
 
 ```html
-<script src="https://rawgit.com/broadsw0rd/vectory/master/dist/vectory.min.js"></script>
+<script src="https://rawgit.com/broadsw0rd/vectory/1.1.0/dist/vectory.min.js"></script>
 ```
 
 ```js

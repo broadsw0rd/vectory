@@ -1,8 +1,9 @@
 {
   "name": "vectory",
-  "version": "1.0.0",
-  "description": "High performance, DevTools friendly, Crankshaft tolerant 2d vectors",
+  "version": "1.1.0",
+  "description": "High performant, DevTools friendly, Crankshaft tolerant 2d vectors",
   "keywords": [
+    "math",
     "vector",
     "2d"
   ],
@@ -24,7 +25,7 @@
   "files": [
     "dist"
   ],
-  "main": "dist/vectory.min.js",
+  "main": "dist/vectory.js",
   "devDependencies": {
     "ava": "^0.15.2",
     "benchmark": "^2.1.0",
