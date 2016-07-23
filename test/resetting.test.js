@@ -56,3 +56,36 @@ test('`Vector#zero()` should return self', function (t) {
   var result = self.zero()
   t.is(result, self)
 })
+
+test('`Vector.set(x, y, vector)` should set vector values', function (t) {
+  var vector = new Vector(0, 0)
+  Vector.set(1, 2, vector)
+  t.is(vector.x, 1)
+  t.is(vector.y, 2)
+})
+
+test('`Vector.set(one, another)` should return vector', function (t) {
+  var vector = new Vector(0, 0)
+  var result = Vector.set(1, 2, vector)
+  t.is(result, vector)
+})
+
+test('`Vector#set(vector)` should set vector values', function (t) {
+  var vector = new Vector(0, 0)
+  vector.set(1, 2)
+  t.is(vector.x, 1)
+  t.is(vector.y, 2)
+})
+
+test('`Vector#set(vector)` should return self', function (t) {
+  var vector = new Vector(0, 0)
+  var result = vector.set(1, 2)
+  t.is(result, vector)
+})
+
+test('`Vector#set(vector)` should set vector values to zero if args not passed', function (t) {
+  var vector = new Vector(1, 2)
+  vector.set()
+  t.is(vector.x, 0)
+  t.is(vector.y, 0)
+})

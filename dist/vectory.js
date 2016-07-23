@@ -197,6 +197,16 @@
     return this
   }
 
+  Vector.set = function (x, y, vector) {
+    return vector.set(x, y)
+  }
+
+  Vector.prototype.set = function (x, y) {
+    this.x = x || 0
+    this.y = y || 0
+    return this
+  }
+
   Vector.copy = function (vector) {
     return vector.copy()
   }

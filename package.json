@@ -43,7 +43,7 @@
   "scripts": {
     "check": "snazzy src/*.js test/*.js bench/*.js bench/**/*.js",
     "build": "rollup -c",
-    "test": "nyc --cache --reporter=html --reporter=lcov --reporter=text ava",
+    "test": "nyc --reporter=html --reporter=lcov --reporter=text ava",
     "bench": "node ./bench/index.js",
     "min": "uglifyjs -c -m -- dist/vectory.js > dist/vectory.min.js",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
