@@ -197,6 +197,16 @@
     return this
   }
 
+  Vector.set = function (x, y, vector) {
+    return vector.set(x, y)
+  }
+
+  Vector.prototype.set = function (x, y) {
+    this.x = x || 0
+    this.y = y || 0
+    return this
+  }
+
   Vector.copy = function (vector) {
     return vector.copy()
   }
@@ -219,6 +229,19 @@
 
   Vector.prototype.toString = function () {
     return this.x.toFixed(3) + ' ' + this.y.toFixed(3)
+  }
+
+  /* istanbul ignore else */
+  if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+    Vector.prototype[Symbol.toStringTag] = 'Vector'
+  }
+
+  Vector.toArray = function (vector) {
+    return vector.toArray()
+  }
+
+  Vector.prototype.toArray = function () {
+    return [this.x, this.y]
   }
 
   Vector.equals = function (one, another) {
@@ -310,12 +333,9 @@
 
   /* istanbul ignore else */
   if (typeof Symbol !== 'undefined' && Symbol.iterator) {
-    Object.defineProperty(Vector.prototype, Symbol.iterator, {
-      configurable: true,
-      value: function iterator () {
-        return new VectorIterator(this)
-      }
-    })
+    Vector.prototype[Symbol.iterator] = function iterator () {
+      return new VectorIterator(this)
+    }
   }
 
   return Vector;

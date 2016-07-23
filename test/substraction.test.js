@@ -1,7 +1,7 @@
-import Vector from '../dist/vectory.js'
-import test from 'ava'
+var Vector = require('../dist/vectory.js')
+var test = require('ava')
 
-test('`Vector.sub(one, another)` should return diff of two vectors', (t) => {
+test('`Vector.sub(one, another)` should return diff of two vectors', function (t) {
   var one = new Vector(1, 2)
   var another = new Vector(3, 4)
   var result = Vector.sub(one, another)
@@ -10,7 +10,7 @@ test('`Vector.sub(one, another)` should return diff of two vectors', (t) => {
   t.is(result.y, 2)
 })
 
-test('`Vector#sub(vector)` should return diff of two vectors', (t) => {
+test('`Vector#sub(vector)` should return diff of two vectors', function (t) {
   var self = new Vector(3, 4)
   var vector = new Vector(1, 2)
   var result = self.sub(vector)
@@ -19,7 +19,7 @@ test('`Vector#sub(vector)` should return diff of two vectors', (t) => {
   t.is(result.y, 2)
 })
 
-test('`Vector.isub(one, another)` should substract one vector from another', (t) => {
+test('`Vector.isub(one, another)` should substract one vector from another', function (t) {
   var one = new Vector(1, 2)
   var another = new Vector(3, 4)
   Vector.isub(one, another)
@@ -27,14 +27,14 @@ test('`Vector.isub(one, another)` should substract one vector from another', (t)
   t.is(another.y, 2)
 })
 
-test('`Vector.isub(one, another)` should return another vector', (t) => {
+test('`Vector.isub(one, another)` should return another vector', function (t) {
   var one = new Vector(1, 2)
   var another = new Vector(3, 4)
   var result = Vector.isub(one, another)
   t.is(result, another)
 })
 
-test('`Vector#isub(vector)` should substract vector from self', (t) => {
+test('`Vector#isub(vector)` should substract vector from self', function (t) {
   var self = new Vector(3, 4)
   var vector = new Vector(1, 2)
   self.isub(vector)
@@ -42,7 +42,7 @@ test('`Vector#isub(vector)` should substract vector from self', (t) => {
   t.is(self.y, 2)
 })
 
-test('`Vector#isub(vector)` should return self instance', (t) => {
+test('`Vector#isub(vector)` should return self instance', function (t) {
   var self = new Vector(3, 4)
   var vector = new Vector(1, 2)
   var result = self.isub(vector)

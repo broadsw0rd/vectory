@@ -32,5 +32,21 @@ module.exports = {
     return function () {
       return self.toString()
     }
+  }()),
+
+  'Vector.toArray(vector)': (function () {
+    var vector = new Vector(rand(0, 100), rand(0, 100))
+
+    return function () {
+      return Vector.toArray(vector)
+    }
+  }()),
+
+  'Vector#toArray()': (function () {
+    var self = new Vector(rand(0, 100), rand(0, 100))
+
+    return function () {
+      return self.toArray()
+    }
   }())
 }

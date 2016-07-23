@@ -1,7 +1,7 @@
-import Vector from '../dist/vectory.js'
-import test from 'ava'
+var Vector = require('../dist/vectory.js')
+var test = require('ava')
 
-test('`Vector.div(scalar, vector)` should divide vector on scalar', (t) => {
+test('`Vector.div(scalar, vector)` should divide vector on scalar', function (t) {
   var vector = new Vector(4, 6)
   var scalar = 2
   var result = Vector.div(scalar, vector)
@@ -10,7 +10,7 @@ test('`Vector.div(scalar, vector)` should divide vector on scalar', (t) => {
   t.is(result.y, 3)
 })
 
-test('`Vector#div(scalar)` should divide self on scalar', (t) => {
+test('`Vector#div(scalar)` should divide self on scalar', function (t) {
   var vector = new Vector(4, 6)
   var scalar = 2
   var result = vector.div(scalar)
@@ -19,7 +19,7 @@ test('`Vector#div(scalar)` should divide self on scalar', (t) => {
   t.is(result.y, 3)
 })
 
-test('`Vector.idiv(scalar, vector)` should divide vector on scalar', (t) => {
+test('`Vector.idiv(scalar, vector)` should divide vector on scalar', function (t) {
   var vector = new Vector(4, 6)
   var scalar = 2
   Vector.idiv(scalar, vector)
@@ -27,14 +27,14 @@ test('`Vector.idiv(scalar, vector)` should divide vector on scalar', (t) => {
   t.is(vector.y, 3)
 })
 
-test('`Vector.idiv(scalar, vector)` should return vector', (t) => {
+test('`Vector.idiv(scalar, vector)` should return vector', function (t) {
   var vector = new Vector(4, 6)
   var scalar = 2
   var result = Vector.idiv(scalar, vector)
   t.is(result, vector)
 })
 
-test('`Vector#idiv(scalar)` should multiply self on scalar', (t) => {
+test('`Vector#idiv(scalar)` should multiply self on scalar', function (t) {
   var vector = new Vector(4, 6)
   var scalar = 2
   vector.idiv(scalar)
@@ -42,7 +42,7 @@ test('`Vector#idiv(scalar)` should multiply self on scalar', (t) => {
   t.is(vector.y, 3)
 })
 
-test('`Vector#idiv(scalar)` should return self instance', (t) => {
+test('`Vector#idiv(scalar)` should return self instance', function (t) {
   var vector = new Vector(4, 6)
   var scalar = 2
   var result = vector.idiv(scalar)

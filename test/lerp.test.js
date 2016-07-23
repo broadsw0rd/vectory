@@ -1,7 +1,7 @@
-import Vector from '../dist/vectory.js'
-import test from 'ava'
+var Vector = require('../dist/vectory.js')
+var test = require('ava')
 
-test('`Vector.lerp(one, another, t)` should return linear interpolant between the vectors', (t) => {
+test('`Vector.lerp(one, another, t)` should return linear interpolant between the vectors', function (t) {
   var one = new Vector(2, 2)
   var another = new Vector(4, 4)
   var time = 0.5
@@ -11,7 +11,7 @@ test('`Vector.lerp(one, another, t)` should return linear interpolant between th
   t.is(result.y, 3)
 })
 
-test('`Vector#lerp(vector, t)` should return linear interpolant between the vectors', (t) => {
+test('`Vector#lerp(vector, t)` should return linear interpolant between the vectors', function (t) {
   var one = new Vector(2, 2)
   var another = new Vector(4, 4)
   var time = 0.5
