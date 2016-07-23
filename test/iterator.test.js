@@ -1,8 +1,8 @@
-import Vector from '../dist/vectory.js'
-import test from 'ava'
+var Vector = require('../dist/vectory.js')
+var test = require('ava')
 
 if (typeof Symbol !== 'undefined' && Symbol.iterator && Vector.prototype[Symbol.iterator]) {
-  test('`Vector.prototype[Symbol.iterator]()` should return an iterator', (t) => {
+  test('`Vector.prototype[Symbol.iterator]()` should return an iterator', function (t) {
     var vector = new Vector(3, 4)
     var iterator = vector[Symbol.iterator]()
     t.truthy(iterator)
@@ -12,5 +12,5 @@ if (typeof Symbol !== 'undefined' && Symbol.iterator && Vector.prototype[Symbol.
     t.deepEqual(iterator.next(), { done: true, value: void 0 })
   })
 } else {
-  test.skip('`Vector.prototype[Symbol.iterator]()` should return an iterator', (t) => {})
+  test.skip('`Vector.prototype[Symbol.iterator]()` should return an iterator', function (t) {})
 }

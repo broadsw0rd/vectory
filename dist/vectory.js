@@ -221,6 +221,11 @@
     return this.x.toFixed(3) + ' ' + this.y.toFixed(3)
   }
 
+  /* istanbul ignore else */
+  if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+    Vector.prototype[Symbol.toStringTag] = 'Vector'
+  }
+
   Vector.equals = function (one, another) {
     return one.equals(another)
   }
@@ -310,12 +315,9 @@
 
   /* istanbul ignore else */
   if (typeof Symbol !== 'undefined' && Symbol.iterator) {
-    Object.defineProperty(Vector.prototype, Symbol.iterator, {
-      configurable: true,
-      value: function iterator () {
-        return new VectorIterator(this)
-      }
-    })
+    Vector.prototype[Symbol.iterator] = function iterator () {
+      return new VectorIterator(this)
+    }
   }
 
   return Vector;

@@ -1,7 +1,7 @@
-import Vector from '../dist/vectory.js'
-import test from 'ava'
+var Vector = require('../dist/vectory.js')
+var test = require('ava')
 
-test('`Vector.add(one, another)` should return sum of two vectors', (t) => {
+test('`Vector.add(one, another)` should return sum of two vectors', function (t) {
   var one = new Vector(1, 2)
   var another = new Vector(3, 4)
   var result = Vector.add(one, another)
@@ -10,7 +10,7 @@ test('`Vector.add(one, another)` should return sum of two vectors', (t) => {
   t.is(result.y, 6)
 })
 
-test('`Vector#add(vector)` should return sum of two vectors', (t) => {
+test('`Vector#add(vector)` should return sum of two vectors', function (t) {
   var self = new Vector(1, 2)
   var vector = new Vector(3, 4)
   var result = self.add(vector)
@@ -19,7 +19,7 @@ test('`Vector#add(vector)` should return sum of two vectors', (t) => {
   t.is(result.y, 6)
 })
 
-test('`Vector.iadd(one, another)` should add one vector to another', (t) => {
+test('`Vector.iadd(one, another)` should add one vector to another', function (t) {
   var one = new Vector(1, 2)
   var another = new Vector(3, 4)
   Vector.iadd(one, another)
@@ -27,14 +27,14 @@ test('`Vector.iadd(one, another)` should add one vector to another', (t) => {
   t.is(another.y, 6)
 })
 
-test('`Vector.iadd(one, another)` should return another vector', (t) => {
+test('`Vector.iadd(one, another)` should return another vector', function (t) {
   var one = new Vector(1, 2)
   var another = new Vector(3, 4)
   var result = Vector.iadd(one, another)
   t.is(result, another)
 })
 
-test('`Vector#iadd(vector)` should add vector to self', (t) => {
+test('`Vector#iadd(vector)` should add vector to self', function (t) {
   var self = new Vector(1, 2)
   var vector = new Vector(3, 4)
   self.iadd(vector)
@@ -42,7 +42,7 @@ test('`Vector#iadd(vector)` should add vector to self', (t) => {
   t.is(self.y, 6)
 })
 
-test('`Vector#iadd(vector)` should return self instance', (t) => {
+test('`Vector#iadd(vector)` should return self instance', function (t) {
   var self = new Vector(1, 2)
   var vector = new Vector(3, 4)
   var result = self.iadd(vector)

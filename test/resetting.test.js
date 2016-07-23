@@ -1,7 +1,7 @@
-import Vector from '../dist/vectory.js'
-import test from 'ava'
+var Vector = require('../dist/vectory.js')
+var test = require('ava')
 
-test('`Vector.reset(one, another)` should reset vector values', (t) => {
+test('`Vector.reset(one, another)` should reset vector values', function (t) {
   var one = new Vector(1, 2)
   var another = new Vector(0, 0)
   Vector.reset(one, another)
@@ -9,14 +9,14 @@ test('`Vector.reset(one, another)` should reset vector values', (t) => {
   t.is(another.y, 2)
 })
 
-test('`Vector.reset(one, another)` should return another vector', (t) => {
+test('`Vector.reset(one, another)` should return another vector', function (t) {
   var one = new Vector(1, 2)
   var another = new Vector(0, 0)
   var result = Vector.reset(one, another)
   t.is(result, another)
 })
 
-test('`Vector#reset(vector)` should reset vector values', (t) => {
+test('`Vector#reset(vector)` should reset vector values', function (t) {
   var self = new Vector(0, 0)
   var vector = new Vector(1, 2)
   self.reset(vector)
@@ -24,34 +24,34 @@ test('`Vector#reset(vector)` should reset vector values', (t) => {
   t.is(self.y, 2)
 })
 
-test('`Vector#reset(vector)` should return self', (t) => {
+test('`Vector#reset(vector)` should return self', function (t) {
   var self = new Vector(0, 0)
   var vector = new Vector(1, 2)
   var result = self.reset(vector)
   t.is(result, self)
 })
 
-test('`Vector.zero(vector)` should reset vector values to zero', (t) => {
+test('`Vector.zero(vector)` should reset vector values to zero', function (t) {
   var vector = new Vector(1, 2)
   Vector.zero(vector)
   t.is(vector.x, 0)
   t.is(vector.y, 0)
 })
 
-test('`Vector.zero(vector)` should return passed vector', (t) => {
+test('`Vector.zero(vector)` should return passed vector', function (t) {
   var vector = new Vector(1, 2)
   var result = Vector.zero(vector)
   t.is(result, vector)
 })
 
-test('`Vector#zero()` should reset vector values to zero', (t) => {
+test('`Vector#zero()` should reset vector values to zero', function (t) {
   var self = new Vector(1, 2)
   self.zero()
   t.is(self.x, 0)
   t.is(self.y, 0)
 })
 
-test('`Vector#zero()` should return self', (t) => {
+test('`Vector#zero()` should return self', function (t) {
   var self = new Vector(1, 2)
   var result = self.zero()
   t.is(result, self)

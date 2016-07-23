@@ -16,4 +16,9 @@ Vector.prototype.toString = function () {
   return this.x.toFixed(3) + ' ' + this.y.toFixed(3)
 }
 
+/* istanbul ignore else */
+if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+  Vector.prototype[Symbol.toStringTag] = 'Vector'
+}
+
 export default Vector
