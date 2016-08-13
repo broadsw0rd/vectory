@@ -27,13 +27,13 @@
   ],
   "main": "dist/vectory.js",
   "devDependencies": {
-    "ava": "^0.15.2",
+    "ava": "^0.16.0",
     "benchmark": "^2.1.0",
-    "coveralls": "^2.11.11",
+    "coveralls": "^2.11.12",
     "log-symbols": "^1.0.2",
-    "nyc": "^7.0.0",
-    "rollup": "^0.34.1",
-    "snazzy": "^4.0.0",
+    "nyc": "^7.1.0",
+    "rollup": "^0.34.7",
+    "snazzy": "^4.0.1",
     "uglify-js": "^2.7.0"
   },
   "standard": {
