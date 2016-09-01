@@ -2,342 +2,342 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global.Vector = factory());
-}(this, function () { 'use strict';
+}(this, (function () { 'use strict';
 
-  function Vector (x, y) {
-    this.x = x || 0
-    this.y = y || 0
+function Vector (x, y) {
+  this.x = x || 0
+  this.y = y || 0
+}
+
+Vector.displayName = 'Vector'
+
+Vector.from = function (data) {
+  return new Vector(data[0], data[1])
+}
+
+Vector.fromAngle = function (angle, magnitude) {
+  return new Vector(magnitude * Math.cos(angle), magnitude * Math.sin(angle))
+}
+
+Vector.parse = function (string) {
+  return Vector.from(string.trim().replace(',', ' ').split(/\s+/).map(parseFloat))
+}
+
+Vector.add = function (one, another) {
+  return another.add(one)
+}
+
+Vector.prototype.add = function (vector) {
+  return new Vector(this.x + vector.x, this.y + vector.y)
+}
+
+Vector.iadd = function (one, another) {
+  return another.iadd(one)
+}
+
+Vector.prototype.iadd = function (vector) {
+  this.x += vector.x
+  this.y += vector.y
+  return this
+}
+
+Vector.sub = function (one, another) {
+  return another.sub(one)
+}
+
+Vector.prototype.sub = function (vector) {
+  return new Vector(this.x - vector.x, this.y - vector.y)
+}
+
+Vector.isub = function (one, another) {
+  return another.isub(one)
+}
+
+Vector.prototype.isub = function (vector) {
+  this.x -= vector.x
+  this.y -= vector.y
+  return this
+}
+
+Vector.mul = function (scalar, vector) {
+  return vector.mul(scalar)
+}
+
+Vector.prototype.mul = function (scalar) {
+  return new Vector(this.x * scalar, this.y * scalar)
+}
+
+Vector.imul = function (scalar, vector) {
+  return vector.imul(scalar)
+}
+
+Vector.prototype.imul = function (scalar) {
+  this.x *= scalar
+  this.y *= scalar
+  return this
+}
+
+Vector.div = function (scalar, vector) {
+  return vector.div(scalar)
+}
+
+Vector.prototype.div = function (scalar) {
+  return new Vector(this.x / scalar, this.y / scalar)
+}
+
+Vector.idiv = function (scalar, vector) {
+  return vector.idiv(scalar)
+}
+
+Vector.prototype.idiv = function (scalar) {
+  this.x /= scalar
+  this.y /= scalar
+  return this
+}
+
+Vector.lerp = function (one, another, t) {
+  return one.lerp(another, t)
+}
+
+Vector.prototype.lerp = function (vector, t) {
+  var x = (1 - t) * this.x + t * vector.x
+  var y = (1 - t) * this.y + t * vector.y
+  return new Vector(x, y)
+}
+
+Vector.normalized = function (vector) {
+  return vector.normalized()
+}
+
+Vector.prototype.normalized = function () {
+  var x = this.x
+  var y = this.y
+  var length = Math.sqrt(x * x + y * y)
+  if (length > 0) {
+    return new Vector(x / length, y / length)
+  } else {
+    return new Vector(0, 0)
   }
+}
 
-  Vector.displayName = 'Vector'
+Vector.normalize = function (vector) {
+  return vector.normalize()
+}
 
-  Vector.from = function (data) {
-    return new Vector(data[0], data[1])
+Vector.prototype.normalize = function () {
+  var x = this.x
+  var y = this.y
+  var length = Math.sqrt(x * x + y * y)
+  if (length > 0) {
+    this.x = x / length
+    this.y = y / length
   }
+  return this
+}
 
-  Vector.fromAngle = function (angle, magnitude) {
-    return new Vector(magnitude * Math.cos(angle), magnitude * Math.sin(angle))
-  }
+Vector.magnitude = function (vector) {
+  return vector.magnitude()
+}
 
-  Vector.parse = function (string) {
-    return Vector.from(string.trim().replace(',', ' ').split(/\s+/).map(parseFloat))
-  }
+Vector.prototype.magnitude = function () {
+  return Math.sqrt(this.x * this.x + this.y * this.y)
+}
 
-  Vector.add = function (one, another) {
-    return another.add(one)
-  }
+Vector.dot = function (one, another) {
+  return another.dot(one)
+}
 
-  Vector.prototype.add = function (vector) {
-    return new Vector(this.x + vector.x, this.y + vector.y)
-  }
+Vector.prototype.dot = function (vector) {
+  return this.x * vector.x + this.y * vector.y
+}
 
-  Vector.iadd = function (one, another) {
-    return another.iadd(one)
-  }
+Vector.distance = function (one, another) {
+  return another.distance(one)
+}
 
-  Vector.prototype.iadd = function (vector) {
-    this.x += vector.x
-    this.y += vector.y
-    return this
-  }
+Vector.prototype.distance = function (vector) {
+  var x = this.x - vector.x
+  var y = this.y - vector.y
+  return Math.sqrt(x * x + y * y)
+}
 
-  Vector.sub = function (one, another) {
-    return another.sub(one)
-  }
+Vector.angleOf = function (vector) {
+  return vector.angleOf()
+}
 
-  Vector.prototype.sub = function (vector) {
-    return new Vector(this.x - vector.x, this.y - vector.y)
-  }
+Vector.prototype.angleOf = function () {
+  return Math.atan2(this.y, this.x)
+}
 
-  Vector.isub = function (one, another) {
-    return another.isub(one)
-  }
+Vector.angleTo = function (one, another) {
+  return another.angleTo(one)
+}
 
-  Vector.prototype.isub = function (vector) {
-    this.x -= vector.x
-    this.y -= vector.y
-    return this
-  }
+Vector.prototype.angleTo = function (vector) {
+  return Math.acos(this.dot(vector) / this.magnitude() * vector.magnitude())
+}
 
-  Vector.mul = function (scalar, vector) {
-    return vector.mul(scalar)
-  }
+Vector.reset = function (one, another) {
+  return another.reset(one)
+}
 
-  Vector.prototype.mul = function (scalar) {
-    return new Vector(this.x * scalar, this.y * scalar)
-  }
+Vector.prototype.reset = function (vector) {
+  this.x = vector.x
+  this.y = vector.y
+  return this
+}
 
-  Vector.imul = function (scalar, vector) {
-    return vector.imul(scalar)
-  }
+Vector.zero = function (vector) {
+  return vector.zero()
+}
 
-  Vector.prototype.imul = function (scalar) {
-    this.x *= scalar
-    this.y *= scalar
-    return this
-  }
+Vector.prototype.zero = function () {
+  this.x = 0
+  this.y = 0
+  return this
+}
 
-  Vector.div = function (scalar, vector) {
-    return vector.div(scalar)
-  }
+Vector.set = function (x, y, vector) {
+  return vector.set(x, y)
+}
 
-  Vector.prototype.div = function (scalar) {
-    return new Vector(this.x / scalar, this.y / scalar)
-  }
+Vector.prototype.set = function (x, y) {
+  this.x = x || 0
+  this.y = y || 0
+  return this
+}
 
-  Vector.idiv = function (scalar, vector) {
-    return vector.idiv(scalar)
-  }
+Vector.copy = function (vector) {
+  return vector.copy()
+}
 
-  Vector.prototype.idiv = function (scalar) {
-    this.x /= scalar
-    this.y /= scalar
-    return this
-  }
+Vector.prototype.copy = function () {
+  return new Vector(this.x, this.y)
+}
 
-  Vector.lerp = function (one, another, t) {
-    return one.lerp(another, t)
-  }
+Vector.toJSON = function (vector) {
+  return vector.toJSON()
+}
 
-  Vector.prototype.lerp = function (vector, t) {
-    var x = (1 - t) * this.x + t * vector.x
-    var y = (1 - t) * this.y + t * vector.y
-    return new Vector(x, y)
-  }
+Vector.prototype.toJSON = function () {
+  return [this.x, this.y]
+}
 
-  Vector.normalized = function (vector) {
-    return vector.normalized()
-  }
+Vector.toString = function (vector) {
+  return vector ? vector.toString() : Function.prototype.toString.call(this)
+}
 
-  Vector.prototype.normalized = function () {
-    var x = this.x
-    var y = this.y
-    var length = Math.sqrt(x * x + y * y)
-    if (length > 0) {
-      return new Vector(x / length, y / length)
-    } else {
-      return new Vector(0, 0)
-    }
-  }
+Vector.prototype.toString = function () {
+  return this.x.toFixed(3) + ' ' + this.y.toFixed(3)
+}
 
-  Vector.normalize = function (vector) {
-    return vector.normalize()
-  }
+/* istanbul ignore else */
+if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+  Vector.prototype[Symbol.toStringTag] = 'Vector'
+}
 
-  Vector.prototype.normalize = function () {
-    var x = this.x
-    var y = this.y
-    var length = Math.sqrt(x * x + y * y)
-    if (length > 0) {
-      this.x = x / length
-      this.y = y / length
-    }
-    return this
-  }
+Vector.toArray = function (vector) {
+  return vector.toArray()
+}
 
-  Vector.magnitude = function (vector) {
-    return vector.magnitude()
-  }
+Vector.prototype.toArray = function () {
+  return [this.x, this.y]
+}
 
-  Vector.prototype.magnitude = function () {
-    return Math.sqrt(this.x * this.x + this.y * this.y)
-  }
+Vector.equals = function (one, another) {
+  return one.equals(another)
+}
 
-  Vector.dot = function (one, another) {
-    return another.dot(one)
-  }
+Vector.prototype.equals = function (vector) {
+  return this.x === vector.x && this.y === vector.y
+}
 
-  Vector.prototype.dot = function (vector) {
-    return this.x * vector.x + this.y * vector.y
-  }
+Vector.compare = function (one, another) {
+  return one.compare(another)
+}
 
-  Vector.distance = function (one, another) {
-    return another.distance(one)
-  }
+Vector.prototype.compare = function (vector) {
+  var thisMagnitude = this.magnitude()
+  var vectorMagnitude = vector.magnitude()
+  return (thisMagnitude > vectorMagnitude) - (vectorMagnitude > thisMagnitude)
+}
 
-  Vector.prototype.distance = function (vector) {
-    var x = this.x - vector.x
-    var y = this.y - vector.y
-    return Math.sqrt(x * x + y * y)
-  }
-
-  Vector.angleOf = function (vector) {
-    return vector.angleOf()
-  }
-
-  Vector.prototype.angleOf = function () {
-    return Math.atan2(this.y, this.x)
-  }
-
-  Vector.angleTo = function (one, another) {
-    return another.angleTo(one)
-  }
-
-  Vector.prototype.angleTo = function (vector) {
-    return Math.acos(this.dot(vector) / this.magnitude() * vector.magnitude())
-  }
-
-  Vector.reset = function (one, another) {
-    return another.reset(one)
-  }
-
-  Vector.prototype.reset = function (vector) {
-    this.x = vector.x
-    this.y = vector.y
-    return this
-  }
-
-  Vector.zero = function (vector) {
-    return vector.zero()
-  }
-
-  Vector.prototype.zero = function () {
-    this.x = 0
-    this.y = 0
-    return this
-  }
-
-  Vector.set = function (x, y, vector) {
-    return vector.set(x, y)
-  }
-
-  Vector.prototype.set = function (x, y) {
-    this.x = x || 0
-    this.y = y || 0
-    return this
-  }
-
-  Vector.copy = function (vector) {
-    return vector.copy()
-  }
-
-  Vector.prototype.copy = function () {
-    return new Vector(this.x, this.y)
-  }
-
-  Vector.toJSON = function (vector) {
-    return vector.toJSON()
-  }
-
-  Vector.prototype.toJSON = function () {
-    return [this.x, this.y]
-  }
-
-  Vector.toString = function (vector) {
-    return vector ? vector.toString() : Function.prototype.toString.call(this)
-  }
-
-  Vector.prototype.toString = function () {
-    return this.x.toFixed(3) + ' ' + this.y.toFixed(3)
-  }
-
-  /* istanbul ignore else */
-  if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-    Vector.prototype[Symbol.toStringTag] = 'Vector'
-  }
-
-  Vector.toArray = function (vector) {
-    return vector.toArray()
-  }
-
-  Vector.prototype.toArray = function () {
-    return [this.x, this.y]
-  }
-
-  Vector.equals = function (one, another) {
-    return one.equals(another)
-  }
-
-  Vector.prototype.equals = function (vector) {
-    return this.x === vector.x && this.y === vector.y
-  }
-
-  Vector.compare = function (one, another) {
-    return one.compare(another)
-  }
-
-  Vector.prototype.compare = function (vector) {
-    var thisMagnitude = this.magnitude()
-    var vectorMagnitude = vector.magnitude()
-    return (thisMagnitude > vectorMagnitude) - (vectorMagnitude > thisMagnitude)
-  }
-
-  Object.defineProperties(Vector.prototype, {
-    xx: {
-      configurable: true,
-      get: function () {
-        return new Vector(this.x, this.x)
-      },
-      set: function (vector) {
-        this.x = vector.x
-        this.y = vector.x
-      }
+Object.defineProperties(Vector.prototype, {
+  xx: {
+    configurable: true,
+    get: function () {
+      return new Vector(this.x, this.x)
     },
-    xy: {
-      configurable: true,
-      get: function () {
-        return new Vector(this.x, this.y)
-      },
-      set: function (vector) {
-        this.x = vector.x
-        this.y = vector.y
-      }
+    set: function (vector) {
+      this.x = vector.x
+      this.y = vector.x
+    }
+  },
+  xy: {
+    configurable: true,
+    get: function () {
+      return new Vector(this.x, this.y)
     },
-    yx: {
-      configurable: true,
-      get: function () {
-        return new Vector(this.y, this.x)
-      },
-      set: function (vector) {
-        this.x = vector.y
-        this.y = vector.x
-      }
+    set: function (vector) {
+      this.x = vector.x
+      this.y = vector.y
+    }
+  },
+  yx: {
+    configurable: true,
+    get: function () {
+      return new Vector(this.y, this.x)
     },
-    yy: {
-      configurable: true,
-      get: function () {
-        return new Vector(this.y, this.y)
-      },
-      set: function (vector) {
-        this.x = vector.y
-        this.y = vector.y
-      }
+    set: function (vector) {
+      this.x = vector.y
+      this.y = vector.x
     }
-  })
-
-  function VectorIterator (vector) {
-    this.vector = vector
-    this.__idx = 0
-  }
-
-  VectorIterator.prototype.next = function () {
-    if (this.__idx === 0) {
-      this.__idx++
-      return {
-        done: false,
-        value: this.vector.x
-      }
-    } else if (this.__idx === 1) {
-      this.__idx++
-      return {
-        done: false,
-        value: this.vector.y
-      }
-    } else {
-      return {
-        done: true,
-        value: void 0
-      }
+  },
+  yy: {
+    configurable: true,
+    get: function () {
+      return new Vector(this.y, this.y)
+    },
+    set: function (vector) {
+      this.x = vector.y
+      this.y = vector.y
     }
   }
+})
 
-  /* istanbul ignore else */
-  if (typeof Symbol !== 'undefined' && Symbol.iterator) {
-    Vector.prototype[Symbol.iterator] = function iterator () {
-      return new VectorIterator(this)
+function VectorIterator (vector) {
+  this.vector = vector
+  this.__idx = 0
+}
+
+VectorIterator.prototype.next = function () {
+  if (this.__idx === 0) {
+    this.__idx++
+    return {
+      done: false,
+      value: this.vector.x
+    }
+  } else if (this.__idx === 1) {
+    this.__idx++
+    return {
+      done: false,
+      value: this.vector.y
+    }
+  } else {
+    return {
+      done: true,
+      value: void 0
     }
   }
+}
 
-  return Vector;
+/* istanbul ignore else */
+if (typeof Symbol !== 'undefined' && Symbol.iterator) {
+  Vector.prototype[Symbol.iterator] = function iterator () {
+    return new VectorIterator(this)
+  }
+}
 
-}));
+return Vector;
+
+})));
