@@ -12,12 +12,13 @@ module.exports = {
 
   'for..of loop': (function () {
     var vector = new Vector(rand(0, 100), rand(0, 100))
-    var sum = 0
 
     return function () {
+      var sum = 0
       for (var i of vector) {
         sum += i
       }
+      return sum
     }
   }())
 }
