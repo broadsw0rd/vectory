@@ -215,6 +215,10 @@ Vector$1.prototype.copy = function () {
   return new Vector$1(this.x, this.y)
 };
 
+Vector$1.clone = Vector$1.copy;
+
+Vector$1.prototype.clone = Vector$1.prototype.copy;
+
 Vector$1.toJSON = function (vector) {
   return vector.toJSON()
 };
