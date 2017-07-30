@@ -31,10 +31,10 @@
 
 ## Features
 
-- Simple - [343 LOC](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#L343)
-- Lightweight - [4.1 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
+- Simple - [376 LOC](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#376)
+- Lightweight - [4.5 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
 - Well tested - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
-- Rich [api](#api) - 29 methods
+- Rich [api](#api) - 33 methods
 - Designed with performance in mind and reviewed with [IRHydra](http://mrale.ph/irhydra/2/)
 
 ## Install
@@ -139,6 +139,13 @@ Nice [article](https://processing.org/tutorials/pvector/) about vector usage by 
 - [x] [`Vector.angleTo(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/angle.js#L11)
 - [x] [`Vector.prototype.angleTo(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/angle.js#L15)
 
+**Rotation**
+
+- [x] [`Vector.rotate(theta, vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/rotation.js#L13)
+- [x] [`Vector.prototype.rotate(theta)`](https://github.com/broadsw0rd/vectory/blob/master/src/rotation.js#L17)
+- [x] [`Vector.irotate(theta, vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/rotation.js#L21)
+- [x] [`Vector.prototype.irotate(theta)`](https://github.com/broadsw0rd/vectory/blob/master/src/rotation.js#L25)
+
 **Resetting**
 
 - [x] [`Vector.reset(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/resetting.js#L3)
@@ -195,8 +202,7 @@ Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v8.2.1
   Cteation
     ✔ Vector(x, y) x 44,942,911 ops/sec ±0.63% (91 runs sampled)
     ✔ Vector.from([x, y]) x 42,769,625 ops/sec ±0.51% (91 runs sampled)
-    ✔ Vector.fromAngle(angle, magnitude) x 45,717,738 ops/sec ±0.75% (91 runs sampled
-)
+    ✔ Vector.fromAngle(angle, magnitude) x 45,717,738 ops/sec ±0.75% (91 runs sampled)
     ✔ Vector.parse(string) x 810,551 ops/sec ±0.84% (87 runs sampled)
 
   Addition
@@ -250,6 +256,12 @@ Intel Core i5-4210U @ 1.7 GHz, DDR3 4 Gb, node v8.2.1
     ✔ Vector#angleOf() x 16,018,390 ops/sec ±0.41% (93 runs sampled)
     ✔ Vector.angleTo(one, another) x 23,187,834 ops/sec ±1.87% (89 runs sampled)
     ✔ Vector#angleTo(vector) x 25,710,425 ops/sec ±0.44% (90 runs sampled)
+
+  Rotation
+    ✔ Vector.rotate(theta, vector) x 14,430,116 ops/sec ±0.63% (92 runs sampled)
+    ✔ Vector#rotate(theta) x 14,712,311 ops/sec ±0.71% (93 runs sampled)
+    ✔ Vector.irotate(theta, vector) x 15,659,649 ops/sec ±0.45% (95 runs sampled)
+    ✔ Vector#irotate(theta) x 15,741,254 ops/sec ±0.57% (93 runs sampled)
 
   Resetting
     ✔ Vector.reset(one, another) x 54,398,978 ops/sec ±0.75% (89 runs sampled)

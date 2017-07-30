@@ -177,6 +177,32 @@ Vector$1.prototype.angleTo = function (vector) {
   return Math.acos(this.dot(vector) / this.magnitude() * vector.magnitude())
 };
 
+function rotate (vector, theta) {
+  var c = Math.cos(theta);
+  var s = Math.sin(theta);
+  var x = vector.x;
+  var y = vector.y;
+  vector.x = x * c - y * s;
+  vector.y = x * s + y * c;
+  return vector
+}
+
+Vector$1.rotate = function (theta, vector) {
+  return vector.rotate(theta)
+};
+
+Vector$1.prototype.rotate = function (theta) {
+  return rotate(this.copy(), theta)
+};
+
+Vector$1.irotate = function (theta, vector) {
+  return vector.irotate(theta)
+};
+
+Vector$1.prototype.irotate = function (theta) {
+  return rotate(this, theta)
+};
+
 Vector$1.reset = function (one, another) {
   return another.reset(one)
 };
