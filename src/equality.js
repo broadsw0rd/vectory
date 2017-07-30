@@ -1,11 +1,15 @@
 import Vector from './vector.js'
+import EPSILON from 'number-epsilon'
 
 Vector.equals = function (one, another) {
   return one.equals(another)
 }
 
 Vector.prototype.equals = function (vector) {
-  return this.x === vector.x && this.y === vector.y
+  return (
+    Math.abs(this.x - vector.x) < EPSILON &&
+    Math.abs(this.y - vector.y) < EPSILON
+  )
 }
 
 Vector.compare = function (one, another) {

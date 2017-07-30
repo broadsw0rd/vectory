@@ -248,12 +248,17 @@ Vector$1.prototype.toArray = function () {
   return [this.x, this.y]
 };
 
+var index = 'EPSILON' in Number ? Number.EPSILON : 2.220446049250313e-16;
+
 Vector$1.equals = function (one, another) {
   return one.equals(another)
 };
 
 Vector$1.prototype.equals = function (vector) {
-  return this.x === vector.x && this.y === vector.y
+  return (
+    Math.abs(this.x - vector.x) < index &&
+    Math.abs(this.y - vector.y) < index
+  )
 };
 
 Vector$1.compare = function (one, another) {
