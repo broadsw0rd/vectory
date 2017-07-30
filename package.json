@@ -31,6 +31,7 @@
     "benchmark": "^2.1.4",
     "coveralls": "^2.13.1",
     "log-symbols": "^2.0.0",
+    "minimist": "^1.2.0",
     "nyc": "^11.0.3",
     "rollup": "^0.45.2",
     "rollup-plugin-commonjs": "^8.0.2",
