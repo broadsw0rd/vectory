@@ -35,7 +35,7 @@
 - Lightweight - [4.5 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
 - Well tested - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
 - Rich [api](#api) - 33 methods
-- Designed with performance in mind and reviewed with [IRHydra](http://mrale.ph/irhydra/2/)
+- Designed with performance in mind and tested with [IRHydra](http://mrale.ph/irhydra/2/)
 
 ## Install
 
@@ -60,13 +60,13 @@ var position = new Vector(0, 0)
 
 ## Usage
 
-Nice [article](https://processing.org/tutorials/pvector/) about vector usage by Daniel Shiffman
+Follow [this link](https://processing.org/tutorials/pvector/) to read more about vectors' usage in the Daniel Shiffman's article
 
 ## Support
 
 - Latest Chrome, FF, Safari
 - IE 9+
-- Node 0.10+
+- Node 4+
 
 ## API
 
