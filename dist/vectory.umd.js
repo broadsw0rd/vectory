@@ -1,3 +1,9 @@
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global.Vector = factory());
+}(this, (function () { 'use strict';
+
 function Vector$1 (x, y) {
   this.x = x || 0;
   this.y = y || 0;
@@ -368,4 +374,6 @@ if (typeof Symbol !== 'undefined' && Symbol.iterator) {
   };
 }
 
-export default Vector$1;
+return Vector$1;
+
+})));

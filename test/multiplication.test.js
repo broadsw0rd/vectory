@@ -1,4 +1,4 @@
-var Vector = require('../dist/vectory.js')
+var Vector = require('../dist/vectory.umd.js')
 var test = require('ava')
 
 test('`Vector.mul(scalar, vector)` should multiply vector on scalar', function (t) {

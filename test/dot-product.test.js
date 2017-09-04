@@ -1,4 +1,4 @@
-var Vector = require('../dist/vectory.js')
+var Vector = require('../dist/vectory.umd.js')
 var test = require('ava')
 
 test('`Vector.dot(one, another)` should return dot product', function (t) {

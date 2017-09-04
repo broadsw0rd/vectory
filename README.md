@@ -31,11 +31,11 @@
 
 ## Features
 
-- Simple - [376 LOC](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#376)
+- Designed with performance in mind
+- Simple - [371 LOC](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.js#371)
 - Lightweight - [4.5 Kb](https://github.com/broadsw0rd/vectory/blob/master/dist/vectory.min.js)
 - Well tested - [100% code coverage](https://coveralls.io/github/broadsw0rd/vectory?branch=master)
 - Rich [api](#api) - 33 methods
-- Designed with performance in mind and tested with [IRHydra](http://mrale.ph/irhydra/2/)
 
 ## Install
 
@@ -51,7 +51,7 @@ var position = new Vector(0, 0)
 or
 
 ```html
-<script src="https://rawgit.com/broadsw0rd/vectory/1.1.0/dist/vectory.min.js"></script>
+<script src="https://rawgit.com/broadsw0rd/vectory/master/dist/vectory.min.js"></script>
 ```
 
 ```js

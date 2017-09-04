@@ -1,4 +1,4 @@
-var Vector = require('../dist/vectory.js')
+var Vector = require('../dist/vectory.umd.js')
 var test = require('ava')
 
 test('`Vector.div(scalar, vector)` should divide vector on scalar', function (t) {

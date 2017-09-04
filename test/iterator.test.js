@@ -1,4 +1,4 @@
-var Vector = require('../dist/vectory.js')
+var Vector = require('../dist/vectory.umd.js')
 var test = require('ava')
 
 if (typeof Symbol !== 'undefined' && Symbol.iterator && Vector.prototype[Symbol.iterator]) {

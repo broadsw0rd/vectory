@@ -1,4 +1,4 @@
-var Vector = require('../dist/vectory.js')
+var Vector = require('../dist/vectory.umd.js')
 var test = require('ava')
 
 test('`Vector.rotate(theta, vector)` should rotate vector on theta angle', function (t) {

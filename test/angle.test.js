@@ -1,4 +1,4 @@
-var Vector = require('../dist/vectory.js')
+var Vector = require('../dist/vectory.umd.js')
 var test = require('ava')
 
 test('`Vector.angleOf(vector)` should return the angle theta of vector', function (t) {
