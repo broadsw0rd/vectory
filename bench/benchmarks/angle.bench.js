@@ -1,4 +1,4 @@
-var Vector = require('../../dist/vectory.js')
+var Vector = require('../../dist/vectory.umd.js')
 var rand = require('../rand.js')
 
 module.exports = {
