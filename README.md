@@ -19,6 +19,44 @@
    </a>
 </p>
 
+Yet another 2d vector implementation for basic motion
+
+``` js
+this.velocity.iadd(this.acceleration)
+this.position.iadd(this.velocity)
+this.acceleration.zero()
+```
+
+with rare methods such as [lerp](https://en.wikipedia.org/wiki/Linear_interpolation)
+
+``` js
+var prev = new Vector(1, 2)
+var next = new Vector(3, 4)
+prev.lerp(next, 0.5) // Vector(2, 3)
+```
+
+and [swizzling](https://www.opengl.org/wiki/Data_Type_%28GLSL%29#Swizzling)
+
+``` js
+var vector = new Vector(1 ,2)
+vector.yx // Vector(2, 1)
+```
+
+with some ES6 support
+
+``` js
+var vector = new Vector(0, 0)
+var vec3 = [...vector, 0] // [0, 0, 0]
+```
+
+and FP ability
+
+``` js
+// create vectors from raw data and scale them twice
+var data = [[1, 2], [3, 4]/*,  ... */]
+var vectors = data.map(Vector.from).map(Vector.mul.bind(null, 2))
+```
+
 ## Table of Contents
 
 - [Features](#features)
