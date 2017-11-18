@@ -28,7 +28,7 @@ var benchmarks = {
   'add': require('./benchmarks/addition.bench.js'),
   'sub': require('./benchmarks/substraction.bench.js'),
   'mul': require('./benchmarks/multiplication.bench.js'),
-  'dev': require('./benchmarks/division.bench.js'),
+  'div': require('./benchmarks/division.bench.js'),
   'lerp': require('./benchmarks/lerp.bench.js'),
   'norm': require('./benchmarks/normalization.bench.js'),
   'mag': require('./benchmarks/magnitude.bench.js'),
