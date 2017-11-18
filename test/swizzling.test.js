@@ -1,5 +1,5 @@
 var Vector = require('../dist/vectory.umd.js')
-var test = require('ava')
+var test = require('tape')
 
 test('`Vector#xx` should be an accessor', function (t) {
   var descriptor = Object.getOwnPropertyDescriptor(Vector.prototype, 'xx')
@@ -7,6 +7,7 @@ test('`Vector#xx` should be an accessor', function (t) {
   t.is(descriptor.enumerable, false)
   t.true(typeof descriptor.get === 'function')
   t.true(typeof descriptor.set === 'function')
+  t.end()
 })
 
 test('`Vector#xx` should have getter which return new vector', function (t) {
@@ -15,6 +16,7 @@ test('`Vector#xx` should have getter which return new vector', function (t) {
   t.true(result instanceof Vector)
   t.is(result.x, 1)
   t.is(result.y, 1)
+  t.end()
 })
 
 test('`Vector#xx` should have setter which set vector values', function (t) {
@@ -23,6 +25,7 @@ test('`Vector#xx` should have setter which set vector values', function (t) {
   self.xx = vector
   t.is(self.x, 3)
   t.is(self.y, 3)
+  t.end()
 })
 
 test('`Vector#xy` should be an accessor', function (t) {
@@ -31,6 +34,7 @@ test('`Vector#xy` should be an accessor', function (t) {
   t.is(descriptor.enumerable, false)
   t.true(typeof descriptor.get === 'function')
   t.true(typeof descriptor.set === 'function')
+  t.end()
 })
 
 test('`Vector#xy` should have getter which return new vector', function (t) {
@@ -39,6 +43,7 @@ test('`Vector#xy` should have getter which return new vector', function (t) {
   t.true(result instanceof Vector)
   t.is(result.x, 1)
   t.is(result.y, 2)
+  t.end()
 })
 
 test('`Vector#xy` should have setter which set vector values', function (t) {
@@ -47,6 +52,7 @@ test('`Vector#xy` should have setter which set vector values', function (t) {
   self.xy = vector
   t.is(self.x, 3)
   t.is(self.y, 4)
+  t.end()
 })
 
 test('`Vector#yx` should be an accessor', function (t) {
@@ -55,6 +61,7 @@ test('`Vector#yx` should be an accessor', function (t) {
   t.is(descriptor.enumerable, false)
   t.true(typeof descriptor.get === 'function')
   t.true(typeof descriptor.set === 'function')
+  t.end()
 })
 test('`Vector#yx` should have getter which return new vector', function (t) {
   var self = new Vector(1, 2)
@@ -62,6 +69,7 @@ test('`Vector#yx` should have getter which return new vector', function (t) {
   t.true(result instanceof Vector)
   t.is(result.x, 2)
   t.is(result.y, 1)
+  t.end()
 })
 
 test('`Vector#yx` should have setter which set vector values', function (t) {
@@ -70,6 +78,7 @@ test('`Vector#yx` should have setter which set vector values', function (t) {
   self.yx = vector
   t.is(self.x, 4)
   t.is(self.y, 3)
+  t.end()
 })
 
 test('`Vector#yy` should be an accessor', function (t) {
@@ -78,6 +87,7 @@ test('`Vector#yy` should be an accessor', function (t) {
   t.is(descriptor.enumerable, false)
   t.true(typeof descriptor.get === 'function')
   t.true(typeof descriptor.set === 'function')
+  t.end()
 })
 
 test('`Vector#yy` should have getter which return new vector', function (t) {
@@ -86,6 +96,7 @@ test('`Vector#yy` should have getter which return new vector', function (t) {
   t.true(result instanceof Vector)
   t.is(result.x, 2)
   t.is(result.y, 2)
+  t.end()
 })
 
 test('`Vector#yy` should have setter which set vector values', function (t) {
@@ -94,4 +105,5 @@ test('`Vector#yy` should have setter which set vector values', function (t) {
   self.yy = vector
   t.is(self.x, 4)
   t.is(self.y, 4)
+  t.end()
 })

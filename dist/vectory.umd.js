@@ -174,7 +174,7 @@ Vector$1.angleTo = function (one, another) {
 };
 
 Vector$1.prototype.angleTo = function (vector) {
-  return Math.acos(this.dot(vector) / this.magnitude() * vector.magnitude())
+  return Math.acos(this.dot(vector) / (this.magnitude() * vector.magnitude()))
 };
 
 function rotate (vector, theta) {

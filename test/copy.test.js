@@ -1,5 +1,5 @@
 var Vector = require('../dist/vectory.umd.js')
-var test = require('ava')
+var test = require('tape')
 
 test('`Vector.copy(vector)` should copy passed vector', function (t) {
   var vector = new Vector(1, 2)
@@ -7,6 +7,7 @@ test('`Vector.copy(vector)` should copy passed vector', function (t) {
   t.true(result instanceof Vector)
   t.is(result.x, 1)
   t.is(result.y, 2)
+  t.end()
 })
 
 test('`Vector#copy()` should copy self', function (t) {
@@ -15,4 +16,5 @@ test('`Vector#copy()` should copy self', function (t) {
   t.true(result instanceof Vector)
   t.is(result.x, 1)
   t.is(result.y, 2)
+  t.end()
 })

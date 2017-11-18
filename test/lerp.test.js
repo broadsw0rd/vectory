@@ -1,5 +1,5 @@
 var Vector = require('../dist/vectory.umd.js')
-var test = require('ava')
+var test = require('tape')
 
 test('`Vector.lerp(one, another, t)` should return linear interpolant between the vectors', function (t) {
   var one = new Vector(2, 2)
@@ -9,6 +9,7 @@ test('`Vector.lerp(one, another, t)` should return linear interpolant between th
   t.true(result instanceof Vector)
   t.is(result.x, 3)
   t.is(result.y, 3)
+  t.end()
 })
 
 test('`Vector#lerp(vector, t)` should return linear interpolant between the vectors', function (t) {
@@ -19,4 +20,5 @@ test('`Vector#lerp(vector, t)` should return linear interpolant between the vect
   t.true(result instanceof Vector)
   t.is(result.x, 3)
   t.is(result.y, 3)
+  t.end()
 })
