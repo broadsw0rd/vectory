@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.2] - 2017-11-18
+
+### Fixed
+
+- Fixed Wrong .angleTo() computing #41
+
 ## [1.2.1] - 2017-09-04
 
 ### Added
