@@ -13,7 +13,7 @@ Vector.angleTo = function (one, another) {
 }
 
 Vector.prototype.angleTo = function (vector) {
-  return Math.acos(this.dot(vector) / this.magnitude() * vector.magnitude())
+  return Math.acos(this.dot(vector) / (this.magnitude() * vector.magnitude()))
 }
 
 export default Vector
