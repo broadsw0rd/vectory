@@ -312,5 +312,5 @@ Command | Description
 `npm run check` | Check standard code style by [snazzy](https://www.npmjs.com/package/snazzy)
 `npm run build` | Wrap source code in [UMD](https://github.com/umdjs/umd) by [rollup](https://github.com/rollup/rollup)
 `npm run bench` | Run [benchmark](http://benchmarkjs.com/)
-`npm run test` | Run tests by [ava](https://github.com/sindresorhus/ava) and compute code coverage by [nyc](https://github.com/bcoe/nyc)
+`npm run test` | Run tests by [tape](https://github.com/substack/tape) and compute code coverage by [nyc](https://github.com/bcoe/nyc)
 `npm run min` | Minify code by [UglifyJS](https://github.com/mishoo/UglifyJS)

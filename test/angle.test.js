@@ -1,16 +1,18 @@
 var Vector = require('../dist/vectory.umd.js')
-var test = require('ava')
+var test = require('tape')
 
 test('`Vector.angleOf(vector)` should return the angle theta of vector', function (t) {
   var vector = new Vector(0, 1)
   var result = Vector.angleOf(vector)
   t.is(result * 180 / Math.PI, 90)
+  t.end()
 })
 
 test('`Vector#angleOf()` should return the angle theta of vector', function (t) {
   var self = new Vector(0, 1)
   var result = self.angleOf()
   t.is(result * 180 / Math.PI, 90)
+  t.end()
 })
 
 test('`Vector.angleTo(one, another)` should return the angle between vectors', function (t) {
@@ -18,6 +20,7 @@ test('`Vector.angleTo(one, another)` should return the angle between vectors', f
   var another = new Vector(1, 0)
   var result = Vector.angleTo(one, another)
   t.is(result * 180 / Math.PI, 90)
+  t.end()
 })
 
 test('`Vector#angleTo(vector)` should return the angle between vectors', function (t) {
@@ -25,4 +28,5 @@ test('`Vector#angleTo(vector)` should return the angle between vectors', functio
   var vector = new Vector(1, 0)
   var result = self.angleTo(vector)
   t.is(result * 180 / Math.PI, 90)
+  t.end()
 })

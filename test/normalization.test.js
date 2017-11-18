@@ -1,5 +1,5 @@
 var Vector = require('../dist/vectory.umd.js')
-var test = require('ava')
+var test = require('tape')
 
 test('`Vector.normalized(vector)` should return unit vector', function (t) {
   var vector = new Vector(2, 0)
@@ -7,6 +7,7 @@ test('`Vector.normalized(vector)` should return unit vector', function (t) {
   t.true(result instanceof Vector)
   t.is(result.x, 1)
   t.is(result.y, 0)
+  t.end()
 })
 
 test('`Vector.normalized(vector)` should return zero vector if zero vector was passed', function (t) {
@@ -15,6 +16,7 @@ test('`Vector.normalized(vector)` should return zero vector if zero vector was p
   t.true(result instanceof Vector)
   t.is(result.x, 0)
   t.is(result.y, 0)
+  t.end()
 })
 
 test('`Vector#normalized()` should return unit vector', function (t) {
@@ -23,6 +25,7 @@ test('`Vector#normalized()` should return unit vector', function (t) {
   t.true(result instanceof Vector)
   t.is(result.x, 1)
   t.is(result.y, 0)
+  t.end()
 })
 
 test('`Vector#normalized()` should return zero vector from zero vector', function (t) {
@@ -31,6 +34,7 @@ test('`Vector#normalized()` should return zero vector from zero vector', functio
   t.true(result instanceof Vector)
   t.is(result.x, 0)
   t.is(result.y, 0)
+  t.end()
 })
 
 test('`Vector.normalize(vector)` should convert passed vector to unit vector', function (t) {
@@ -39,6 +43,7 @@ test('`Vector.normalize(vector)` should convert passed vector to unit vector', f
   t.is(vector.x, 1)
   t.is(vector.y, 0)
   t.is(result, vector)
+  t.end()
 })
 
 test('`Vector.normalize(vector)` should do nothing if zero vector was passed', function (t) {
@@ -47,6 +52,7 @@ test('`Vector.normalize(vector)` should do nothing if zero vector was passed', f
   t.is(vector.x, 0)
   t.is(vector.y, 0)
   t.is(result, vector)
+  t.end()
 })
 
 test('`Vector#normalize()` should convert vector to unit vector', function (t) {
@@ -54,10 +60,12 @@ test('`Vector#normalize()` should convert vector to unit vector', function (t) {
   vector.normalize()
   t.is(vector.x, 1)
   t.is(vector.y, 0)
+  t.end()
 })
 
 test('`Vector#normalize()` should return self', function (t) {
   var vector = new Vector(0, 0)
   var result = vector.normalize()
   t.is(result, vector)
+  t.end()
 })
