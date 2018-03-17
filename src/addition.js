@@ -18,6 +18,7 @@ Vector.add = function (one, another) {
 
 /**
  * Add passed vector to self and return new vector
+ * @name Vector#add()
  * @param {Vector} vector Vector for addition
  * @return {Vector} Sum of two vectors
  * @example

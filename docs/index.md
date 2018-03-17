@@ -5,8 +5,12 @@
 -   [Vector][1]
     -   [add][2]
     -   [iadd][3]
-    -   [add][4]
-    -   [iadd][5]
+    -   [sub][4]
+    -   [isub][5]
+    -   [add][6]
+    -   [iadd][7]
+    -   [sub][8]
+    -   [isub][9]
 
 ## Vector
 
@@ -14,8 +18,8 @@ Vector constructor
 
 **Parameters**
 
--   `x` **[number][6]** First vector component
--   `y` **[number][6]** Second vector component
+-   `x` **[number][10]** First vector component
+-   `y` **[number][10]** Second vector component
 
 **Examples**
 
@@ -30,7 +34,7 @@ Add passed vector to self and return new vector
 
 **Parameters**
 
--   `vector` **[Vector][7]** Vector for addition
+-   `vector` **[Vector][11]** Vector for addition
 
 **Examples**
 
@@ -41,7 +45,7 @@ var result = self.add(vector)
 console.log(result) // Vector {x: 4, y: 6}
 ```
 
-Returns **[Vector][7]** Sum of two vectors
+Returns **[Vector][11]** Sum of two vectors
 
 ### iadd
 
@@ -49,7 +53,7 @@ Add passed vector to self and return self
 
 **Parameters**
 
--   `vector` **[Vector][7]** Vector for addition
+-   `vector` **[Vector][11]** Vector for addition
 
 **Examples**
 
@@ -60,7 +64,45 @@ self.iadd(vector)
 console.log(self) // Vector {x: 4, y: 6}
 ```
 
-Returns **[Vector][7]** self
+Returns **[Vector][11]** self
+
+### sub
+
+Substruct vector from self
+
+**Parameters**
+
+-   `vector` **[Vector][11]** Subtrahend vector
+
+**Examples**
+
+```javascript
+var self = new Vector(3, 4)
+var vector = new Vector(1, 2)
+var result = self.sub(vector)
+console.log(result) // Vector {x: 2, y: 2}
+```
+
+Returns **[Vector][11]** Diff of two vectors
+
+### isub
+
+Substruct passed vector from self
+
+**Parameters**
+
+-   `vector` **[Vector][11]** Subtrahend vector
+
+**Examples**
+
+```javascript
+var self = new Vector(3, 4)
+var vector = new Vector(1, 2)
+self.isub(vector)
+console.log(self) // Vector {x: 2, y: 2}
+```
+
+Returns **[Vector][11]** self
 
 ### add
 
@@ -68,8 +110,8 @@ Add two vectors and return new vector
 
 **Parameters**
 
--   `one` **[Vector][7]** First vector
--   `another` **[Vector][7]** Second vector
+-   `one` **[Vector][11]** First vector
+-   `another` **[Vector][11]** Second vector
 
 **Examples**
 
@@ -80,7 +122,7 @@ var result = Vector.add(one, another)
 console.log(result) // Vector {x: 4, y: 6}
 ```
 
-Returns **[Vector][7]** Sum of two vectors
+Returns **[Vector][11]** Sum of two vectors
 
 ### iadd
 
@@ -88,8 +130,8 @@ Add first passed vector to second vector and return modified second vector
 
 **Parameters**
 
--   `one` **[Vector][7]** Vector for addition
--   `another` **[Vector][7]** Second vector which will be modified
+-   `one` **[Vector][11]** Vector for addition
+-   `another` **[Vector][11]** Second vector which will be modified
 
 **Examples**
 
@@ -101,7 +143,48 @@ console.log(result) // Vector {x: 4, y: 6}
 console.log(result === aniother) // true
 ```
 
-Returns **[Vector][7]** Modified second vector
+Returns **[Vector][11]** Modified second vector
+
+### sub
+
+Substruct two vectors an return new vector
+
+**Parameters**
+
+-   `one` **[Vector][11]** Subtrahend vector
+-   `another` **[Vector][11]** Minuend vector
+
+**Examples**
+
+```javascript
+var one = new Vector(1, 2)
+var another = new Vector(3, 4)
+var result = Vector.sub(one, another)
+console.log(result) // Vector {x: 2, y: 2}
+```
+
+Returns **[Vector][11]** Diff of two vectors
+
+### isub
+
+Substruct first passed vector from second and return modified second vector
+
+**Parameters**
+
+-   `one` **[Vector][11]** Subtrahend vector
+-   `another` **[Vector][11]** Minuend vector
+
+**Examples**
+
+```javascript
+var one = new Vector(1, 2)
+var another = new Vector(3, 4)
+var result = Vector.isub(one, another)
+console.log(result) // Vector {x: 2, y: 2}
+console.log(result === another) // true
+```
+
+Returns **[Vector][11]** Modified minuend vector
 
 [1]: #vector
 
@@ -109,10 +192,18 @@ Returns **[Vector][7]** Modified second vector
 
 [3]: #iadd
 
-[4]: #add-1
+[4]: #sub
 
-[5]: #iadd-1
+[5]: #isub
 
-[6]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[6]: #add-1
 
-[7]: #vector
+[7]: #iadd-1
+
+[8]: #sub-1
+
+[9]: #isub-1
+
+[10]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[11]: #vector
