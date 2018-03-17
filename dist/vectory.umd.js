@@ -50,7 +50,6 @@ Vector$1.add = function (one, another) {
 
 /**
  * Add passed vector to self and return new vector
- * @name Vector#add()
  * @param {Vector} vector Vector for addition
  * @return {Vector} Sum of two vectors
  * @example
@@ -68,12 +67,13 @@ Vector$1.prototype.add = function (vector) {
  * @param  {Vector} one     Vector for addition
  * @param  {Vector} another Second vector which will be modified
  * @return {Vector}         Modified second vector
+ * @static
  * @example
  * var one = new Vector(1, 2)
  * var another = new Vector(3, 4)
  * var result = Vector.iadd(one, another)
  * console.log(result) // Vector {x: 4, y: 6}
- * console.log(result === aniother) // true
+ * console.log(result === another) // true
  */
 Vector$1.iadd = function (one, another) {
   return another.iadd(one)
@@ -96,7 +96,7 @@ Vector$1.prototype.iadd = function (vector) {
 };
 
 /**
- * Substruct two vectors an return new vector
+ * Substruct two vectors and return new vector
  * @param  {Vector} one     Subtrahend vector
  * @param  {Vector} another Minuend vector
  * @return {Vector}         Diff of two vectors

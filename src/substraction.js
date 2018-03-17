@@ -1,7 +1,7 @@
 import Vector from './vector.js'
 
 /**
- * Substruct two vectors an return new vector
+ * Substruct two vectors and return new vector
  * @param  {Vector} one     Subtrahend vector
  * @param  {Vector} another Minuend vector
  * @return {Vector}         Diff of two vectors

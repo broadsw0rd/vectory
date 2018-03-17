@@ -30,7 +30,6 @@
   "devDependencies": {
     "benchmark": "2.1.4",
     "coveralls": "3.0.0",
-    "documentation": "^6.1.0",
     "log-symbols": "2.1.0",
     "minimist": "1.2.0",
     "nyc": "11.3.0",
@@ -57,7 +56,6 @@
     "test": "nyc --reporter=html --reporter=lcov --reporter=text tape test/index.test.js",
     "bench": "node ./bench/index.js",
     "min": "uglifyjs dist/vectory.umd.js -c -m > dist/vectory.min.js",
-    "docs": "documentation build src/*.js -f md > docs/index.md",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   }
 }
