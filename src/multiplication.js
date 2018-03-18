@@ -17,7 +17,7 @@ Vector.mul = function (scalar, vector) {
 }
 
 /**
- * Multiply scalar on self and return new vector
+ * Multiply self on scalar and return new vector
  * @param  {Number} scalar Scalar
  * @return {Vector}        Scaled vector
  * @example
@@ -52,9 +52,9 @@ Vector.imul = function (scalar, vector) {
  * @param  {Number} scalar Scalar
  * @return {Vector}        self
  * @example
- * var vector = new Vector(2, 3)
+ * var self = new Vector(2, 3)
  * var scalar = 2
- * var result = vector.imul(scalar)
+ * self.imul(scalar)
  * console.log(self) // Vector {x: 4, y: 6}
  */
 Vector.prototype.imul = function (scalar) {
