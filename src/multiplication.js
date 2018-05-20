@@ -40,7 +40,7 @@ Vector.prototype.mul = function (scalar) {
  * var vector = new Vector(2, 3)
  * var scalar = 2
  * var result = Vector.imul(scalar, vector)
- * console.log(result) // Vector {x: 4, y: 6}
+ * console.log(result) // Vector {x: 4, y: 6}
  * console.log(result === vector) // true
  */
 Vector.imul = function (scalar, vector) {
@@ -55,7 +55,7 @@ Vector.imul = function (scalar, vector) {
  * var self = new Vector(2, 3)
  * var scalar = 2
  * self.imul(scalar)
- * console.log(self) // Vector {x: 4, y: 6}
+ * console.log(self) // Vector {x: 4, y: 6}
  */
 Vector.prototype.imul = function (scalar) {
   this.x *= scalar

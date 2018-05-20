@@ -40,7 +40,7 @@ Vector.prototype.div = function (scalar) {
  * var vector = new Vector(4, 6)
  * var scalar = 2
  * var result = Vector.idiv(scalar, vector)
- * console.log(result) // Vector {x: 2, y: 3}
+ * console.log(result) // Vector {x: 2, y: 3}
  * console.log(result === vector) // true
  */
 Vector.idiv = function (scalar, vector) {
@@ -55,7 +55,7 @@ Vector.idiv = function (scalar, vector) {
  * var self = new Vector(4, 6)
  * var scalar = 2
  * self.idiv(scalar)
- * console.log(self) // Vector {x: 2, y: 3}
+ * console.log(self) // Vector {x: 2, y: 3}
  */
 Vector.prototype.idiv = function (scalar) {
   this.x /= scalar

@@ -5,7 +5,7 @@
  * @param {number} y Second vector component
  * @example
  * var vector = new Vector(1, 2)
- * console.log(vector) // Vector {x: 1, y: 2}
+ * console.log(vector) // Vector {x: 1, y: 2}
  */
 function Vector$1 (x, y) {
   this.x = x || 0;
@@ -36,7 +36,7 @@ Vector$1.parse = function (string) {
  * var one = new Vector(1, 2)
  * var another = new Vector(3, 4)
  * var result = Vector.add(one, another)
- * console.log(result) // Vector {x: 4, y: 6}
+ * console.log(result) // Vector {x: 4, y: 6}
  */
 Vector$1.add = function (one, another) {
   return another.add(one)
@@ -50,7 +50,7 @@ Vector$1.add = function (one, another) {
  * var self = new Vector(1, 2)
  * var vector = new Vector(3, 4)
  * var result = self.add(vector)
- * console.log(result) // Vector {x: 4, y: 6}
+ * console.log(result) // Vector {x: 4, y: 6}
  */
 Vector$1.prototype.add = function (vector) {
   return new Vector$1(this.x + vector.x, this.y + vector.y)
@@ -66,7 +66,7 @@ Vector$1.prototype.add = function (vector) {
  * var one = new Vector(1, 2)
  * var another = new Vector(3, 4)
  * var result = Vector.iadd(one, another)
- * console.log(result) // Vector {x: 4, y: 6}
+ * console.log(result) // Vector {x: 4, y: 6}
  * console.log(result === another) // true
  */
 Vector$1.iadd = function (one, another) {
@@ -81,7 +81,7 @@ Vector$1.iadd = function (one, another) {
  * var self = new Vector(1, 2)
  * var vector = new Vector(3, 4)
  * self.iadd(vector)
- * console.log(self) // Vector {x: 4, y: 6}
+ * console.log(self) // Vector {x: 4, y: 6}
  */
 Vector$1.prototype.iadd = function (vector) {
   this.x += vector.x;
@@ -129,7 +129,7 @@ Vector$1.prototype.sub = function (vector) {
  * var one = new Vector(1, 2)
  * var another = new Vector(3, 4)
  * var result = Vector.isub(one, another)
- * console.log(result) // Vector {x: 2, y: 2}
+ * console.log(result) // Vector {x: 2, y: 2}
  * console.log(result === another) // true
  */
 Vector$1.isub = function (one, another) {
@@ -144,7 +144,7 @@ Vector$1.isub = function (one, another) {
  * var self = new Vector(3, 4)
  * var vector = new Vector(1, 2)
  * self.isub(vector)
- * console.log(self) // Vector {x: 2, y: 2}
+ * console.log(self) // Vector {x: 2, y: 2}
  */
 Vector$1.prototype.isub = function (vector) {
   this.x -= vector.x;
@@ -192,7 +192,7 @@ Vector$1.prototype.mul = function (scalar) {
  * var vector = new Vector(2, 3)
  * var scalar = 2
  * var result = Vector.imul(scalar, vector)
- * console.log(result) // Vector {x: 4, y: 6}
+ * console.log(result) // Vector {x: 4, y: 6}
  * console.log(result === vector) // true
  */
 Vector$1.imul = function (scalar, vector) {
@@ -207,7 +207,7 @@ Vector$1.imul = function (scalar, vector) {
  * var self = new Vector(2, 3)
  * var scalar = 2
  * self.imul(scalar)
- * console.log(self) // Vector {x: 4, y: 6}
+ * console.log(self) // Vector {x: 4, y: 6}
  */
 Vector$1.prototype.imul = function (scalar) {
   this.x *= scalar;
@@ -255,7 +255,7 @@ Vector$1.prototype.div = function (scalar) {
  * var vector = new Vector(4, 6)
  * var scalar = 2
  * var result = Vector.idiv(scalar, vector)
- * console.log(result) // Vector {x: 2, y: 3}
+ * console.log(result) // Vector {x: 2, y: 3}
  * console.log(result === vector) // true
  */
 Vector$1.idiv = function (scalar, vector) {
@@ -270,7 +270,7 @@ Vector$1.idiv = function (scalar, vector) {
  * var self = new Vector(4, 6)
  * var scalar = 2
  * self.idiv(scalar)
- * console.log(self) // Vector {x: 2, y: 3}
+ * console.log(self) // Vector {x: 2, y: 3}
  */
 Vector$1.prototype.idiv = function (scalar) {
   this.x /= scalar;
@@ -278,10 +278,36 @@ Vector$1.prototype.idiv = function (scalar) {
   return this
 };
 
+/**
+ * Linear interpolation between two vectors using `t` to weight between them
+ * @param  {Vector} one     Start point
+ * @param  {Vector} another End point
+ * @param  {number} t       Alpha value [0..1]
+ * @return {Vector} Interpolation result
+ * @static
+ * @example
+ * var one = new Vector(2, 2)
+ * var another = new Vector(4, 4)
+ * var time = 0.5
+ * var result = Vector.lerp(one, another, time)
+ * console.log(result) // Vector {x: 3, y: 3}
+ */
 Vector$1.lerp = function (one, another, t) {
   return one.lerp(another, t)
 };
 
+/**
+ * Linear interpolation self and passed vector using `t` to weight between them
+ * @param  {Vector} vector End point
+ * @param  {number} t      Alpha value [0..1]
+ * @return {Vector} Interpolation result
+ * @example
+ * var one = new Vector(2, 2)
+ * var another = new Vector(4, 4)
+ * var time = 0.5
+ * var result = one.lerp(another, time)
+ * console.log(result) // Vector {x: 3, y: 3}
+ */
 Vector$1.prototype.lerp = function (vector, t) {
   var x = (1 - t) * this.x + t * vector.x;
   var y = (1 - t) * this.y + t * vector.y;

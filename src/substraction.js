@@ -40,7 +40,7 @@ Vector.prototype.sub = function (vector) {
  * var one = new Vector(1, 2)
  * var another = new Vector(3, 4)
  * var result = Vector.isub(one, another)
- * console.log(result) // Vector {x: 2, y: 2}
+ * console.log(result) // Vector {x: 2, y: 2}
  * console.log(result === another) // true
  */
 Vector.isub = function (one, another) {
@@ -55,7 +55,7 @@ Vector.isub = function (one, another) {
  * var self = new Vector(3, 4)
  * var vector = new Vector(1, 2)
  * self.isub(vector)
- * console.log(self) // Vector {x: 2, y: 2}
+ * console.log(self) // Vector {x: 2, y: 2}
  */
 Vector.prototype.isub = function (vector) {
   this.x -= vector.x
