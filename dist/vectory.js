@@ -280,6 +280,7 @@ Vector$1.prototype.idiv = function (scalar) {
 
 /**
  * Linear interpolation between two vectors using `t` to weight between them
+ * https://en.wikipedia.org/wiki/Linear_interpolation
  * @param  {Vector} one     Start point
  * @param  {Vector} another End point
  * @param  {number} t       Alpha value [0..1]
@@ -297,7 +298,8 @@ Vector$1.lerp = function (one, another, t) {
 };
 
 /**
- * Linear interpolation self and passed vector using `t` to weight between them
+ * Linear interpolation between self and passed vector using `t` to weight between them
+ * https://en.wikipedia.org/wiki/Linear_interpolation
  * @param  {Vector} vector End point
  * @param  {number} t      Alpha value [0..1]
  * @return {Vector} Interpolation result
@@ -314,10 +316,28 @@ Vector$1.prototype.lerp = function (vector, t) {
   return new Vector$1(x, y)
 };
 
+/**
+ * Calculates the unit vector in the same direction as the passed vector, but with length 1
+ * @param  {Vector} vector Vector to normalize
+ * @return {Vector}        Unit vector
+ * @static
+ * @example
+ * var vector = new Vector(2, 0)
+ * var result = Vector.normalized(vector)
+ * console.log(result) // Vector {x: 1, y: 0}
+ */
 Vector$1.normalized = function (vector) {
   return vector.normalized()
 };
 
+/**
+ * Calculates the unit vector in the same direction as self, but with length 1
+ * @return {Vector} Unit vector
+ * @example
+ * var vector = new Vector(0, 0)
+ * var result = vector.normalized()
+ * console.log(result) // Vector {x: 1, y: 0}
+ */
 Vector$1.prototype.normalized = function () {
   var x = this.x;
   var y = this.y;
@@ -329,10 +349,29 @@ Vector$1.prototype.normalized = function () {
   }
 };
 
+/**
+ * Reduce the passed vector to length 1
+ * @param  {Vector} vector Vector to normalize
+ * @return {Vector}        Passed vector, but with length 1
+ * @static
+ * @example
+ * var vector = new Vector(2, 0)
+ * var result = Vector.normalize(vector)
+ * console.log(result) // Vector {x: 1, y: 0}
+ * console.log(result === vector) // true
+ */
 Vector$1.normalize = function (vector) {
   return vector.normalize()
 };
 
+/**
+ * Reduce self to length 1
+ * @return {Vector} Self, but with length 1
+ * @example
+ * var vector = new Vector(2, 0)
+ * vector.normalize()
+ * console.log(vector) // Vector {x: 1, y: 0}
+ */
 Vector$1.prototype.normalize = function () {
   var x = this.x;
   var y = this.y;
@@ -344,26 +383,88 @@ Vector$1.prototype.normalize = function () {
   return this
 };
 
+/**
+ * Calculate the length of passed vector
+ * @param  {Vector} vector Vector
+ * @return {number}        Length of vector
+ * @static
+ * @example
+ * var vector = new Vector(3, 4)
+ * var magnitude = Vector.magnitude(vector)
+ * console.log(magnitude) // 5
+ */
 Vector$1.magnitude = function (vector) {
   return vector.magnitude()
 };
 
+/**
+ * Calculate the length of self
+ * @return {number} Length of self
+ * @example
+ * var vector = new Vector(3, 4)
+ * var magnitude = vector.magnitude()
+ * console.log(magnitude) // 5
+ */
 Vector$1.prototype.magnitude = function () {
   return Math.sqrt(this.x * this.x + this.y * this.y)
 };
 
+/**
+ * Calculates the dot product of two passed vectors
+ * @param  {Vector} one     Ferst vector
+ * @param  {Vector} another Second vector
+ * @return {number}         Dot product
+ * @static
+ * @example
+ * var one = new Vector(2, 3)
+ * var another = new Vector(3, 2)
+ * var product = Vector.dot(one, another)
+ * console.log(product) // 12
+ */
 Vector$1.dot = function (one, another) {
   return another.dot(one)
 };
 
+/**
+ * Calculates the dot product of self and passed vector
+ * @param  {Vector} vector Vector
+ * @return {number}        Dot product
+ * @example
+ * var self = new Vector(2, 3)
+ * var vector = new Vector(3, 2)
+ * var product = self.dot(vector)
+ * console.log(product) // 12
+ */
 Vector$1.prototype.dot = function (vector) {
   return this.x * vector.x + this.y * vector.y
 };
 
+/**
+ * Calculates the distance between two passed vectors. Same as `another.sub(one).magnitude()`
+ * @param  {Vector} one     First vector
+ * @param  {Vector} another Second vector
+ * @return {number}         Distance
+ * @static
+ * @example
+ * var one = new Vector(4, 3)
+ * var another = new Vector(8, 6)
+ * var distance = Vector.distance(one, another)
+ * console.log(product) // 5
+ */
 Vector$1.distance = function (one, another) {
   return another.distance(one)
 };
 
+/**
+ * Calculates the distance between self and passed vector. Same as `self.sub(vector).magnitude()`
+ * @param  {Vector} vector Vector
+ * @return {number}        Distance
+ * @example
+ * var self = new Vector(8, 6)
+ * var vector = new Vector(4, 3)
+ * var distance = self.distance(vector)
+ * console.log(product) // 5
+ */
 Vector$1.prototype.distance = function (vector) {
   var x = this.x - vector.x;
   var y = this.y - vector.y;
