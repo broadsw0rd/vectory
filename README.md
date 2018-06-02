@@ -162,6 +162,11 @@ Follow [this link](https://processing.org/tutorials/pvector/) to read more about
 - [x] [`Vector.dot(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/dot-product.js#L4)
 - [x] [`Vector.prototype.dot(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/dot-product.js#L20)
 
+**Cross product**
+
+- [x] [`Vector.cross(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/cross-product.js#L4)
+- [x] [`Vector.prototype.cross(vector)`](https://github.com/broadsw0rd/vectory/blob/master/src/cross-product.js#L20)
+
 **Distance**
 
 - [x] [`Vector.distance(one, another)`](https://github.com/broadsw0rd/vectory/blob/master/src/distance.js#L4)
