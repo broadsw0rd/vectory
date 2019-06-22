@@ -1,6 +1,6 @@
 {
   "name": "vectory",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "High performant, DevTools friendly, Crankshaft tolerant 2d vectors",
   "keywords": [
     "math",
@@ -29,18 +29,18 @@
   "module": "dist/vectory.js",
   "devDependencies": {
     "benchmark": "2.1.4",
-    "coveralls": "3.0.0",
-    "log-symbols": "2.1.0",
+    "coveralls": "3.0.4",
+    "log-symbols": "3.0.0",
     "minimist": "1.2.0",
-    "nyc": "11.3.0",
-    "rollup": "0.51.7",
-    "rollup-plugin-commonjs": "8.2.6",
-    "rollup-plugin-node-resolve": "3.0.0",
-    "snazzy": "7.0.0",
-    "standard": "10.0.3",
+    "nyc": "14.1.1",
+    "rollup": "1.16.1",
+    "rollup-plugin-commonjs": "10.0.0",
+    "rollup-plugin-node-resolve": "5.0.3",
+    "snazzy": "8.0.0",
+    "standard": "12.0.1",
     "tap-diff": "0.1.1",
-    "tape": "4.8.0",
-    "uglify-js": "3.1.9"
+    "tape": "4.10.2",
+    "uglify-js": "3.6.0"
   },
   "dependencies": {
     "number-epsilon": "1.0.3"
